@@ -1,0 +1,134 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS eval_foo_start))
+(VAR v_.0 v_.01 v_.03 v_i v_range v_up)
+(RULES
+  eval_foo_start(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb0_in(v_.0, v_.01, v_.03, v_i, v_range, v_up))
+  eval_foo_bb0_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_i, 20, 0, v_i, v_range, v_up))
+  eval_foo_bb1_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up)) :|: 0 <= v_.0 && v_.0 <= v_.01
+  eval_foo_bb1_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb3_in(v_.0, v_.01, v_.03, v_i, v_range, v_up)) :|: 0 > v_.0
+  eval_foo_bb1_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb3_in(v_.0, v_.01, v_.03, v_i, v_range, v_up)) :|: v_.0 > v_.01
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_.0 - 1, v_.01 - 1, 0, v_i, v_range, v_up)) :|: v_.0 = 0 && v_.0 = v_.01 && v_.0 - 1 = v_.01 - 2
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_.0 - 1, v_.01, 0, v_i, v_range, v_up)) :|: v_.0 = 0 && v_.0 = v_.01 && v_.0 - 1 < v_.01 - 2
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_.0 - 1, v_.01, 0, v_i, v_range, v_up)) :|: v_.0 = 0 && v_.0 = v_.01 && v_.0 - 1 > v_.01 - 2
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_.0 + 1, v_.01 - 1, 1, v_i, v_range, v_up)) :|: v_.0 = 0 && v_.0 < v_.01 && v_.0 + 1 = v_.01 - 2
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_.0 + 1, v_.01 - 1, 1, v_i, v_range, v_up)) :|: v_.0 = 0 && v_.0 > v_.01 && v_.0 + 1 = v_.01 - 2
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_.0 + 1, v_.01, 1, v_i, v_range, v_up)) :|: v_.0 = 0 && v_.0 < v_.01 && v_.0 + 1 < v_.01 - 2
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_.0 + 1, v_.01, 1, v_i, v_range, v_up)) :|: v_.0 = 0 && v_.0 < v_.01 && v_.0 + 1 > v_.01 - 2
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_.0 + 1, v_.01, 1, v_i, v_range, v_up)) :|: v_.0 = 0 && v_.0 > v_.01 && v_.0 + 1 < v_.01 - 2
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_.0 + 1, v_.01, 1, v_i, v_range, v_up)) :|: v_.0 = 0 && v_.0 > v_.01 && v_.0 + 1 > v_.01 - 2
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_.0 - 1, v_.01 - 1, 0, v_i, v_range, v_up)) :|: v_.0 < 0 && v_.0 = v_.01 && v_.0 - 1 = v_.01 - 2
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_.0 - 1, v_.01 - 1, 0, v_i, v_range, v_up)) :|: v_.0 > 0 && v_.0 = v_.01 && v_.0 - 1 = v_.01 - 2
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_.0 - 1, v_.01, 0, v_i, v_range, v_up)) :|: v_.0 < 0 && v_.0 = v_.01 && v_.0 - 1 < v_.01 - 2
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_.0 - 1, v_.01, 0, v_i, v_range, v_up)) :|: v_.0 < 0 && v_.0 = v_.01 && v_.0 - 1 > v_.01 - 2
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_.0 - 1, v_.01, 0, v_i, v_range, v_up)) :|: v_.0 > 0 && v_.0 = v_.01 && v_.0 - 1 < v_.01 - 2
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_.0 - 1, v_.01, 0, v_i, v_range, v_up)) :|: v_.0 > 0 && v_.0 = v_.01 && v_.0 - 1 > v_.01 - 2
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_.0, v_.01 - 1, v_.03, v_i, v_range, v_up)) :|: v_.0 < 0 && v_.0 < v_.01 && v_.03 = 1 && v_.03 = 0 && v_.0 = v_.01 - 2
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_.0, v_.01 - 1, v_.03, v_i, v_range, v_up)) :|: v_.0 < 0 && v_.0 > v_.01 && v_.03 = 1 && v_.03 = 0 && v_.0 = v_.01 - 2
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_.0, v_.01 - 1, v_.03, v_i, v_range, v_up)) :|: v_.0 > 0 && v_.0 < v_.01 && v_.03 = 1 && v_.03 = 0 && v_.0 = v_.01 - 2
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_.0, v_.01 - 1, v_.03, v_i, v_range, v_up)) :|: v_.0 > 0 && v_.0 > v_.01 && v_.03 = 1 && v_.03 = 0 && v_.0 = v_.01 - 2
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_.0, v_.01, v_.03, v_i, v_range, v_up)) :|: v_.0 < 0 && v_.0 < v_.01 && v_.03 = 1 && v_.03 = 0 && v_.0 < v_.01 - 2
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_.0, v_.01, v_.03, v_i, v_range, v_up)) :|: v_.0 < 0 && v_.0 < v_.01 && v_.03 = 1 && v_.03 = 0 && v_.0 > v_.01 - 2
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_.0, v_.01, v_.03, v_i, v_range, v_up)) :|: v_.0 < 0 && v_.0 > v_.01 && v_.03 = 1 && v_.03 = 0 && v_.0 < v_.01 - 2
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_.0, v_.01, v_.03, v_i, v_range, v_up)) :|: v_.0 < 0 && v_.0 > v_.01 && v_.03 = 1 && v_.03 = 0 && v_.0 > v_.01 - 2
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_.0, v_.01, v_.03, v_i, v_range, v_up)) :|: v_.0 > 0 && v_.0 < v_.01 && v_.03 = 1 && v_.03 = 0 && v_.0 < v_.01 - 2
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_.0, v_.01, v_.03, v_i, v_range, v_up)) :|: v_.0 > 0 && v_.0 < v_.01 && v_.03 = 1 && v_.03 = 0 && v_.0 > v_.01 - 2
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_.0, v_.01, v_.03, v_i, v_range, v_up)) :|: v_.0 > 0 && v_.0 > v_.01 && v_.03 = 1 && v_.03 = 0 && v_.0 < v_.01 - 2
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_.0, v_.01, v_.03, v_i, v_range, v_up)) :|: v_.0 > 0 && v_.0 > v_.01 && v_.03 = 1 && v_.03 = 0 && v_.0 > v_.01 - 2
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_.0 + 1, v_.01 - 1, v_.03, v_i, v_range, v_up)) :|: v_.0 < 0 && v_.0 < v_.01 && v_.03 = 1 && v_.03 < 0 && v_.0 + 1 = v_.01 - 2
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_.0 + 1, v_.01 - 1, v_.03, v_i, v_range, v_up)) :|: v_.0 < 0 && v_.0 < v_.01 && v_.03 = 1 && v_.03 > 0 && v_.0 + 1 = v_.01 - 2
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_.0 + 1, v_.01 - 1, v_.03, v_i, v_range, v_up)) :|: v_.0 < 0 && v_.0 > v_.01 && v_.03 = 1 && v_.03 < 0 && v_.0 + 1 = v_.01 - 2
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_.0 + 1, v_.01 - 1, v_.03, v_i, v_range, v_up)) :|: v_.0 < 0 && v_.0 > v_.01 && v_.03 = 1 && v_.03 > 0 && v_.0 + 1 = v_.01 - 2
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_.0 + 1, v_.01 - 1, v_.03, v_i, v_range, v_up)) :|: v_.0 > 0 && v_.0 < v_.01 && v_.03 = 1 && v_.03 < 0 && v_.0 + 1 = v_.01 - 2
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_.0 + 1, v_.01 - 1, v_.03, v_i, v_range, v_up)) :|: v_.0 > 0 && v_.0 < v_.01 && v_.03 = 1 && v_.03 > 0 && v_.0 + 1 = v_.01 - 2
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_.0 + 1, v_.01 - 1, v_.03, v_i, v_range, v_up)) :|: v_.0 > 0 && v_.0 > v_.01 && v_.03 = 1 && v_.03 < 0 && v_.0 + 1 = v_.01 - 2
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_.0 + 1, v_.01 - 1, v_.03, v_i, v_range, v_up)) :|: v_.0 > 0 && v_.0 > v_.01 && v_.03 = 1 && v_.03 > 0 && v_.0 + 1 = v_.01 - 2
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_.0 + 1, v_.01, v_.03, v_i, v_range, v_up)) :|: v_.0 < 0 && v_.0 < v_.01 && v_.03 = 1 && v_.03 < 0 && v_.0 + 1 < v_.01 - 2
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_.0 + 1, v_.01, v_.03, v_i, v_range, v_up)) :|: v_.0 < 0 && v_.0 < v_.01 && v_.03 = 1 && v_.03 < 0 && v_.0 + 1 > v_.01 - 2
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_.0 + 1, v_.01, v_.03, v_i, v_range, v_up)) :|: v_.0 < 0 && v_.0 < v_.01 && v_.03 = 1 && v_.03 > 0 && v_.0 + 1 < v_.01 - 2
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_.0 + 1, v_.01, v_.03, v_i, v_range, v_up)) :|: v_.0 < 0 && v_.0 < v_.01 && v_.03 = 1 && v_.03 > 0 && v_.0 + 1 > v_.01 - 2
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_.0 + 1, v_.01, v_.03, v_i, v_range, v_up)) :|: v_.0 < 0 && v_.0 > v_.01 && v_.03 = 1 && v_.03 < 0 && v_.0 + 1 < v_.01 - 2
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_.0 + 1, v_.01, v_.03, v_i, v_range, v_up)) :|: v_.0 < 0 && v_.0 > v_.01 && v_.03 = 1 && v_.03 < 0 && v_.0 + 1 > v_.01 - 2
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_.0 + 1, v_.01, v_.03, v_i, v_range, v_up)) :|: v_.0 < 0 && v_.0 > v_.01 && v_.03 = 1 && v_.03 > 0 && v_.0 + 1 < v_.01 - 2
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_.0 + 1, v_.01, v_.03, v_i, v_range, v_up)) :|: v_.0 < 0 && v_.0 > v_.01 && v_.03 = 1 && v_.03 > 0 && v_.0 + 1 > v_.01 - 2
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_.0 + 1, v_.01, v_.03, v_i, v_range, v_up)) :|: v_.0 > 0 && v_.0 < v_.01 && v_.03 = 1 && v_.03 < 0 && v_.0 + 1 < v_.01 - 2
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_.0 + 1, v_.01, v_.03, v_i, v_range, v_up)) :|: v_.0 > 0 && v_.0 < v_.01 && v_.03 = 1 && v_.03 < 0 && v_.0 + 1 > v_.01 - 2
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_.0 + 1, v_.01, v_.03, v_i, v_range, v_up)) :|: v_.0 > 0 && v_.0 < v_.01 && v_.03 = 1 && v_.03 > 0 && v_.0 + 1 < v_.01 - 2
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_.0 + 1, v_.01, v_.03, v_i, v_range, v_up)) :|: v_.0 > 0 && v_.0 < v_.01 && v_.03 = 1 && v_.03 > 0 && v_.0 + 1 > v_.01 - 2
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_.0 + 1, v_.01, v_.03, v_i, v_range, v_up)) :|: v_.0 > 0 && v_.0 > v_.01 && v_.03 = 1 && v_.03 < 0 && v_.0 + 1 < v_.01 - 2
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_.0 + 1, v_.01, v_.03, v_i, v_range, v_up)) :|: v_.0 > 0 && v_.0 > v_.01 && v_.03 = 1 && v_.03 < 0 && v_.0 + 1 > v_.01 - 2
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_.0 + 1, v_.01, v_.03, v_i, v_range, v_up)) :|: v_.0 > 0 && v_.0 > v_.01 && v_.03 = 1 && v_.03 > 0 && v_.0 + 1 < v_.01 - 2
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_.0 + 1, v_.01, v_.03, v_i, v_range, v_up)) :|: v_.0 > 0 && v_.0 > v_.01 && v_.03 = 1 && v_.03 > 0 && v_.0 + 1 > v_.01 - 2
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_.0 - 1, v_.01 - 1, v_.03, v_i, v_range, v_up)) :|: v_.0 < 0 && v_.0 < v_.01 && v_.03 < 1 && v_.03 = 0 && v_.0 - 1 = v_.01 - 2
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_.0 - 1, v_.01 - 1, v_.03, v_i, v_range, v_up)) :|: v_.0 < 0 && v_.0 < v_.01 && v_.03 > 1 && v_.03 = 0 && v_.0 - 1 = v_.01 - 2
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_.0 - 1, v_.01 - 1, v_.03, v_i, v_range, v_up)) :|: v_.0 < 0 && v_.0 > v_.01 && v_.03 < 1 && v_.03 = 0 && v_.0 - 1 = v_.01 - 2
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_.0 - 1, v_.01 - 1, v_.03, v_i, v_range, v_up)) :|: v_.0 < 0 && v_.0 > v_.01 && v_.03 > 1 && v_.03 = 0 && v_.0 - 1 = v_.01 - 2
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_.0 - 1, v_.01 - 1, v_.03, v_i, v_range, v_up)) :|: v_.0 > 0 && v_.0 < v_.01 && v_.03 < 1 && v_.03 = 0 && v_.0 - 1 = v_.01 - 2
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_.0 - 1, v_.01 - 1, v_.03, v_i, v_range, v_up)) :|: v_.0 > 0 && v_.0 < v_.01 && v_.03 > 1 && v_.03 = 0 && v_.0 - 1 = v_.01 - 2
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_.0 - 1, v_.01 - 1, v_.03, v_i, v_range, v_up)) :|: v_.0 > 0 && v_.0 > v_.01 && v_.03 < 1 && v_.03 = 0 && v_.0 - 1 = v_.01 - 2
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_.0 - 1, v_.01 - 1, v_.03, v_i, v_range, v_up)) :|: v_.0 > 0 && v_.0 > v_.01 && v_.03 > 1 && v_.03 = 0 && v_.0 - 1 = v_.01 - 2
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_.0 - 1, v_.01, v_.03, v_i, v_range, v_up)) :|: v_.0 < 0 && v_.0 < v_.01 && v_.03 < 1 && v_.03 = 0 && v_.0 - 1 < v_.01 - 2
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_.0 - 1, v_.01, v_.03, v_i, v_range, v_up)) :|: v_.0 < 0 && v_.0 < v_.01 && v_.03 < 1 && v_.03 = 0 && v_.0 - 1 > v_.01 - 2
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_.0 - 1, v_.01, v_.03, v_i, v_range, v_up)) :|: v_.0 < 0 && v_.0 < v_.01 && v_.03 > 1 && v_.03 = 0 && v_.0 - 1 < v_.01 - 2
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_.0 - 1, v_.01, v_.03, v_i, v_range, v_up)) :|: v_.0 < 0 && v_.0 < v_.01 && v_.03 > 1 && v_.03 = 0 && v_.0 - 1 > v_.01 - 2
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_.0 - 1, v_.01, v_.03, v_i, v_range, v_up)) :|: v_.0 < 0 && v_.0 > v_.01 && v_.03 < 1 && v_.03 = 0 && v_.0 - 1 < v_.01 - 2
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_.0 - 1, v_.01, v_.03, v_i, v_range, v_up)) :|: v_.0 < 0 && v_.0 > v_.01 && v_.03 < 1 && v_.03 = 0 && v_.0 - 1 > v_.01 - 2
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_.0 - 1, v_.01, v_.03, v_i, v_range, v_up)) :|: v_.0 < 0 && v_.0 > v_.01 && v_.03 > 1 && v_.03 = 0 && v_.0 - 1 < v_.01 - 2
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_.0 - 1, v_.01, v_.03, v_i, v_range, v_up)) :|: v_.0 < 0 && v_.0 > v_.01 && v_.03 > 1 && v_.03 = 0 && v_.0 - 1 > v_.01 - 2
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_.0 - 1, v_.01, v_.03, v_i, v_range, v_up)) :|: v_.0 > 0 && v_.0 < v_.01 && v_.03 < 1 && v_.03 = 0 && v_.0 - 1 < v_.01 - 2
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_.0 - 1, v_.01, v_.03, v_i, v_range, v_up)) :|: v_.0 > 0 && v_.0 < v_.01 && v_.03 < 1 && v_.03 = 0 && v_.0 - 1 > v_.01 - 2
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_.0 - 1, v_.01, v_.03, v_i, v_range, v_up)) :|: v_.0 > 0 && v_.0 < v_.01 && v_.03 > 1 && v_.03 = 0 && v_.0 - 1 < v_.01 - 2
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_.0 - 1, v_.01, v_.03, v_i, v_range, v_up)) :|: v_.0 > 0 && v_.0 < v_.01 && v_.03 > 1 && v_.03 = 0 && v_.0 - 1 > v_.01 - 2
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_.0 - 1, v_.01, v_.03, v_i, v_range, v_up)) :|: v_.0 > 0 && v_.0 > v_.01 && v_.03 < 1 && v_.03 = 0 && v_.0 - 1 < v_.01 - 2
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_.0 - 1, v_.01, v_.03, v_i, v_range, v_up)) :|: v_.0 > 0 && v_.0 > v_.01 && v_.03 < 1 && v_.03 = 0 && v_.0 - 1 > v_.01 - 2
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_.0 - 1, v_.01, v_.03, v_i, v_range, v_up)) :|: v_.0 > 0 && v_.0 > v_.01 && v_.03 > 1 && v_.03 = 0 && v_.0 - 1 < v_.01 - 2
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_.0 - 1, v_.01, v_.03, v_i, v_range, v_up)) :|: v_.0 > 0 && v_.0 > v_.01 && v_.03 > 1 && v_.03 = 0 && v_.0 - 1 > v_.01 - 2
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_.0, v_.01 - 1, v_.03, v_i, v_range, v_up)) :|: v_.0 < 0 && v_.0 < v_.01 && v_.03 < 1 && v_.03 < 0 && v_.0 = v_.01 - 2
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_.0, v_.01 - 1, v_.03, v_i, v_range, v_up)) :|: v_.0 < 0 && v_.0 < v_.01 && v_.03 < 1 && v_.03 > 0 && v_.0 = v_.01 - 2
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_.0, v_.01 - 1, v_.03, v_i, v_range, v_up)) :|: v_.0 < 0 && v_.0 < v_.01 && v_.03 > 1 && v_.03 < 0 && v_.0 = v_.01 - 2
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_.0, v_.01 - 1, v_.03, v_i, v_range, v_up)) :|: v_.0 < 0 && v_.0 < v_.01 && v_.03 > 1 && v_.03 > 0 && v_.0 = v_.01 - 2
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_.0, v_.01 - 1, v_.03, v_i, v_range, v_up)) :|: v_.0 < 0 && v_.0 > v_.01 && v_.03 < 1 && v_.03 < 0 && v_.0 = v_.01 - 2
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_.0, v_.01 - 1, v_.03, v_i, v_range, v_up)) :|: v_.0 < 0 && v_.0 > v_.01 && v_.03 < 1 && v_.03 > 0 && v_.0 = v_.01 - 2
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_.0, v_.01 - 1, v_.03, v_i, v_range, v_up)) :|: v_.0 < 0 && v_.0 > v_.01 && v_.03 > 1 && v_.03 < 0 && v_.0 = v_.01 - 2
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_.0, v_.01 - 1, v_.03, v_i, v_range, v_up)) :|: v_.0 < 0 && v_.0 > v_.01 && v_.03 > 1 && v_.03 > 0 && v_.0 = v_.01 - 2
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_.0, v_.01 - 1, v_.03, v_i, v_range, v_up)) :|: v_.0 > 0 && v_.0 < v_.01 && v_.03 < 1 && v_.03 < 0 && v_.0 = v_.01 - 2
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_.0, v_.01 - 1, v_.03, v_i, v_range, v_up)) :|: v_.0 > 0 && v_.0 < v_.01 && v_.03 < 1 && v_.03 > 0 && v_.0 = v_.01 - 2
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_.0, v_.01 - 1, v_.03, v_i, v_range, v_up)) :|: v_.0 > 0 && v_.0 < v_.01 && v_.03 > 1 && v_.03 < 0 && v_.0 = v_.01 - 2
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_.0, v_.01 - 1, v_.03, v_i, v_range, v_up)) :|: v_.0 > 0 && v_.0 < v_.01 && v_.03 > 1 && v_.03 > 0 && v_.0 = v_.01 - 2
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_.0, v_.01 - 1, v_.03, v_i, v_range, v_up)) :|: v_.0 > 0 && v_.0 > v_.01 && v_.03 < 1 && v_.03 < 0 && v_.0 = v_.01 - 2
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_.0, v_.01 - 1, v_.03, v_i, v_range, v_up)) :|: v_.0 > 0 && v_.0 > v_.01 && v_.03 < 1 && v_.03 > 0 && v_.0 = v_.01 - 2
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_.0, v_.01 - 1, v_.03, v_i, v_range, v_up)) :|: v_.0 > 0 && v_.0 > v_.01 && v_.03 > 1 && v_.03 < 0 && v_.0 = v_.01 - 2
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_.0, v_.01 - 1, v_.03, v_i, v_range, v_up)) :|: v_.0 > 0 && v_.0 > v_.01 && v_.03 > 1 && v_.03 > 0 && v_.0 = v_.01 - 2
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_.0, v_.01, v_.03, v_i, v_range, v_up)) :|: v_.0 < 0 && v_.0 < v_.01 && v_.03 < 1 && v_.03 < 0 && v_.0 < v_.01 - 2
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_.0, v_.01, v_.03, v_i, v_range, v_up)) :|: v_.0 < 0 && v_.0 < v_.01 && v_.03 < 1 && v_.03 < 0 && v_.0 > v_.01 - 2
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_.0, v_.01, v_.03, v_i, v_range, v_up)) :|: v_.0 < 0 && v_.0 < v_.01 && v_.03 < 1 && v_.03 > 0 && v_.0 < v_.01 - 2
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_.0, v_.01, v_.03, v_i, v_range, v_up)) :|: v_.0 < 0 && v_.0 < v_.01 && v_.03 < 1 && v_.03 > 0 && v_.0 > v_.01 - 2
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_.0, v_.01, v_.03, v_i, v_range, v_up)) :|: v_.0 < 0 && v_.0 < v_.01 && v_.03 > 1 && v_.03 < 0 && v_.0 < v_.01 - 2
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_.0, v_.01, v_.03, v_i, v_range, v_up)) :|: v_.0 < 0 && v_.0 < v_.01 && v_.03 > 1 && v_.03 < 0 && v_.0 > v_.01 - 2
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_.0, v_.01, v_.03, v_i, v_range, v_up)) :|: v_.0 < 0 && v_.0 < v_.01 && v_.03 > 1 && v_.03 > 0 && v_.0 < v_.01 - 2
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_.0, v_.01, v_.03, v_i, v_range, v_up)) :|: v_.0 < 0 && v_.0 < v_.01 && v_.03 > 1 && v_.03 > 0 && v_.0 > v_.01 - 2
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_.0, v_.01, v_.03, v_i, v_range, v_up)) :|: v_.0 < 0 && v_.0 > v_.01 && v_.03 < 1 && v_.03 < 0 && v_.0 < v_.01 - 2
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_.0, v_.01, v_.03, v_i, v_range, v_up)) :|: v_.0 < 0 && v_.0 > v_.01 && v_.03 < 1 && v_.03 < 0 && v_.0 > v_.01 - 2
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_.0, v_.01, v_.03, v_i, v_range, v_up)) :|: v_.0 < 0 && v_.0 > v_.01 && v_.03 < 1 && v_.03 > 0 && v_.0 < v_.01 - 2
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_.0, v_.01, v_.03, v_i, v_range, v_up)) :|: v_.0 < 0 && v_.0 > v_.01 && v_.03 < 1 && v_.03 > 0 && v_.0 > v_.01 - 2
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_.0, v_.01, v_.03, v_i, v_range, v_up)) :|: v_.0 < 0 && v_.0 > v_.01 && v_.03 > 1 && v_.03 < 0 && v_.0 < v_.01 - 2
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_.0, v_.01, v_.03, v_i, v_range, v_up)) :|: v_.0 < 0 && v_.0 > v_.01 && v_.03 > 1 && v_.03 < 0 && v_.0 > v_.01 - 2
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_.0, v_.01, v_.03, v_i, v_range, v_up)) :|: v_.0 < 0 && v_.0 > v_.01 && v_.03 > 1 && v_.03 > 0 && v_.0 < v_.01 - 2
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_.0, v_.01, v_.03, v_i, v_range, v_up)) :|: v_.0 < 0 && v_.0 > v_.01 && v_.03 > 1 && v_.03 > 0 && v_.0 > v_.01 - 2
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_.0, v_.01, v_.03, v_i, v_range, v_up)) :|: v_.0 > 0 && v_.0 < v_.01 && v_.03 < 1 && v_.03 < 0 && v_.0 < v_.01 - 2
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_.0, v_.01, v_.03, v_i, v_range, v_up)) :|: v_.0 > 0 && v_.0 < v_.01 && v_.03 < 1 && v_.03 < 0 && v_.0 > v_.01 - 2
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_.0, v_.01, v_.03, v_i, v_range, v_up)) :|: v_.0 > 0 && v_.0 < v_.01 && v_.03 < 1 && v_.03 > 0 && v_.0 < v_.01 - 2
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_.0, v_.01, v_.03, v_i, v_range, v_up)) :|: v_.0 > 0 && v_.0 < v_.01 && v_.03 < 1 && v_.03 > 0 && v_.0 > v_.01 - 2
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_.0, v_.01, v_.03, v_i, v_range, v_up)) :|: v_.0 > 0 && v_.0 < v_.01 && v_.03 > 1 && v_.03 < 0 && v_.0 < v_.01 - 2
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_.0, v_.01, v_.03, v_i, v_range, v_up)) :|: v_.0 > 0 && v_.0 < v_.01 && v_.03 > 1 && v_.03 < 0 && v_.0 > v_.01 - 2
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_.0, v_.01, v_.03, v_i, v_range, v_up)) :|: v_.0 > 0 && v_.0 < v_.01 && v_.03 > 1 && v_.03 > 0 && v_.0 < v_.01 - 2
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_.0, v_.01, v_.03, v_i, v_range, v_up)) :|: v_.0 > 0 && v_.0 < v_.01 && v_.03 > 1 && v_.03 > 0 && v_.0 > v_.01 - 2
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_.0, v_.01, v_.03, v_i, v_range, v_up)) :|: v_.0 > 0 && v_.0 > v_.01 && v_.03 < 1 && v_.03 < 0 && v_.0 < v_.01 - 2
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_.0, v_.01, v_.03, v_i, v_range, v_up)) :|: v_.0 > 0 && v_.0 > v_.01 && v_.03 < 1 && v_.03 < 0 && v_.0 > v_.01 - 2
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_.0, v_.01, v_.03, v_i, v_range, v_up)) :|: v_.0 > 0 && v_.0 > v_.01 && v_.03 < 1 && v_.03 > 0 && v_.0 < v_.01 - 2
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_.0, v_.01, v_.03, v_i, v_range, v_up)) :|: v_.0 > 0 && v_.0 > v_.01 && v_.03 < 1 && v_.03 > 0 && v_.0 > v_.01 - 2
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_.0, v_.01, v_.03, v_i, v_range, v_up)) :|: v_.0 > 0 && v_.0 > v_.01 && v_.03 > 1 && v_.03 < 0 && v_.0 < v_.01 - 2
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_.0, v_.01, v_.03, v_i, v_range, v_up)) :|: v_.0 > 0 && v_.0 > v_.01 && v_.03 > 1 && v_.03 < 0 && v_.0 > v_.01 - 2
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_.0, v_.01, v_.03, v_i, v_range, v_up)) :|: v_.0 > 0 && v_.0 > v_.01 && v_.03 > 1 && v_.03 > 0 && v_.0 < v_.01 - 2
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_bb1_in(v_.0, v_.01, v_.03, v_i, v_range, v_up)) :|: v_.0 > 0 && v_.0 > v_.01 && v_.03 > 1 && v_.03 > 0 && v_.0 > v_.01 - 2
+  eval_foo_bb3_in(v_.0, v_.01, v_.03, v_i, v_range, v_up) -> Com_1(eval_foo_stop(v_.0, v_.01, v_.03, v_i, v_range, v_up))
+)

@@ -1,0 +1,24 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS eval_Loopus2014_ex1_start))
+(VAR nondef.0 v_8 v_a.0 v_a.1 v_a.2 v_a.3 v_b.0 v_b.1 v_b.2 v_b.3 v_i.0 v_n)
+(RULES
+  eval_Loopus2014_ex1_start(v_8, v_a.0, v_a.1, v_a.2, v_a.3, v_b.0, v_b.1, v_b.2, v_b.3, v_i.0, v_n) -> Com_1(eval_Loopus2014_ex1_bb0_in(v_8, v_a.0, v_a.1, v_a.2, v_a.3, v_b.0, v_b.1, v_b.2, v_b.3, v_i.0, v_n))
+  eval_Loopus2014_ex1_bb0_in(v_8, v_a.0, v_a.1, v_a.2, v_a.3, v_b.0, v_b.1, v_b.2, v_b.3, v_i.0, v_n) -> Com_1(eval_Loopus2014_ex1_bb1_in(v_8, v_n, v_a.1, v_a.2, v_a.3, 0, v_b.1, v_b.2, v_b.3, v_i.0, v_n))
+  eval_Loopus2014_ex1_bb1_in(v_8, v_a.0, v_a.1, v_a.2, v_a.3, v_b.0, v_b.1, v_b.2, v_b.3, v_i.0, v_n) -> Com_1(eval_Loopus2014_ex1_bb2_in(v_8, v_a.0, v_a.1, v_a.2, v_a.3, v_b.0, v_b.1, v_b.2, v_b.3, v_i.0, v_n)) :|: v_a.0 > 0
+  eval_Loopus2014_ex1_bb1_in(v_8, v_a.0, v_a.1, v_a.2, v_a.3, v_b.0, v_b.1, v_b.2, v_b.3, v_i.0, v_n) -> Com_1(eval_Loopus2014_ex1_bb10_in(v_8, v_a.0, v_a.1, v_a.2, v_a.3, v_b.0, v_b.1, v_b.2, v_b.3, v_i.0, v_n)) :|: v_a.0 <= 0
+  eval_Loopus2014_ex1_bb2_in(v_8, v_a.0, v_a.1, v_a.2, v_a.3, v_b.0, v_b.1, v_b.2, v_b.3, v_i.0, v_n) -> Com_1(eval_Loopus2014_ex1_bb3_in(v_8, v_a.0, v_a.0 - 1, v_a.2, v_a.3, v_b.0, v_b.0 + 1, v_b.2, v_b.3, v_i.0, v_n))
+  eval_Loopus2014_ex1_bb3_in(v_8, v_a.0, v_a.1, v_a.2, v_a.3, v_b.0, v_b.1, v_b.2, v_b.3, v_i.0, v_n) -> Com_1(eval_Loopus2014_ex1_bb4_in(v_8, v_a.0, v_a.1, v_a.2, v_a.3, v_b.0, v_b.1, v_b.2, v_b.3, v_i.0, v_n)) :|: v_b.1 > 0
+  eval_Loopus2014_ex1_bb3_in(v_8, v_a.0, v_a.1, v_a.2, v_a.3, v_b.0, v_b.1, v_b.2, v_b.3, v_i.0, v_n) -> Com_1(eval_Loopus2014_ex1_bb1_in(v_8, v_a.1, v_a.1, v_a.2, v_a.3, v_b.1, v_b.1, v_b.2, v_b.3, v_i.0, v_n)) :|: v_b.1 <= 0
+  eval_Loopus2014_ex1_bb4_in(v_8, v_a.0, v_a.1, v_a.2, v_a.3, v_b.0, v_b.1, v_b.2, v_b.3, v_i.0, v_n) -> Com_1(eval_Loopus2014_ex1_bb5_in(v_8, v_a.0, v_a.1, v_a.1, v_a.3, v_b.0, v_b.1, v_b.1 - 1, v_b.3, v_n - 1, v_n))
+  eval_Loopus2014_ex1_bb5_in(v_8, v_a.0, v_a.1, v_a.2, v_a.3, v_b.0, v_b.1, v_b.2, v_b.3, v_i.0, v_n) -> Com_1(eval_Loopus2014_ex1_bb6_in(v_8, v_a.0, v_a.1, v_a.2, v_a.3, v_b.0, v_b.1, v_b.2, v_b.3, v_i.0, v_n)) :|: v_i.0 > 0
+  eval_Loopus2014_ex1_bb5_in(v_8, v_a.0, v_a.1, v_a.2, v_a.3, v_b.0, v_b.1, v_b.2, v_b.3, v_i.0, v_n) -> Com_1(eval_Loopus2014_ex1_bb3_in(v_8, v_a.0, v_a.2, v_a.2, v_a.3, v_b.0, v_b.2, v_b.2, v_b.3, v_i.0, v_n)) :|: v_i.0 <= 0
+  eval_Loopus2014_ex1_bb6_in(v_8, v_a.0, v_a.1, v_a.2, v_a.3, v_b.0, v_b.1, v_b.2, v_b.3, v_i.0, v_n) -> Com_1(eval_Loopus2014_ex1_bb7_in(v_8, v_a.0, v_a.1, v_a.2, v_a.3, v_b.0, v_b.1, v_b.2, v_b.3, v_i.0, v_n)) :|: v_a.2 > 0
+  eval_Loopus2014_ex1_bb6_in(v_8, v_a.0, v_a.1, v_a.2, v_a.3, v_b.0, v_b.1, v_b.2, v_b.3, v_i.0, v_n) -> Com_1(eval_Loopus2014_ex1_bb9_in(v_8, v_a.0, v_a.1, v_a.2, v_a.2, v_b.0, v_b.1, v_b.2, v_b.2, v_i.0, v_n)) :|: v_a.2 <= 0
+  eval_Loopus2014_ex1_bb7_in(v_8, v_a.0, v_a.1, v_a.2, v_a.3, v_b.0, v_b.1, v_b.2, v_b.3, v_i.0, v_n) -> Com_1(eval_Loopus2014_ex1_6(v_8, v_a.0, v_a.1, v_a.2, v_a.3, v_b.0, v_b.1, v_b.2, v_b.3, v_i.0, v_n))
+  eval_Loopus2014_ex1_6(v_8, v_a.0, v_a.1, v_a.2, v_a.3, v_b.0, v_b.1, v_b.2, v_b.3, v_i.0, v_n) -> Com_2(eval_nondet_start(v_8, v_a.0, v_a.1, v_a.2, v_a.3, v_b.0, v_b.1, v_b.2, v_b.3, v_i.0, v_n), eval_Loopus2014_ex1_7(nondef.0, v_a.0, v_a.1, v_a.2, v_a.3, v_b.0, v_b.1, v_b.2, v_b.3, v_i.0, v_n))
+  eval_Loopus2014_ex1_7(v_8, v_a.0, v_a.1, v_a.2, v_a.3, v_b.0, v_b.1, v_b.2, v_b.3, v_i.0, v_n) -> Com_1(eval_Loopus2014_ex1_bb8_in(v_8, v_a.0, v_a.1, v_a.2, v_a.3, v_b.0, v_b.1, v_b.2, v_b.3, v_i.0, v_n)) :|: v_8 > 0
+  eval_Loopus2014_ex1_7(v_8, v_a.0, v_a.1, v_a.2, v_a.3, v_b.0, v_b.1, v_b.2, v_b.3, v_i.0, v_n) -> Com_1(eval_Loopus2014_ex1_bb9_in(v_8, v_a.0, v_a.1, v_a.2, v_a.2, v_b.0, v_b.1, v_b.2, v_b.2, v_i.0, v_n)) :|: v_8 <= 0
+  eval_Loopus2014_ex1_bb8_in(v_8, v_a.0, v_a.1, v_a.2, v_a.3, v_b.0, v_b.1, v_b.2, v_b.3, v_i.0, v_n) -> Com_1(eval_Loopus2014_ex1_bb9_in(v_8, v_a.0, v_a.1, v_a.2, v_a.2 - 1, v_b.0, v_b.1, v_b.2, v_b.2 + 1, v_i.0, v_n))
+  eval_Loopus2014_ex1_bb9_in(v_8, v_a.0, v_a.1, v_a.2, v_a.3, v_b.0, v_b.1, v_b.2, v_b.3, v_i.0, v_n) -> Com_1(eval_Loopus2014_ex1_bb5_in(v_8, v_a.0, v_a.1, v_a.3, v_a.3, v_b.0, v_b.1, v_b.3, v_b.3, v_i.0 - 1, v_n))
+  eval_Loopus2014_ex1_bb10_in(v_8, v_a.0, v_a.1, v_a.2, v_a.3, v_b.0, v_b.1, v_b.2, v_b.3, v_i.0, v_n) -> Com_1(eval_Loopus2014_ex1_stop(v_8, v_a.0, v_a.1, v_a.2, v_a.3, v_b.0, v_b.1, v_b.2, v_b.3, v_i.0, v_n))
+)

@@ -1,0 +1,21 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS eval_insertsort_start))
+(VAR nondef.0 nondef.1 v_1 v_4 v_i.0 v_j.0 v_length)
+(RULES
+  eval_insertsort_start(v_1, v_4, v_i.0, v_j.0, v_length) -> Com_1(eval_insertsort_bb0_in(v_1, v_4, v_i.0, v_j.0, v_length))
+  eval_insertsort_bb0_in(v_1, v_4, v_i.0, v_j.0, v_length) -> Com_1(eval_insertsort_bb1_in(v_1, v_4, 1, v_j.0, v_length))
+  eval_insertsort_bb1_in(v_1, v_4, v_i.0, v_j.0, v_length) -> Com_1(eval_insertsort_bb2_in(v_1, v_4, v_i.0, v_j.0, v_length)) :|: v_i.0 < v_length
+  eval_insertsort_bb1_in(v_1, v_4, v_i.0, v_j.0, v_length) -> Com_1(eval_insertsort_bb7_in(v_1, v_4, v_i.0, v_j.0, v_length)) :|: v_i.0 >= v_length
+  eval_insertsort_bb2_in(v_1, v_4, v_i.0, v_j.0, v_length) -> Com_1(eval_insertsort_0(v_1, v_4, v_i.0, v_j.0, v_length))
+  eval_insertsort_0(v_1, v_4, v_i.0, v_j.0, v_length) -> Com_2(eval_nondet_start(v_1, v_4, v_i.0, v_j.0, v_length), eval_insertsort_1(nondef.0, v_4, v_i.0, v_j.0, v_length))
+  eval_insertsort_1(v_1, v_4, v_i.0, v_j.0, v_length) -> Com_1(eval_insertsort_bb3_in(v_1, v_4, v_i.0, v_i.0 - 1, v_length))
+  eval_insertsort_bb3_in(v_1, v_4, v_i.0, v_j.0, v_length) -> Com_1(eval_insertsort_bb4_in(v_1, v_4, v_i.0, v_j.0, v_length)) :|: v_j.0 >= 0
+  eval_insertsort_bb3_in(v_1, v_4, v_i.0, v_j.0, v_length) -> Com_1(eval_insertsort_bb6_in(v_1, v_4, v_i.0, v_j.0, v_length)) :|: v_j.0 < 0
+  eval_insertsort_bb4_in(v_1, v_4, v_i.0, v_j.0, v_length) -> Com_1(eval_insertsort_3(v_1, v_4, v_i.0, v_j.0, v_length))
+  eval_insertsort_3(v_1, v_4, v_i.0, v_j.0, v_length) -> Com_2(eval_nondet_start(v_1, v_4, v_i.0, v_j.0, v_length), eval_insertsort_4(v_1, nondef.1, v_i.0, v_j.0, v_length))
+  eval_insertsort_4(v_1, v_4, v_i.0, v_j.0, v_length) -> Com_1(eval_insertsort_bb5_in(v_1, v_4, v_i.0, v_j.0, v_length)) :|: v_4 > v_1
+  eval_insertsort_4(v_1, v_4, v_i.0, v_j.0, v_length) -> Com_1(eval_insertsort_bb6_in(v_1, v_4, v_i.0, v_j.0, v_length)) :|: v_4 <= v_1
+  eval_insertsort_bb5_in(v_1, v_4, v_i.0, v_j.0, v_length) -> Com_1(eval_insertsort_bb3_in(v_1, v_4, v_i.0, v_j.0 - 1, v_length))
+  eval_insertsort_bb6_in(v_1, v_4, v_i.0, v_j.0, v_length) -> Com_1(eval_insertsort_bb1_in(v_1, v_4, v_i.0 + 1, v_j.0, v_length))
+  eval_insertsort_bb7_in(v_1, v_4, v_i.0, v_j.0, v_length) -> Com_1(eval_insertsort_stop(v_1, v_4, v_i.0, v_j.0, v_length))
+)

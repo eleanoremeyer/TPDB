@@ -1,0 +1,14 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS eval_peed_pldi09_fig4_2_start))
+(VAR v_m v_n v_va.0 v_vb.0)
+(RULES
+  eval_peed_pldi09_fig4_2_start(v_m, v_n, v_va.0, v_vb.0) -> Com_1(eval_peed_pldi09_fig4_2_bb0_in(v_m, v_n, v_va.0, v_vb.0))
+  eval_peed_pldi09_fig4_2_bb0_in(v_m, v_n, v_va.0, v_vb.0) -> Com_1(eval_peed_pldi09_fig4_2_bb4_in(v_m, v_n, v_va.0, v_vb.0)) :|: v_m <= 0
+  eval_peed_pldi09_fig4_2_bb0_in(v_m, v_n, v_va.0, v_vb.0) -> Com_1(eval_peed_pldi09_fig4_2_bb1_in(v_m, v_n, v_n, 0)) :|: v_m > 0
+  eval_peed_pldi09_fig4_2_bb1_in(v_m, v_n, v_va.0, v_vb.0) -> Com_1(eval_peed_pldi09_fig4_2_bb2_in(v_m, v_n, v_va.0, v_vb.0)) :|: v_va.0 > 0
+  eval_peed_pldi09_fig4_2_bb1_in(v_m, v_n, v_va.0, v_vb.0) -> Com_1(eval_peed_pldi09_fig4_2_bb4_in(v_m, v_n, v_va.0, v_vb.0)) :|: v_va.0 <= 0
+  eval_peed_pldi09_fig4_2_bb2_in(v_m, v_n, v_va.0, v_vb.0) -> Com_1(eval_peed_pldi09_fig4_2_bb3_in(v_m, v_n, v_va.0, v_vb.0)) :|: v_vb.0 < v_m
+  eval_peed_pldi09_fig4_2_bb2_in(v_m, v_n, v_va.0, v_vb.0) -> Com_1(eval_peed_pldi09_fig4_2_bb1_in(v_m, v_n, v_va.0, 0)) :|: v_vb.0 >= v_m
+  eval_peed_pldi09_fig4_2_bb3_in(v_m, v_n, v_va.0, v_vb.0) -> Com_1(eval_peed_pldi09_fig4_2_bb1_in(v_m, v_n, v_va.0 - 1, v_vb.0 + 1))
+  eval_peed_pldi09_fig4_2_bb4_in(v_m, v_n, v_va.0, v_vb.0) -> Com_1(eval_peed_pldi09_fig4_2_stop(v_m, v_n, v_va.0, v_vb.0))
+)

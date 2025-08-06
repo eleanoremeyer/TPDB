@@ -1,0 +1,12 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS eval_non_linear05_start))
+(VAR v_.0 v_.01 v_x1 v_x2)
+(RULES
+  eval_non_linear05_start(v_.0, v_.01, v_x1, v_x2) -> Com_1(eval_non_linear05_bb0_in(v_.0, v_.01, v_x1, v_x2))
+  eval_non_linear05_bb0_in(v_.0, v_.01, v_x1, v_x2) -> Com_1(eval_non_linear05_bb1_in(v_x1, v_x2, v_x1, v_x2))
+  eval_non_linear05_bb1_in(v_.0, v_.01, v_x1, v_x2) -> Com_1(eval_non_linear05_bb2_in(v_.0, v_.01, v_x1, v_x2)) :|: 3*v_.0 < 2*v_.01 && v_.01 < 2*v_.0
+  eval_non_linear05_bb1_in(v_.0, v_.01, v_x1, v_x2) -> Com_1(eval_non_linear05_.critedge_in(v_.0, v_.01, v_x1, v_x2)) :|: 3*v_.0 >= 2*v_.01
+  eval_non_linear05_bb1_in(v_.0, v_.01, v_x1, v_x2) -> Com_1(eval_non_linear05_.critedge_in(v_.0, v_.01, v_x1, v_x2)) :|: v_.01 >= 2*v_.0
+  eval_non_linear05_bb2_in(v_.0, v_.01, v_x1, v_x2) -> Com_1(eval_non_linear05_bb1_in(4*v_.0 - v_.01, 2*v_.0 + v_.01, v_x1, v_x2))
+  eval_non_linear05_.critedge_in(v_.0, v_.01, v_x1, v_x2) -> Com_1(eval_non_linear05_stop(v_.0, v_.01, v_x1, v_x2))
+)

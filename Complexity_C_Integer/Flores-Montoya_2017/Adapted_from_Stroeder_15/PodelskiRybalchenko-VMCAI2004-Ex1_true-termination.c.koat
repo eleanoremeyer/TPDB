@@ -1,0 +1,17 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS eval_foo_start))
+(VAR nondef.0 nondef.1 v_.0 v_.01 v_2 v_5 v_6 v_i v_j v_nondetNat v_nondetPos)
+(RULES
+  eval_foo_start(v_.0, v_.01, v_2, v_5, v_6, v_i, v_j, v_nondetNat, v_nondetPos) -> Com_1(eval_foo_bb0_in(v_.0, v_.01, v_2, v_5, v_6, v_i, v_j, v_nondetNat, v_nondetPos))
+  eval_foo_bb0_in(v_.0, v_.01, v_2, v_5, v_6, v_i, v_j, v_nondetNat, v_nondetPos) -> Com_1(eval_foo_bb1_in(v_i, v_j, v_2, v_5, v_6, v_i, v_j, v_nondetNat, v_nondetPos))
+  eval_foo_bb1_in(v_.0, v_.01, v_2, v_5, v_6, v_i, v_j, v_nondetNat, v_nondetPos) -> Com_1(eval_foo_bb2_in(v_.0, v_.01, v_2, v_5, v_6, v_i, v_j, v_nondetNat, v_nondetPos)) :|: v_.0 - v_.01 >= 1
+  eval_foo_bb1_in(v_.0, v_.01, v_2, v_5, v_6, v_i, v_j, v_nondetNat, v_nondetPos) -> Com_1(eval_foo_bb3_in(v_.0, v_.01, v_2, v_5, v_6, v_i, v_j, v_nondetNat, v_nondetPos)) :|: v_.0 - v_.01 < 1
+  eval_foo_bb2_in(v_.0, v_.01, v_2, v_5, v_6, v_i, v_j, v_nondetNat, v_nondetPos) -> Com_1(eval_foo_2(v_.0, v_.01, v_2, v_5, v_6, v_i, v_j, v_nondetNat, v_nondetPos))
+  eval_foo_2(v_.0, v_.01, v_2, v_5, v_6, v_i, v_j, v_nondetNat, v_nondetPos) -> Com_2(eval___VERIFIER_nondet_int_start(v_.0, v_.01, v_2, v_5, v_6, v_i, v_j, v_nondetNat, v_nondetPos), eval_foo_3(v_.0, v_.01, nondef.0, v_5, v_6, v_i, v_j, v_nondetNat, v_nondetPos))
+  eval_foo_3(v_.0, v_.01, v_2, v_5, v_6, v_i, v_j, v_nondetNat, v_nondetPos) -> Com_1(eval_foo_6(v_.0, v_.01, v_2, v_.0 + v_2, v_6, v_i, v_j, v_nondetNat, v_nondetPos)) :|: v_2 < 0
+  eval_foo_3(v_.0, v_.01, v_2, v_5, v_6, v_i, v_j, v_nondetNat, v_nondetPos) -> Com_1(eval_foo_6(v_.0, v_.01, v_2, v_.0 - v_2, v_6, v_i, v_j, v_nondetNat, v_nondetPos)) :|: v_2 >= 0
+  eval_foo_6(v_.0, v_.01, v_2, v_5, v_6, v_i, v_j, v_nondetNat, v_nondetPos) -> Com_2(eval___VERIFIER_nondet_int_start(v_.0, v_.01, v_2, v_5, v_6, v_i, v_j, v_nondetNat, v_nondetPos), eval_foo_7(v_.0, v_.01, v_2, v_5, nondef.1, v_i, v_j, v_nondetNat, v_nondetPos))
+  eval_foo_7(v_.0, v_.01, v_2, v_5, v_6, v_i, v_j, v_nondetNat, v_nondetPos) -> Com_1(eval_foo_bb1_in(v_5, v_.01 - v_6 + 1, v_2, v_5, v_6, v_i, v_j, v_nondetNat, v_nondetPos)) :|: v_6 < 0
+  eval_foo_7(v_.0, v_.01, v_2, v_5, v_6, v_i, v_j, v_nondetNat, v_nondetPos) -> Com_1(eval_foo_bb1_in(v_5, v_.01 + v_6 + 1, v_2, v_5, v_6, v_i, v_j, v_nondetNat, v_nondetPos)) :|: v_6 >= 0
+  eval_foo_bb3_in(v_.0, v_.01, v_2, v_5, v_6, v_i, v_j, v_nondetNat, v_nondetPos) -> Com_1(eval_foo_stop(v_.0, v_.01, v_2, v_5, v_6, v_i, v_j, v_nondetNat, v_nondetPos))
+)

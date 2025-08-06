@@ -1,0 +1,18 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS eval_speed_popl10_sequential_single_start))
+(VAR nondef.0 v_1 v_n v_x.0 v_x.1)
+(RULES
+  eval_speed_popl10_sequential_single_start(v_1, v_n, v_x.0, v_x.1) -> Com_1(eval_speed_popl10_sequential_single_bb0_in(v_1, v_n, v_x.0, v_x.1))
+  eval_speed_popl10_sequential_single_bb0_in(v_1, v_n, v_x.0, v_x.1) -> Com_1(eval_speed_popl10_sequential_single_bb1_in(v_1, v_n, 0, v_x.1))
+  eval_speed_popl10_sequential_single_bb1_in(v_1, v_n, v_x.0, v_x.1) -> Com_1(eval_speed_popl10_sequential_single_bb2_in(v_1, v_n, v_x.0, v_x.1)) :|: v_x.0 < v_n
+  eval_speed_popl10_sequential_single_bb1_in(v_1, v_n, v_x.0, v_x.1) -> Com_1(eval_speed_popl10_sequential_single_bb4_in(v_1, v_n, v_x.0, v_x.0)) :|: v_x.0 >= v_n
+  eval_speed_popl10_sequential_single_bb2_in(v_1, v_n, v_x.0, v_x.1) -> Com_1(eval_speed_popl10_sequential_single_0(v_1, v_n, v_x.0, v_x.1))
+  eval_speed_popl10_sequential_single_0(v_1, v_n, v_x.0, v_x.1) -> Com_2(eval_nondet_start(v_1, v_n, v_x.0, v_x.1), eval_speed_popl10_sequential_single_1(nondef.0, v_n, v_x.0, v_x.1))
+  eval_speed_popl10_sequential_single_1(v_1, v_n, v_x.0, v_x.1) -> Com_1(eval_speed_popl10_sequential_single_bb4_in(v_1, v_n, v_x.0, v_x.0)) :|: v_1 > 0
+  eval_speed_popl10_sequential_single_1(v_1, v_n, v_x.0, v_x.1) -> Com_1(eval_speed_popl10_sequential_single_bb3_in(v_1, v_n, v_x.0, v_x.1)) :|: v_1 <= 0
+  eval_speed_popl10_sequential_single_bb3_in(v_1, v_n, v_x.0, v_x.1) -> Com_1(eval_speed_popl10_sequential_single_bb1_in(v_1, v_n, v_x.0 + 1, v_x.1))
+  eval_speed_popl10_sequential_single_bb4_in(v_1, v_n, v_x.0, v_x.1) -> Com_1(eval_speed_popl10_sequential_single_bb5_in(v_1, v_n, v_x.0, v_x.1)) :|: v_x.1 < v_n
+  eval_speed_popl10_sequential_single_bb4_in(v_1, v_n, v_x.0, v_x.1) -> Com_1(eval_speed_popl10_sequential_single_bb6_in(v_1, v_n, v_x.0, v_x.1)) :|: v_x.1 >= v_n
+  eval_speed_popl10_sequential_single_bb5_in(v_1, v_n, v_x.0, v_x.1) -> Com_1(eval_speed_popl10_sequential_single_bb4_in(v_1, v_n, v_x.0, v_x.1 + 1))
+  eval_speed_popl10_sequential_single_bb6_in(v_1, v_n, v_x.0, v_x.1) -> Com_1(eval_speed_popl10_sequential_single_stop(v_1, v_n, v_x.0, v_x.1))
+)

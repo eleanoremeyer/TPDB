@@ -1,0 +1,19 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS eval_rank2_start))
+(VAR nondef.0 v_1 v_4 v_m v_x.0 v_y.0 v_y.1)
+(RULES
+  eval_rank2_start(v_1, v_4, v_m, v_x.0, v_y.0, v_y.1) -> Com_1(eval_rank2_bb0_in(v_1, v_4, v_m, v_x.0, v_y.0, v_y.1))
+  eval_rank2_bb0_in(v_1, v_4, v_m, v_x.0, v_y.0, v_y.1) -> Com_1(eval_rank2_bb1_in(v_1, v_4, v_m, v_m, v_m, v_y.1))
+  eval_rank2_bb1_in(v_1, v_4, v_m, v_x.0, v_y.0, v_y.1) -> Com_1(eval_rank2_bb2_in(v_1, v_4, v_m, v_x.0, v_y.0, v_y.1)) :|: v_x.0 >= 2
+  eval_rank2_bb1_in(v_1, v_4, v_m, v_x.0, v_y.0, v_y.1) -> Com_1(eval_rank2_bb6_in(v_1, v_4, v_m, v_x.0, v_y.0, v_y.1)) :|: v_x.0 < 2
+  eval_rank2_bb2_in(v_1, v_4, v_m, v_x.0, v_y.0, v_y.1) -> Com_1(eval_rank2_bb3_in(v_x.0 - 1, v_4, v_m, v_x.0, v_y.0, v_y.0 + v_x.0 - 1))
+  eval_rank2_bb3_in(v_1, v_4, v_m, v_x.0, v_y.0, v_y.1) -> Com_1(eval_rank2_bb4_in(v_1, v_4, v_m, v_x.0, v_y.0, v_y.1)) :|: v_y.1 >= v_1
+  eval_rank2_bb3_in(v_1, v_4, v_m, v_x.0, v_y.0, v_y.1) -> Com_1(eval_rank2_.critedge_in(v_1, v_4, v_m, v_x.0, v_y.0, v_y.1)) :|: v_y.1 < v_1
+  eval_rank2_bb4_in(v_1, v_4, v_m, v_x.0, v_y.0, v_y.1) -> Com_1(eval_rank2_3(v_1, v_4, v_m, v_x.0, v_y.0, v_y.1))
+  eval_rank2_3(v_1, v_4, v_m, v_x.0, v_y.0, v_y.1) -> Com_2(eval_nondet_start(v_1, v_4, v_m, v_x.0, v_y.0, v_y.1), eval_rank2_4(v_1, nondef.0, v_m, v_x.0, v_y.0, v_y.1))
+  eval_rank2_4(v_1, v_4, v_m, v_x.0, v_y.0, v_y.1) -> Com_1(eval_rank2_bb5_in(v_1, v_4, v_m, v_x.0, v_y.0, v_y.1)) :|: v_4 > 0
+  eval_rank2_4(v_1, v_4, v_m, v_x.0, v_y.0, v_y.1) -> Com_1(eval_rank2_.critedge_in(v_1, v_4, v_m, v_x.0, v_y.0, v_y.1)) :|: v_4 <= 0
+  eval_rank2_bb5_in(v_1, v_4, v_m, v_x.0, v_y.0, v_y.1) -> Com_1(eval_rank2_bb3_in(v_1, v_4, v_m, v_x.0, v_y.0, v_y.1 - 1))
+  eval_rank2_.critedge_in(v_1, v_4, v_m, v_x.0, v_y.0, v_y.1) -> Com_1(eval_rank2_bb1_in(v_1, v_4, v_m, v_1 - 1, v_y.1 - v_1 + 1, v_y.1))
+  eval_rank2_bb6_in(v_1, v_4, v_m, v_x.0, v_y.0, v_y.1) -> Com_1(eval_rank2_stop(v_1, v_4, v_m, v_x.0, v_y.0, v_y.1))
+)

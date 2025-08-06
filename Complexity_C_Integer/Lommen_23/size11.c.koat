@@ -1,0 +1,19 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS eval_size11_start))
+(VAR nondef.0 v_.0 v_.03 v_.1 v_1 v_2 v_a v_b v_c v_d v_e)
+(RULES
+  eval_size11_start(v_.0, v_.03, v_.1, v_1, v_2, v_a, v_b, v_c, v_d, v_e) -> Com_1(eval_size11_bb0_in(v_.0, v_.03, v_.1, v_1, v_2, v_a, v_b, v_c, v_d, v_e))
+  eval_size11_bb0_in(v_.0, v_.03, v_.1, v_1, v_2, v_a, v_b, v_c, v_d, v_e) -> Com_1(eval_size11_bb1_in(v_a, v_e, v_.1, v_1, v_2, v_a, v_b, v_c, v_d, v_e))
+  eval_size11_bb1_in(v_.0, v_.03, v_.1, v_1, v_2, v_a, v_b, v_c, v_d, v_e) -> Com_1(eval_size11_bb2_in(v_.0, v_.03, v_.1, v_1, v_2, v_a, v_b, v_c, v_d, v_e)) :|: v_.03 > 0
+  eval_size11_bb1_in(v_.0, v_.03, v_.1, v_1, v_2, v_a, v_b, v_c, v_d, v_e) -> Com_1(eval_size11_bb3_in(v_.0, v_.03, v_.0, v_1, v_2, v_a, v_b, v_c, v_d, v_e)) :|: v_.03 <= 0
+  eval_size11_bb2_in(v_.0, v_.03, v_.1, v_1, v_2, v_a, v_b, v_c, v_d, v_e) -> Com_1(eval_size11_1(v_.0, v_.03, v_.1, v_.03 - 1, v_2, v_a, v_b, v_c, v_d, v_e))
+  eval_size11_1(v_.0, v_.03, v_.1, v_1, v_2, v_a, v_b, v_c, v_d, v_e) -> Com_2(eval___VERIFIER_nondet_int_start(v_.0, v_.03, v_.1, v_1, v_2, v_a, v_b, v_c, v_d, v_e), eval_size11_2(v_.0, v_.03, v_.1, v_1, nondef.0, v_a, v_b, v_c, v_d, v_e))
+  eval_size11_2(v_.0, v_.03, v_.1, v_1, v_2, v_a, v_b, v_c, v_d, v_e) -> Com_1(eval_size11_bb1_in(v_.0 + 2*v_b, v_1, v_.1, v_1, v_2, v_a, v_b, v_c, v_d, v_e)) :|: v_2 > 0 && v_2 > 0
+  eval_size11_2(v_.0, v_.03, v_.1, v_1, v_2, v_a, v_b, v_c, v_d, v_e) -> Com_1(eval_size11_bb1_in(2*v_b, v_1, v_.1, v_1, v_2, v_a, v_b, v_c, v_d, v_e)) :|: v_2 > 0 && v_2 <= 0
+  eval_size11_2(v_.0, v_.03, v_.1, v_1, v_2, v_a, v_b, v_c, v_d, v_e) -> Com_1(eval_size11_bb1_in(2*v_.0 + 2*v_b, v_1, v_.1, v_1, v_2, v_a, v_b, v_c, v_d, v_e)) :|: v_2 <= 0 && v_2 > 0
+  eval_size11_2(v_.0, v_.03, v_.1, v_1, v_2, v_a, v_b, v_c, v_d, v_e) -> Com_1(eval_size11_bb1_in(2*v_b + v_.0, v_1, v_.1, v_1, v_2, v_a, v_b, v_c, v_d, v_e)) :|: v_2 <= 0 && v_2 <= 0
+  eval_size11_bb3_in(v_.0, v_.03, v_.1, v_1, v_2, v_a, v_b, v_c, v_d, v_e) -> Com_1(eval_size11_bb4_in(v_.0, v_.03, v_.1, v_1, v_2, v_a, v_b, v_c, v_d, v_e)) :|: v_.1 > 0
+  eval_size11_bb3_in(v_.0, v_.03, v_.1, v_1, v_2, v_a, v_b, v_c, v_d, v_e) -> Com_1(eval_size11_bb5_in(v_.0, v_.03, v_.1, v_1, v_2, v_a, v_b, v_c, v_d, v_e)) :|: v_.1 <= 0
+  eval_size11_bb4_in(v_.0, v_.03, v_.1, v_1, v_2, v_a, v_b, v_c, v_d, v_e) -> Com_1(eval_size11_bb3_in(v_.0, v_.03, v_.1 - 1, v_1, v_2, v_a, v_b, v_c, v_d, v_e))
+  eval_size11_bb5_in(v_.0, v_.03, v_.1, v_1, v_2, v_a, v_b, v_c, v_d, v_e) -> Com_1(eval_size11_stop(v_.0, v_.03, v_.1, v_1, v_2, v_a, v_b, v_c, v_d, v_e))
+)

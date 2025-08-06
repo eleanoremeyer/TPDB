@@ -1,0 +1,13 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS eval_foo_start))
+(VAR v_.0 v_.01 v_choose v_death v_life v_temp)
+(RULES
+  eval_foo_start(v_.0, v_.01, v_choose, v_death, v_life, v_temp) -> Com_1(eval_foo_bb0_in(v_.0, v_.01, v_choose, v_death, v_life, v_temp))
+  eval_foo_bb0_in(v_.0, v_.01, v_choose, v_death, v_life, v_temp) -> Com_1(eval_foo_bb1_in(13, 17, v_choose, v_death, v_life, v_temp))
+  eval_foo_bb1_in(v_.0, v_.01, v_choose, v_death, v_life, v_temp) -> Com_1(eval_foo_bb2_in(v_.0, v_.01, v_choose, v_death, v_life, v_temp)) :|: v_.0 < v_.01
+  eval_foo_bb1_in(v_.0, v_.01, v_choose, v_death, v_life, v_temp) -> Com_1(eval_foo_bb3_in(v_.0, v_.01, v_choose, v_death, v_life, v_temp)) :|: v_.0 >= v_.01
+  eval_foo_bb2_in(v_.0, v_.01, v_choose, v_death, v_life, v_temp) -> Com_1(eval_foo_bb1_in(2, v_.0 + 1, v_choose, v_death, v_life, v_temp)) :|: 2 < v_.01
+  eval_foo_bb2_in(v_.0, v_.01, v_choose, v_death, v_life, v_temp) -> Com_1(eval_foo_bb1_in(2, v_.0 + 1, v_choose, v_death, v_life, v_temp)) :|: 2 < v_.0 + 1
+  eval_foo_bb2_in(v_.0, v_.01, v_choose, v_death, v_life, v_temp) -> Com_1(eval_foo_bb1_in(v_.01, v_.0 + 1, v_choose, v_death, v_life, v_temp)) :|: 2 >= v_.01 && 2 >= v_.0 + 1
+  eval_foo_bb3_in(v_.0, v_.01, v_choose, v_death, v_life, v_temp) -> Com_1(eval_foo_stop(v_.0, v_.01, v_choose, v_death, v_life, v_temp))
+)

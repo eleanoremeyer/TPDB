@@ -1,0 +1,14 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS eval_render_ht_start))
+(VAR v_.0 v_0 v_level v_old_level)
+(RULES
+  eval_render_ht_start(v_.0, v_0, v_level, v_old_level) -> Com_1(eval_render_ht_bb0_in(v_.0, v_0, v_level, v_old_level))
+  eval_render_ht_bb0_in(v_.0, v_0, v_level, v_old_level) -> Com_1(eval_render_ht_bb1_in(v_old_level, v_0, v_level, v_old_level))
+  eval_render_ht_bb1_in(v_.0, v_0, v_level, v_old_level) -> Com_1(eval_render_ht_LeafBlock_in(v_.0, v_level - v_.0, v_level, v_old_level))
+  eval_render_ht_LeafBlock_in(v_.0, v_0, v_level, v_old_level) -> Com_1(eval_render_ht_bb2_in(v_.0, v_0, v_level, v_old_level)) :|: v_0 + 7 <= 14
+  eval_render_ht_LeafBlock_in(v_.0, v_0, v_level, v_old_level) -> Com_1(eval_render_ht_NewDefault_in(v_.0, v_0, v_level, v_old_level)) :|: v_0 + 7 > 14
+  eval_render_ht_bb2_in(v_.0, v_0, v_level, v_old_level) -> Com_1(eval_render_ht_stop(v_.0, v_0, v_level, v_old_level))
+  eval_render_ht_NewDefault_in(v_.0, v_0, v_level, v_old_level) -> Com_1(eval_render_ht_bb3_in(v_.0, v_0, v_level, v_old_level))
+  eval_render_ht_bb3_in(v_.0, v_0, v_level, v_old_level) -> Com_1(eval_render_ht_bb1_in(v_.0 + 4, v_0, v_level, v_old_level)) :|: v_level > v_.0
+  eval_render_ht_bb3_in(v_.0, v_0, v_level, v_old_level) -> Com_1(eval_render_ht_bb1_in(v_.0 - 4, v_0, v_level, v_old_level)) :|: v_level <= v_.0
+)

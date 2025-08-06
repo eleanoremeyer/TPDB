@@ -1,0 +1,14 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS eval_jama_ex4_start))
+(VAR v_a v_b v_c v_d v_i.0 v_j.0)
+(RULES
+  eval_jama_ex4_start(v_a, v_b, v_c, v_d, v_i.0, v_j.0) -> Com_1(eval_jama_ex4_bb0_in(v_a, v_b, v_c, v_d, v_i.0, v_j.0))
+  eval_jama_ex4_bb0_in(v_a, v_b, v_c, v_d, v_i.0, v_j.0) -> Com_1(eval_jama_ex4_bb1_in(v_a, v_b, v_c, v_d, v_a, v_j.0))
+  eval_jama_ex4_bb1_in(v_a, v_b, v_c, v_d, v_i.0, v_j.0) -> Com_1(eval_jama_ex4_bb2_in(v_a, v_b, v_c, v_d, v_i.0, v_c)) :|: v_i.0 <= v_b
+  eval_jama_ex4_bb1_in(v_a, v_b, v_c, v_d, v_i.0, v_j.0) -> Com_1(eval_jama_ex4_bb5_in(v_a, v_b, v_c, v_d, v_i.0, v_j.0)) :|: v_i.0 > v_b
+  eval_jama_ex4_bb2_in(v_a, v_b, v_c, v_d, v_i.0, v_j.0) -> Com_1(eval_jama_ex4_bb3_in(v_a, v_b, v_c, v_d, v_i.0, v_j.0)) :|: v_j.0 <= v_d
+  eval_jama_ex4_bb2_in(v_a, v_b, v_c, v_d, v_i.0, v_j.0) -> Com_1(eval_jama_ex4_bb4_in(v_a, v_b, v_c, v_d, v_i.0, v_j.0)) :|: v_j.0 > v_d
+  eval_jama_ex4_bb3_in(v_a, v_b, v_c, v_d, v_i.0, v_j.0) -> Com_1(eval_jama_ex4_bb2_in(v_a, v_b, v_c, v_d, v_i.0, v_j.0 + 1))
+  eval_jama_ex4_bb4_in(v_a, v_b, v_c, v_d, v_i.0, v_j.0) -> Com_1(eval_jama_ex4_bb1_in(v_a, v_b, v_c, v_d, v_i.0 + 1, v_j.0))
+  eval_jama_ex4_bb5_in(v_a, v_b, v_c, v_d, v_i.0, v_j.0) -> Com_1(eval_jama_ex4_stop(v_a, v_b, v_c, v_d, v_i.0, v_j.0))
+)

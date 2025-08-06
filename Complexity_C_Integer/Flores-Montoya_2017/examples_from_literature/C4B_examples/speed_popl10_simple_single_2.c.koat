@@ -1,0 +1,14 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS eval_speed_popl10_simple_single_2_start))
+(VAR v_m v_n v_x.0 v_y.0)
+(RULES
+  eval_speed_popl10_simple_single_2_start(v_m, v_n, v_x.0, v_y.0) -> Com_1(eval_speed_popl10_simple_single_2_bb0_in(v_m, v_n, v_x.0, v_y.0))
+  eval_speed_popl10_simple_single_2_bb0_in(v_m, v_n, v_x.0, v_y.0) -> Com_1(eval_speed_popl10_simple_single_2_bb1_in(v_m, v_n, 0, 0))
+  eval_speed_popl10_simple_single_2_bb1_in(v_m, v_n, v_x.0, v_y.0) -> Com_1(eval_speed_popl10_simple_single_2_bb2_in(v_m, v_n, v_x.0, v_y.0)) :|: v_x.0 < v_n
+  eval_speed_popl10_simple_single_2_bb1_in(v_m, v_n, v_x.0, v_y.0) -> Com_1(eval_speed_popl10_simple_single_2_bb3_in(v_m, v_n, v_x.0, v_y.0)) :|: v_x.0 >= v_n
+  eval_speed_popl10_simple_single_2_bb2_in(v_m, v_n, v_x.0, v_y.0) -> Com_1(eval_speed_popl10_simple_single_2_bb1_in(v_m, v_n, v_x.0 + 1, v_y.0 + 1))
+  eval_speed_popl10_simple_single_2_bb3_in(v_m, v_n, v_x.0, v_y.0) -> Com_1(eval_speed_popl10_simple_single_2_bb4_in(v_m, v_n, v_x.0, v_y.0)) :|: v_y.0 < v_m
+  eval_speed_popl10_simple_single_2_bb3_in(v_m, v_n, v_x.0, v_y.0) -> Com_1(eval_speed_popl10_simple_single_2_bb5_in(v_m, v_n, v_x.0, v_y.0)) :|: v_y.0 >= v_m
+  eval_speed_popl10_simple_single_2_bb4_in(v_m, v_n, v_x.0, v_y.0) -> Com_1(eval_speed_popl10_simple_single_2_bb1_in(v_m, v_n, v_x.0 + 1, v_y.0 + 1))
+  eval_speed_popl10_simple_single_2_bb5_in(v_m, v_n, v_x.0, v_y.0) -> Com_1(eval_speed_popl10_simple_single_2_stop(v_m, v_n, v_x.0, v_y.0))
+)

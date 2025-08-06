@@ -1,0 +1,25 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS eval_knuth_morris_pratt_start))
+(VAR nondef.0 nondef.1 v_2 v_4 v_i.0 v_j.0 v_j.1 v_m v_n)
+(RULES
+  eval_knuth_morris_pratt_start(v_2, v_4, v_i.0, v_j.0, v_j.1, v_m, v_n) -> Com_1(eval_knuth_morris_pratt_bb0_in(v_2, v_4, v_i.0, v_j.0, v_j.1, v_m, v_n))
+  eval_knuth_morris_pratt_bb0_in(v_2, v_4, v_i.0, v_j.0, v_j.1, v_m, v_n) -> Com_1(eval_knuth_morris_pratt_bb1_in(v_2, v_4, 0, 0, v_j.1, v_m, v_n))
+  eval_knuth_morris_pratt_bb1_in(v_2, v_4, v_i.0, v_j.0, v_j.1, v_m, v_n) -> Com_1(eval_knuth_morris_pratt_bb2_in(v_2, v_4, v_i.0, v_j.0, v_j.0, v_m, v_n)) :|: v_i.0 < v_n
+  eval_knuth_morris_pratt_bb1_in(v_2, v_4, v_i.0, v_j.0, v_j.1, v_m, v_n) -> Com_1(eval_knuth_morris_pratt_bb6_in(v_2, v_4, v_i.0, v_j.0, v_j.1, v_m, v_n)) :|: v_i.0 >= v_n
+  eval_knuth_morris_pratt_bb2_in(v_2, v_4, v_i.0, v_j.0, v_j.1, v_m, v_n) -> Com_1(eval_knuth_morris_pratt_bb3_in(v_2, v_4, v_i.0, v_j.0, v_j.1, v_m, v_n)) :|: v_j.1 >= 0
+  eval_knuth_morris_pratt_bb2_in(v_2, v_4, v_i.0, v_j.0, v_j.1, v_m, v_n) -> Com_1(eval_knuth_morris_pratt_.critedge_in(v_2, v_4, v_i.0, v_j.0, v_j.1, v_m, v_n)) :|: v_j.1 < 0
+  eval_knuth_morris_pratt_bb3_in(v_2, v_4, v_i.0, v_j.0, v_j.1, v_m, v_n) -> Com_1(eval_knuth_morris_pratt_0(v_2, v_4, v_i.0, v_j.0, v_j.1, v_m, v_n))
+  eval_knuth_morris_pratt_0(v_2, v_4, v_i.0, v_j.0, v_j.1, v_m, v_n) -> Com_2(eval_nondet_start(v_2, v_4, v_i.0, v_j.0, v_j.1, v_m, v_n), eval_knuth_morris_pratt_1(nondef.0, v_4, v_i.0, v_j.0, v_j.1, v_m, v_n))
+  eval_knuth_morris_pratt_1(v_2, v_4, v_i.0, v_j.0, v_j.1, v_m, v_n) -> Com_1(eval_knuth_morris_pratt_bb4_in(v_2, v_4, v_i.0, v_j.0, v_j.1, v_m, v_n)) :|: v_2 > 0
+  eval_knuth_morris_pratt_1(v_2, v_4, v_i.0, v_j.0, v_j.1, v_m, v_n) -> Com_1(eval_knuth_morris_pratt_.critedge_in(v_2, v_4, v_i.0, v_j.0, v_j.1, v_m, v_n)) :|: v_2 <= 0
+  eval_knuth_morris_pratt_bb4_in(v_2, v_4, v_i.0, v_j.0, v_j.1, v_m, v_n) -> Com_1(eval_knuth_morris_pratt_2(v_2, v_4, v_i.0, v_j.0, v_j.1, v_m, v_n))
+  eval_knuth_morris_pratt_2(v_2, v_4, v_i.0, v_j.0, v_j.1, v_m, v_n) -> Com_2(eval_nondet_start(v_2, v_4, v_i.0, v_j.0, v_j.1, v_m, v_n), eval_knuth_morris_pratt_3(v_2, nondef.1, v_i.0, v_j.0, v_j.1, v_m, v_n))
+  eval_knuth_morris_pratt_3(v_2, v_4, v_i.0, v_j.0, v_j.1, v_m, v_n) -> Com_1(eval_knuth_morris_pratt_bb6_in(v_2, v_4, v_i.0, v_j.0, v_j.1, v_m, v_n)) :|: v_4 <= 0
+  eval_knuth_morris_pratt_3(v_2, v_4, v_i.0, v_j.0, v_j.1, v_m, v_n) -> Com_1(eval_knuth_morris_pratt_bb6_in(v_2, v_4, v_i.0, v_j.0, v_j.1, v_m, v_n)) :|: v_4 > 0
+  eval_knuth_morris_pratt_3(v_2, v_4, v_i.0, v_j.0, v_j.1, v_m, v_n) -> Com_1(eval_knuth_morris_pratt_bb5_in(v_2, v_4, v_i.0, v_j.0, v_j.1, v_m, v_n)) :|: v_4 > 0 && v_4 <= 0
+  eval_knuth_morris_pratt_bb5_in(v_2, v_4, v_i.0, v_j.0, v_j.1, v_m, v_n) -> Com_1(eval_knuth_morris_pratt_bb2_in(v_2, v_4, v_i.0, v_j.0, v_j.1 - v_4, v_m, v_n))
+  eval_knuth_morris_pratt_.critedge_in(v_2, v_4, v_i.0, v_j.0, v_j.1, v_m, v_n) -> Com_1(eval_knuth_morris_pratt_bb6_in(v_2, v_4, v_i.0, v_j.0, v_j.1, v_m, v_n)) :|: v_j.1 + 1 = v_m
+  eval_knuth_morris_pratt_.critedge_in(v_2, v_4, v_i.0, v_j.0, v_j.1, v_m, v_n) -> Com_1(eval_knuth_morris_pratt_bb1_in(v_2, v_4, v_i.0 + 1, v_j.1 + 1, v_j.1, v_m, v_n)) :|: v_j.1 + 1 < v_m
+  eval_knuth_morris_pratt_.critedge_in(v_2, v_4, v_i.0, v_j.0, v_j.1, v_m, v_n) -> Com_1(eval_knuth_morris_pratt_bb1_in(v_2, v_4, v_i.0 + 1, v_j.1 + 1, v_j.1, v_m, v_n)) :|: v_j.1 + 1 > v_m
+  eval_knuth_morris_pratt_bb6_in(v_2, v_4, v_i.0, v_j.0, v_j.1, v_m, v_n) -> Com_1(eval_knuth_morris_pratt_stop(v_2, v_4, v_i.0, v_j.0, v_j.1, v_m, v_n))
+)

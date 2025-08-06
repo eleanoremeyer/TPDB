@@ -1,0 +1,15 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS eval_foo_start))
+(VAR nondef.0 v_.0 v_.01 v_3 v_oldx v_x)
+(RULES
+  eval_foo_start(v_.0, v_.01, v_3, v_oldx, v_x) -> Com_1(eval_foo_bb0_in(v_.0, v_.01, v_3, v_oldx, v_x))
+  eval_foo_bb0_in(v_.0, v_.01, v_3, v_oldx, v_x) -> Com_1(eval_foo_bb1_in(v_x, v_oldx, v_3, v_oldx, v_x))
+  eval_foo_bb1_in(v_.0, v_.01, v_3, v_oldx, v_x) -> Com_1(eval_foo_bb2_in(v_.0, v_.01, v_3, v_oldx, v_x)) :|: v_.0 > 1 && -2*v_.0 = v_.01
+  eval_foo_bb1_in(v_.0, v_.01, v_3, v_oldx, v_x) -> Com_1(eval_foo_.critedge_in(v_.0, v_.01, v_3, v_oldx, v_x)) :|: v_.0 <= 1
+  eval_foo_bb1_in(v_.0, v_.01, v_3, v_oldx, v_x) -> Com_1(eval_foo_.critedge_in(v_.0, v_.01, v_3, v_oldx, v_x)) :|: -2*v_.0 < v_.01
+  eval_foo_bb1_in(v_.0, v_.01, v_3, v_oldx, v_x) -> Com_1(eval_foo_.critedge_in(v_.0, v_.01, v_3, v_oldx, v_x)) :|: -2*v_.0 > v_.01
+  eval_foo_bb2_in(v_.0, v_.01, v_3, v_oldx, v_x) -> Com_1(eval_foo_2(v_.0, v_.01, v_3, v_oldx, v_x))
+  eval_foo_2(v_.0, v_.01, v_3, v_oldx, v_x) -> Com_2(eval___VERIFIER_nondet_int_start(v_.0, v_.01, v_3, v_oldx, v_x), eval_foo_3(v_.0, v_.01, nondef.0, v_oldx, v_x))
+  eval_foo_3(v_.0, v_.01, v_3, v_oldx, v_x) -> Com_1(eval_foo_bb1_in(v_3, v_.0, v_3, v_oldx, v_x))
+  eval_foo_.critedge_in(v_.0, v_.01, v_3, v_oldx, v_x) -> Com_1(eval_foo_stop(v_.0, v_.01, v_3, v_oldx, v_x))
+)

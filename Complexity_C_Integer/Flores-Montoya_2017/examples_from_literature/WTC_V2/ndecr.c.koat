@@ -1,0 +1,11 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS eval_ndecr_start))
+(VAR v_i.0 v_n)
+(RULES
+  eval_ndecr_start(v_i.0, v_n) -> Com_1(eval_ndecr_bb0_in(v_i.0, v_n))
+  eval_ndecr_bb0_in(v_i.0, v_n) -> Com_1(eval_ndecr_bb1_in(v_n - 1, v_n))
+  eval_ndecr_bb1_in(v_i.0, v_n) -> Com_1(eval_ndecr_bb2_in(v_i.0, v_n)) :|: v_i.0 > 1
+  eval_ndecr_bb1_in(v_i.0, v_n) -> Com_1(eval_ndecr_bb3_in(v_i.0, v_n)) :|: v_i.0 <= 1
+  eval_ndecr_bb2_in(v_i.0, v_n) -> Com_1(eval_ndecr_bb1_in(v_i.0 - 1, v_n))
+  eval_ndecr_bb3_in(v_i.0, v_n) -> Com_1(eval_ndecr_stop(v_i.0, v_n))
+)

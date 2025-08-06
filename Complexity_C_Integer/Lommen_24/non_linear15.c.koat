@@ -1,0 +1,18 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS eval_non_linear15_start))
+(VAR nondef.0 v_.0 v_.01 v_2 v_4 v_x1 v_x2)
+(RULES
+  eval_non_linear15_start(v_.0, v_.01, v_2, v_4, v_x1, v_x2) -> Com_1(eval_non_linear15_bb0_in(v_.0, v_.01, v_2, v_4, v_x1, v_x2))
+  eval_non_linear15_bb0_in(v_.0, v_.01, v_2, v_4, v_x1, v_x2) -> Com_1(eval_non_linear15_bb1_in(v_x1, v_x2, v_2, v_4, v_x1, v_x2))
+  eval_non_linear15_bb1_in(v_.0, v_.01, v_2, v_4, v_x1, v_x2) -> Com_1(eval_non_linear15_bb2_in(v_.0, v_.01, v_2, v_4, v_x1, v_x2)) :|: v_.01 < v_.0 && v_.01 > 0
+  eval_non_linear15_bb1_in(v_.0, v_.01, v_2, v_4, v_x1, v_x2) -> Com_1(eval_non_linear15_bb5_in(v_.0, v_.01, v_2, v_4, v_x1, v_x2)) :|: v_.01 >= v_.0
+  eval_non_linear15_bb1_in(v_.0, v_.01, v_2, v_4, v_x1, v_x2) -> Com_1(eval_non_linear15_bb5_in(v_.0, v_.01, v_2, v_4, v_x1, v_x2)) :|: v_.01 <= 0
+  eval_non_linear15_bb2_in(v_.0, v_.01, v_2, v_4, v_x1, v_x2) -> Com_1(eval_non_linear15_0(v_.0, v_.01, v_2, v_4, v_x1, v_x2))
+  eval_non_linear15_0(v_.0, v_.01, v_2, v_4, v_x1, v_x2) -> Com_2(eval___VERIFIER_nondet_int_start(v_.0, v_.01, v_2, v_4, v_x1, v_x2), eval_non_linear15_1(v_.0, v_.01, nondef.0, v_4, v_x1, v_x2))
+  eval_non_linear15_1(v_.0, v_.01, v_2, v_4, v_x1, v_x2) -> Com_1(eval_non_linear15_bb3_in(v_.0, v_.01, v_2, 2*v_.0, v_x1, v_x2)) :|: v_2 < 0
+  eval_non_linear15_1(v_.0, v_.01, v_2, v_4, v_x1, v_x2) -> Com_1(eval_non_linear15_bb3_in(v_.0, v_.01, v_2, 2*v_.0, v_x1, v_x2)) :|: v_2 > 0
+  eval_non_linear15_1(v_.0, v_.01, v_2, v_4, v_x1, v_x2) -> Com_1(eval_non_linear15_bb4_in(v_.0, v_.01, v_2, 2*v_.0, v_x1, v_x2)) :|: v_2 = 0
+  eval_non_linear15_bb3_in(v_.0, v_.01, v_2, v_4, v_x1, v_x2) -> Com_1(eval_non_linear15_bb1_in(v_4, 3*v_.01, v_2, v_4, v_x1, v_x2))
+  eval_non_linear15_bb4_in(v_.0, v_.01, v_2, v_4, v_x1, v_x2) -> Com_1(eval_non_linear15_bb1_in(v_4, 4*v_.01, v_2, v_4, v_x1, v_x2))
+  eval_non_linear15_bb5_in(v_.0, v_.01, v_2, v_4, v_x1, v_x2) -> Com_1(eval_non_linear15_stop(v_.0, v_.01, v_2, v_4, v_x1, v_x2))
+)

@@ -1,0 +1,13 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS eval_foo_start))
+(VAR v_.0 v_i)
+(RULES
+  eval_foo_start(v_.0, v_i) -> Com_1(eval_foo_bb0_in(v_.0, v_i))
+  eval_foo_bb0_in(v_.0, v_i) -> Com_1(eval_foo_bb1_in(v_i, v_i))
+  eval_foo_bb1_in(v_.0, v_i) -> Com_1(eval_foo_bb2_in(v_.0, v_i)) :|: v_.0 < 10
+  eval_foo_bb1_in(v_.0, v_i) -> Com_1(eval_foo_bb3_in(v_.0, v_i)) :|: v_.0 >= 10
+  eval_foo_bb2_in(v_.0, v_i) -> Com_1(eval_foo_bb1_in(v_.0 + 1, v_i)) :|: v_.0 < 3
+  eval_foo_bb2_in(v_.0, v_i) -> Com_1(eval_foo_bb1_in(v_.0 + 1, v_i)) :|: v_.0 > 3
+  eval_foo_bb2_in(v_.0, v_i) -> Com_1(eval_foo_bb1_in(v_.0, v_i)) :|: v_.0 = 3
+  eval_foo_bb3_in(v_.0, v_i) -> Com_1(eval_foo_stop(v_.0, v_i))
+)

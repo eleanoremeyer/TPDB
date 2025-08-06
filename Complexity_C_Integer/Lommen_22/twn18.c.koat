@@ -1,0 +1,13 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS eval_twn18_start))
+(VAR v_.01 v_.02 v_a v_b v_c v_d v_e)
+(RULES
+  eval_twn18_start(v_.01, v_.02, v_a, v_b, v_c, v_d, v_e) -> Com_1(eval_twn18_bb0_in(v_.01, v_.02, v_a, v_b, v_c, v_d, v_e))
+  eval_twn18_bb0_in(v_.01, v_.02, v_a, v_b, v_c, v_d, v_e) -> Com_1(eval_twn18_bb1_in(v_b, v_c, v_a, v_b, v_c, v_d, v_e))
+  eval_twn18_bb1_in(v_.01, v_.02, v_a, v_b, v_c, v_d, v_e) -> Com_1(eval_twn18_bb2_in(v_.01, v_.02, v_a, v_b, v_c, v_d, v_e)) :|: v_.01^2 > 1
+  eval_twn18_bb1_in(v_.01, v_.02, v_a, v_b, v_c, v_d, v_e) -> Com_1(eval_twn18_.critedge_in(v_.01, v_.02, v_a, v_b, v_c, v_d, v_e)) :|: v_.01^2 <= 1
+  eval_twn18_bb2_in(v_.01, v_.02, v_a, v_b, v_c, v_d, v_e) -> Com_1(eval_twn18_bb3_in(v_.01, v_.02, v_a, v_b, v_c, v_d, v_e)) :|: v_a*v_.02 > 0
+  eval_twn18_bb2_in(v_.01, v_.02, v_a, v_b, v_c, v_d, v_e) -> Com_1(eval_twn18_.critedge_in(v_.01, v_.02, v_a, v_b, v_c, v_d, v_e)) :|: v_a*v_.02 <= 0
+  eval_twn18_bb3_in(v_.01, v_.02, v_a, v_b, v_c, v_d, v_e) -> Com_1(eval_twn18_bb1_in(3*v_.01 - 4*v_.02, 4*v_.01 - 3*v_.02, v_a, v_b, v_c, v_d, v_e))
+  eval_twn18_.critedge_in(v_.01, v_.02, v_a, v_b, v_c, v_d, v_e) -> Com_1(eval_twn18_stop(v_.01, v_.02, v_a, v_b, v_c, v_d, v_e))
+)

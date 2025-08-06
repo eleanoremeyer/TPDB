@@ -1,0 +1,16 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS eval_t10_start))
+(VAR nondef.0 v_.0 v_.01 v_1 v_x v_y)
+(RULES
+  eval_t10_start(v_.0, v_.01, v_1, v_x, v_y) -> Com_1(eval_t10_bb0_in(v_.0, v_.01, v_1, v_x, v_y))
+  eval_t10_bb0_in(v_.0, v_.01, v_1, v_x, v_y) -> Com_1(eval_t10_bb1_in(v_x, v_y, v_1, v_x, v_y))
+  eval_t10_bb1_in(v_.0, v_.01, v_1, v_x, v_y) -> Com_1(eval_t10_bb2_in(v_.0, v_.01, v_1, v_x, v_y)) :|: v_.0 > v_.01
+  eval_t10_bb1_in(v_.0, v_.01, v_1, v_x, v_y) -> Com_1(eval_t10_bb3_in(v_.0, v_.01, v_1, v_x, v_y)) :|: v_.0 <= v_.01
+  eval_t10_bb2_in(v_.0, v_.01, v_1, v_x, v_y) -> Com_1(eval_t10_0(v_.0, v_.01, v_1, v_x, v_y))
+  eval_t10_0(v_.0, v_.01, v_1, v_x, v_y) -> Com_2(eval_nondet_start(v_.0, v_.01, v_1, v_x, v_y), eval_t10_1(v_.0, v_.01, nondef.0, v_x, v_y))
+  eval_t10_1(v_.0, v_.01, v_1, v_x, v_y) -> Com_1(eval_t10_bb1_in(v_.0, v_.01 + 1, v_1, v_x, v_y)) :|: v_1 > 0 && v_1 > 0
+  eval_t10_1(v_.0, v_.01, v_1, v_x, v_y) -> Com_1(eval_t10_bb1_in(v_.0 - 1, v_.01 + 1, v_1, v_x, v_y)) :|: v_1 > 0 && v_1 <= 0
+  eval_t10_1(v_.0, v_.01, v_1, v_x, v_y) -> Com_1(eval_t10_bb1_in(v_.0, v_.01, v_1, v_x, v_y)) :|: v_1 <= 0 && v_1 > 0
+  eval_t10_1(v_.0, v_.01, v_1, v_x, v_y) -> Com_1(eval_t10_bb1_in(v_.0 - 1, v_.01, v_1, v_x, v_y)) :|: v_1 <= 0 && v_1 <= 0
+  eval_t10_bb3_in(v_.0, v_.01, v_1, v_x, v_y) -> Com_1(eval_t10_stop(v_.0, v_.01, v_1, v_x, v_y))
+)

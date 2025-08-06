@@ -1,0 +1,18 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS eval_speed_popl10_nested_multiple_start))
+(VAR nondef.0 v_.0 v_.01 v_.1 v_2 v_m v_n v_x v_y)
+(RULES
+  eval_speed_popl10_nested_multiple_start(v_.0, v_.01, v_.1, v_2, v_m, v_n, v_x, v_y) -> Com_1(eval_speed_popl10_nested_multiple_bb0_in(v_.0, v_.01, v_.1, v_2, v_m, v_n, v_x, v_y))
+  eval_speed_popl10_nested_multiple_bb0_in(v_.0, v_.01, v_.1, v_2, v_m, v_n, v_x, v_y) -> Com_1(eval_speed_popl10_nested_multiple_bb1_in(v_x, v_y, v_.1, v_2, v_m, v_n, v_x, v_y))
+  eval_speed_popl10_nested_multiple_bb1_in(v_.0, v_.01, v_.1, v_2, v_m, v_n, v_x, v_y) -> Com_1(eval_speed_popl10_nested_multiple_bb2_in(v_.0, v_.01, v_.01, v_2, v_m, v_n, v_x, v_y)) :|: v_.0 < v_n
+  eval_speed_popl10_nested_multiple_bb1_in(v_.0, v_.01, v_.1, v_2, v_m, v_n, v_x, v_y) -> Com_1(eval_speed_popl10_nested_multiple_bb6_in(v_.0, v_.01, v_.1, v_2, v_m, v_n, v_x, v_y)) :|: v_.0 >= v_n
+  eval_speed_popl10_nested_multiple_bb2_in(v_.0, v_.01, v_.1, v_2, v_m, v_n, v_x, v_y) -> Com_1(eval_speed_popl10_nested_multiple_bb3_in(v_.0, v_.01, v_.1, v_2, v_m, v_n, v_x, v_y)) :|: v_.1 < v_m
+  eval_speed_popl10_nested_multiple_bb2_in(v_.0, v_.01, v_.1, v_2, v_m, v_n, v_x, v_y) -> Com_1(eval_speed_popl10_nested_multiple_bb5_in(v_.0, v_.01, v_.1, v_2, v_m, v_n, v_x, v_y)) :|: v_.1 >= v_m
+  eval_speed_popl10_nested_multiple_bb3_in(v_.0, v_.01, v_.1, v_2, v_m, v_n, v_x, v_y) -> Com_1(eval_speed_popl10_nested_multiple_0(v_.0, v_.01, v_.1, v_2, v_m, v_n, v_x, v_y))
+  eval_speed_popl10_nested_multiple_0(v_.0, v_.01, v_.1, v_2, v_m, v_n, v_x, v_y) -> Com_2(eval_nondet_start(v_.0, v_.01, v_.1, v_2, v_m, v_n, v_x, v_y), eval_speed_popl10_nested_multiple_1(v_.0, v_.01, v_.1, nondef.0, v_m, v_n, v_x, v_y))
+  eval_speed_popl10_nested_multiple_1(v_.0, v_.01, v_.1, v_2, v_m, v_n, v_x, v_y) -> Com_1(eval_speed_popl10_nested_multiple_bb5_in(v_.0, v_.01, v_.1, v_2, v_m, v_n, v_x, v_y)) :|: v_2 > 0
+  eval_speed_popl10_nested_multiple_1(v_.0, v_.01, v_.1, v_2, v_m, v_n, v_x, v_y) -> Com_1(eval_speed_popl10_nested_multiple_bb4_in(v_.0, v_.01, v_.1, v_2, v_m, v_n, v_x, v_y)) :|: v_2 <= 0
+  eval_speed_popl10_nested_multiple_bb4_in(v_.0, v_.01, v_.1, v_2, v_m, v_n, v_x, v_y) -> Com_1(eval_speed_popl10_nested_multiple_bb2_in(v_.0, v_.01, v_.1 + 1, v_2, v_m, v_n, v_x, v_y))
+  eval_speed_popl10_nested_multiple_bb5_in(v_.0, v_.01, v_.1, v_2, v_m, v_n, v_x, v_y) -> Com_1(eval_speed_popl10_nested_multiple_bb1_in(v_.0 + 1, v_.1, v_.1, v_2, v_m, v_n, v_x, v_y))
+  eval_speed_popl10_nested_multiple_bb6_in(v_.0, v_.01, v_.1, v_2, v_m, v_n, v_x, v_y) -> Com_1(eval_speed_popl10_nested_multiple_stop(v_.0, v_.01, v_.1, v_2, v_m, v_n, v_x, v_y))
+)

@@ -1,0 +1,17 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS eval_non_linear20_start))
+(VAR nondef.0 v_.0 v_.01 v_0 v_4 v_5 v_x1 v_x2)
+(RULES
+  eval_non_linear20_start(v_.0, v_.01, v_0, v_4, v_5, v_x1, v_x2) -> Com_1(eval_non_linear20_bb0_in(v_.0, v_.01, v_0, v_4, v_5, v_x1, v_x2))
+  eval_non_linear20_bb0_in(v_.0, v_.01, v_0, v_4, v_5, v_x1, v_x2) -> Com_1(eval_non_linear20_0(v_.0, v_.01, v_0, v_4, v_5, v_x1, v_x2))
+  eval_non_linear20_0(v_.0, v_.01, v_0, v_4, v_5, v_x1, v_x2) -> Com_2(eval___VERIFIER_nondet_int_start(v_.0, v_.01, v_0, v_4, v_5, v_x1, v_x2), eval_non_linear20_1(v_.0, v_.01, nondef.0, v_4, v_5, v_x1, v_x2))
+  eval_non_linear20_1(v_.0, v_.01, v_0, v_4, v_5, v_x1, v_x2) -> Com_1(eval_non_linear20_bb1_in(v_x1, v_x2, v_0, v_4, v_5, v_x1, v_x2))
+  eval_non_linear20_bb1_in(v_.0, v_.01, v_0, v_4, v_5, v_x1, v_x2) -> Com_1(eval_non_linear20_bb2_in(v_.0, v_.01, v_0, v_4, v_5, v_x1, v_x2)) :|: v_.01 < v_.0 && v_.01 > 0 && v_0 >= 3
+  eval_non_linear20_bb1_in(v_.0, v_.01, v_0, v_4, v_5, v_x1, v_x2) -> Com_1(eval_non_linear20_.critedge_in(v_.0, v_.01, v_0, v_4, v_5, v_x1, v_x2)) :|: v_.01 >= v_.0
+  eval_non_linear20_bb1_in(v_.0, v_.01, v_0, v_4, v_5, v_x1, v_x2) -> Com_1(eval_non_linear20_.critedge_in(v_.0, v_.01, v_0, v_4, v_5, v_x1, v_x2)) :|: v_.01 <= 0
+  eval_non_linear20_bb1_in(v_.0, v_.01, v_0, v_4, v_5, v_x1, v_x2) -> Com_1(eval_non_linear20_.critedge_in(v_.0, v_.01, v_0, v_4, v_5, v_x1, v_x2)) :|: v_0 < 3
+  eval_non_linear20_bb2_in(v_.0, v_.01, v_0, v_4, v_5, v_x1, v_x2) -> Com_1(eval_non_linear20_4(v_.0, v_.01, v_0, 2*v_.0, v_0*v_.01, v_x1, v_x2))
+  eval_non_linear20_4(v_.0, v_.01, v_0, v_4, v_5, v_x1, v_x2) -> Com_2(eval___VERIFIER_nondet_int_start(v_.0, v_.01, v_0, v_4, v_5, v_x1, v_x2), eval_non_linear20_5(v_.0, v_.01, v_0, v_4, v_5, v_x1, v_x2))
+  eval_non_linear20_5(v_.0, v_.01, v_0, v_4, v_5, v_x1, v_x2) -> Com_1(eval_non_linear20_bb1_in(v_4, v_5, v_0, v_4, v_5, v_x1, v_x2))
+  eval_non_linear20_.critedge_in(v_.0, v_.01, v_0, v_4, v_5, v_x1, v_x2) -> Com_1(eval_non_linear20_stop(v_.0, v_.01, v_0, v_4, v_5, v_x1, v_x2))
+)

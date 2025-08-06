@@ -1,0 +1,21 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS eval_foo_start))
+(VAR nondef.0 v_.0 v_4 v_id v_maxId v_tmp)
+(RULES
+  eval_foo_start(v_.0, v_4, v_id, v_maxId, v_tmp) -> Com_1(eval_foo_bb0_in(v_.0, v_4, v_id, v_maxId, v_tmp))
+  eval_foo_bb0_in(v_.0, v_4, v_id, v_maxId, v_tmp) -> Com_1(eval_foo_bb1_in(v_.0, v_4, v_id, v_maxId, v_tmp)) :|: 0 <= v_id && v_id < v_maxId
+  eval_foo_bb0_in(v_.0, v_4, v_id, v_maxId, v_tmp) -> Com_1(eval_foo_.critedge_in(v_.0, v_4, v_id, v_maxId, v_tmp)) :|: 0 > v_id
+  eval_foo_bb0_in(v_.0, v_4, v_id, v_maxId, v_tmp) -> Com_1(eval_foo_.critedge_in(v_.0, v_4, v_id, v_maxId, v_tmp)) :|: v_id >= v_maxId
+  eval_foo_bb1_in(v_.0, v_4, v_id, v_maxId, v_tmp) -> Com_1(eval_foo_bb2_in(v_id + 1, v_4, v_id, v_maxId, v_tmp))
+  eval_foo_bb2_in(v_.0, v_4, v_id, v_maxId, v_tmp) -> Com_1(eval_foo_bb3_in(v_.0, v_4, v_id, v_maxId, v_tmp)) :|: v_.0 < v_id
+  eval_foo_bb2_in(v_.0, v_4, v_id, v_maxId, v_tmp) -> Com_1(eval_foo_bb3_in(v_.0, v_4, v_id, v_maxId, v_tmp)) :|: v_.0 > v_id
+  eval_foo_bb2_in(v_.0, v_4, v_id, v_maxId, v_tmp) -> Com_1(eval_foo_.critedge_in(v_.0, v_4, v_id, v_maxId, v_tmp)) :|: v_.0 = v_id
+  eval_foo_bb3_in(v_.0, v_4, v_id, v_maxId, v_tmp) -> Com_1(eval_foo_2(v_.0, v_4, v_id, v_maxId, v_tmp))
+  eval_foo_2(v_.0, v_4, v_id, v_maxId, v_tmp) -> Com_2(eval___VERIFIER_nondet_int_start(v_.0, v_4, v_id, v_maxId, v_tmp), eval_foo_3(v_.0, nondef.0, v_id, v_maxId, v_tmp))
+  eval_foo_3(v_.0, v_4, v_id, v_maxId, v_tmp) -> Com_1(eval_foo_bb4_in(v_.0, v_4, v_id, v_maxId, v_tmp)) :|: v_4 < 0
+  eval_foo_3(v_.0, v_4, v_id, v_maxId, v_tmp) -> Com_1(eval_foo_bb4_in(v_.0, v_4, v_id, v_maxId, v_tmp)) :|: v_4 > 0
+  eval_foo_3(v_.0, v_4, v_id, v_maxId, v_tmp) -> Com_1(eval_foo_.critedge_in(v_.0, v_4, v_id, v_maxId, v_tmp)) :|: v_4 = 0
+  eval_foo_bb4_in(v_.0, v_4, v_id, v_maxId, v_tmp) -> Com_1(eval_foo_bb2_in(v_.0 + 1, v_4, v_id, v_maxId, v_tmp)) :|: v_.0 <= v_maxId
+  eval_foo_bb4_in(v_.0, v_4, v_id, v_maxId, v_tmp) -> Com_1(eval_foo_bb2_in(0, v_4, v_id, v_maxId, v_tmp)) :|: v_.0 > v_maxId
+  eval_foo_.critedge_in(v_.0, v_4, v_id, v_maxId, v_tmp) -> Com_1(eval_foo_stop(v_.0, v_4, v_id, v_maxId, v_tmp))
+)

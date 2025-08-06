@@ -1,0 +1,19 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS eval_textbook_ex3_start))
+(VAR v_2 v_i.0 v_i.0.sink v_j.0 v_l.0 v_m)
+(RULES
+  eval_textbook_ex3_start(v_2, v_i.0, v_i.0.sink, v_j.0, v_l.0, v_m) -> Com_1(eval_textbook_ex3_bb0_in(v_2, v_i.0, v_i.0.sink, v_j.0, v_l.0, v_m))
+  eval_textbook_ex3_bb0_in(v_2, v_i.0, v_i.0.sink, v_j.0, v_l.0, v_m) -> Com_1(eval_textbook_ex3_bb1_in(v_2, 1, v_i.0.sink, v_j.0, v_l.0, v_m))
+  eval_textbook_ex3_bb1_in(v_2, v_i.0, v_i.0.sink, v_j.0, v_l.0, v_m) -> Com_1(eval_textbook_ex3_bb2_in(v_2, v_i.0, v_i.0.sink, 1, v_l.0, v_m)) :|: v_i.0 <= v_m
+  eval_textbook_ex3_bb1_in(v_2, v_i.0, v_i.0.sink, v_j.0, v_l.0, v_m) -> Com_1(eval_textbook_ex3_bb8_in(v_2, v_i.0, v_i.0.sink, v_j.0, v_l.0, v_m)) :|: v_i.0 > v_m
+  eval_textbook_ex3_bb2_in(v_2, v_i.0, v_i.0.sink, v_j.0, v_l.0, v_m) -> Com_1(eval_textbook_ex3_bb3_in(v_2, v_i.0, v_i.0, v_j.0, v_l.0, v_m)) :|: v_j.0 <= v_i.0
+  eval_textbook_ex3_bb2_in(v_2, v_i.0, v_i.0.sink, v_j.0, v_l.0, v_m) -> Com_1(eval_textbook_ex3_bb7_in(v_2, v_i.0, v_i.0.sink, v_j.0, v_l.0, v_m)) :|: v_j.0 > v_i.0
+  eval_textbook_ex3_bb3_in(v_2, v_i.0, v_i.0.sink, v_j.0, v_l.0, v_m) -> Com_1(eval_textbook_ex3_bb4_in(v_i.0.sink + 1, v_i.0, v_i.0.sink, v_j.0, 1, v_m)) :|: v_i.0.sink + 1 <= v_m
+  eval_textbook_ex3_bb3_in(v_2, v_i.0, v_i.0.sink, v_j.0, v_l.0, v_m) -> Com_1(eval_textbook_ex3_bb6_in(v_i.0.sink + 1, v_i.0, v_i.0.sink, v_j.0, v_l.0, v_m)) :|: v_i.0.sink + 1 > v_m
+  eval_textbook_ex3_bb4_in(v_2, v_i.0, v_i.0.sink, v_j.0, v_l.0, v_m) -> Com_1(eval_textbook_ex3_bb5_in(v_2, v_i.0, v_i.0.sink, v_j.0, v_l.0, v_m)) :|: v_l.0 <= v_2
+  eval_textbook_ex3_bb4_in(v_2, v_i.0, v_i.0.sink, v_j.0, v_l.0, v_m) -> Com_1(eval_textbook_ex3_bb3_in(v_2, v_i.0, v_2, v_j.0, v_l.0, v_m)) :|: v_l.0 > v_2
+  eval_textbook_ex3_bb5_in(v_2, v_i.0, v_i.0.sink, v_j.0, v_l.0, v_m) -> Com_1(eval_textbook_ex3_bb4_in(v_2, v_i.0, v_i.0.sink, v_j.0, v_l.0 + 1, v_m))
+  eval_textbook_ex3_bb6_in(v_2, v_i.0, v_i.0.sink, v_j.0, v_l.0, v_m) -> Com_1(eval_textbook_ex3_bb2_in(v_2, v_i.0, v_i.0.sink, v_j.0 + 1, v_l.0, v_m))
+  eval_textbook_ex3_bb7_in(v_2, v_i.0, v_i.0.sink, v_j.0, v_l.0, v_m) -> Com_1(eval_textbook_ex3_bb1_in(v_2, v_i.0 + 1, v_i.0.sink, v_j.0, v_l.0, v_m))
+  eval_textbook_ex3_bb8_in(v_2, v_i.0, v_i.0.sink, v_j.0, v_l.0, v_m) -> Com_1(eval_textbook_ex3_stop(v_2, v_i.0, v_i.0.sink, v_j.0, v_l.0, v_m))
+)

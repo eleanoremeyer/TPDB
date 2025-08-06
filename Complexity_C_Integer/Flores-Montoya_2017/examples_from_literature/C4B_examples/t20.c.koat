@@ -1,0 +1,14 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS eval_t20_start))
+(VAR v_.0 v_.01 v_x v_y)
+(RULES
+  eval_t20_start(v_.0, v_.01, v_x, v_y) -> Com_1(eval_t20_bb0_in(v_.0, v_.01, v_x, v_y))
+  eval_t20_bb0_in(v_.0, v_.01, v_x, v_y) -> Com_1(eval_t20_bb1_in(v_x, v_.01, v_x, v_y))
+  eval_t20_bb1_in(v_.0, v_.01, v_x, v_y) -> Com_1(eval_t20_bb2_in(v_.0, v_.01, v_x, v_y)) :|: v_.0 < v_y
+  eval_t20_bb1_in(v_.0, v_.01, v_x, v_y) -> Com_1(eval_t20_bb3_in(v_.0, v_y, v_x, v_y)) :|: v_.0 >= v_y
+  eval_t20_bb2_in(v_.0, v_.01, v_x, v_y) -> Com_1(eval_t20_bb1_in(v_.0 + 1, v_.01, v_x, v_y))
+  eval_t20_bb3_in(v_.0, v_.01, v_x, v_y) -> Com_1(eval_t20_bb4_in(v_.0, v_.01, v_x, v_y)) :|: v_.01 < v_.0
+  eval_t20_bb3_in(v_.0, v_.01, v_x, v_y) -> Com_1(eval_t20_bb5_in(v_.0, v_.01, v_x, v_y)) :|: v_.01 >= v_.0
+  eval_t20_bb4_in(v_.0, v_.01, v_x, v_y) -> Com_1(eval_t20_bb3_in(v_.0, v_.01 + 1, v_x, v_y))
+  eval_t20_bb5_in(v_.0, v_.01, v_x, v_y) -> Com_1(eval_t20_stop(v_.0, v_.01, v_x, v_y))
+)

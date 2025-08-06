@@ -1,0 +1,11 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS eval_t30_start))
+(VAR v_.0 v_.01 v_x v_y)
+(RULES
+  eval_t30_start(v_.0, v_.01, v_x, v_y) -> Com_1(eval_t30_bb0_in(v_.0, v_.01, v_x, v_y))
+  eval_t30_bb0_in(v_.0, v_.01, v_x, v_y) -> Com_1(eval_t30_bb1_in(v_x, v_y, v_x, v_y))
+  eval_t30_bb1_in(v_.0, v_.01, v_x, v_y) -> Com_1(eval_t30_bb2_in(v_.0, v_.01, v_x, v_y)) :|: v_.0 > 0
+  eval_t30_bb1_in(v_.0, v_.01, v_x, v_y) -> Com_1(eval_t30_bb3_in(v_.0, v_.01, v_x, v_y)) :|: v_.0 <= 0
+  eval_t30_bb2_in(v_.0, v_.01, v_x, v_y) -> Com_1(eval_t30_bb1_in(v_.01, v_.0 - 1, v_x, v_y))
+  eval_t30_bb3_in(v_.0, v_.01, v_x, v_y) -> Com_1(eval_t30_stop(v_.0, v_.01, v_x, v_y))
+)

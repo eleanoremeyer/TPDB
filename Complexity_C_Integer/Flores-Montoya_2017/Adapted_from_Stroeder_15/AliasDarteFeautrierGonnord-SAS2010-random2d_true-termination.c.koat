@@ -1,0 +1,39 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS eval_foo_start))
+(VAR nondef.0 v_.05 v_1 v_2 v_N v_i v_r v_x v_y)
+(RULES
+  eval_foo_start(v_.05, v_1, v_2, v_N, v_i, v_r, v_x, v_y) -> Com_1(eval_foo_bb0_in(v_.05, v_1, v_2, v_N, v_i, v_r, v_x, v_y))
+  eval_foo_bb0_in(v_.05, v_1, v_2, v_N, v_i, v_r, v_x, v_y) -> Com_1(eval_foo_bb1_in(0, v_1, v_2, v_N, v_i, v_r, v_x, v_y))
+  eval_foo_bb1_in(v_.05, v_1, v_2, v_N, v_i, v_r, v_x, v_y) -> Com_1(eval_foo_bb2_in(v_.05, v_1, v_2, v_N, v_i, v_r, v_x, v_y)) :|: v_.05 < 10
+  eval_foo_bb1_in(v_.05, v_1, v_2, v_N, v_i, v_r, v_x, v_y) -> Com_1(eval_foo_bb8_in(v_.05, v_1, v_2, v_N, v_i, v_r, v_x, v_y)) :|: v_.05 >= 10
+  eval_foo_bb2_in(v_.05, v_1, v_2, v_N, v_i, v_r, v_x, v_y) -> Com_1(eval_foo_1(v_.05, v_.05 + 1, v_2, v_N, v_i, v_r, v_x, v_y))
+  eval_foo_1(v_.05, v_1, v_2, v_N, v_i, v_r, v_x, v_y) -> Com_2(eval___VERIFIER_nondet_int_start(v_.05, v_1, v_2, v_N, v_i, v_r, v_x, v_y), eval_foo_2(v_.05, v_1, nondef.0, v_N, v_i, v_r, v_x, v_y))
+  eval_foo_2(v_.05, v_1, v_2, v_N, v_i, v_r, v_x, v_y) -> Com_1(eval_foo_bb3_in(v_.05, v_1, v_2, v_N, v_i, v_r, v_x, v_y)) :|: v_2 >= 0 && v_2 <= 3
+  eval_foo_2(v_.05, v_1, v_2, v_N, v_i, v_r, v_x, v_y) -> Com_1(eval_foo_bb1_in(v_1, v_1, v_2, v_N, v_i, v_r, v_x, v_y)) :|: v_2 < 0
+  eval_foo_2(v_.05, v_1, v_2, v_N, v_i, v_r, v_x, v_y) -> Com_1(eval_foo_bb1_in(v_1, v_1, v_2, v_N, v_i, v_r, v_x, v_y)) :|: v_2 > 3
+  eval_foo_bb3_in(v_.05, v_1, v_2, v_N, v_i, v_r, v_x, v_y) -> Com_1(eval_foo_NodeBlock14_in(v_.05, v_1, v_2, v_N, v_i, v_r, v_x, v_y))
+  eval_foo_NodeBlock14_in(v_.05, v_1, v_2, v_N, v_i, v_r, v_x, v_y) -> Com_1(eval_foo_NodeBlock_in(v_.05, v_1, v_2, v_N, v_i, v_r, v_x, v_y)) :|: v_2 < 2
+  eval_foo_NodeBlock14_in(v_.05, v_1, v_2, v_N, v_i, v_r, v_x, v_y) -> Com_1(eval_foo_NodeBlock12_in(v_.05, v_1, v_2, v_N, v_i, v_r, v_x, v_y)) :|: v_2 >= 2
+  eval_foo_NodeBlock_in(v_.05, v_1, v_2, v_N, v_i, v_r, v_x, v_y) -> Com_1(eval_foo_LeafBlock_in(v_.05, v_1, v_2, v_N, v_i, v_r, v_x, v_y)) :|: v_2 < 1
+  eval_foo_NodeBlock_in(v_.05, v_1, v_2, v_N, v_i, v_r, v_x, v_y) -> Com_1(eval_foo_LeafBlock6_in(v_.05, v_1, v_2, v_N, v_i, v_r, v_x, v_y)) :|: v_2 >= 1
+  eval_foo_LeafBlock_in(v_.05, v_1, v_2, v_N, v_i, v_r, v_x, v_y) -> Com_1(eval_foo_bb4_in(v_.05, v_1, v_2, v_N, v_i, v_r, v_x, v_y)) :|: v_2 = 0
+  eval_foo_LeafBlock_in(v_.05, v_1, v_2, v_N, v_i, v_r, v_x, v_y) -> Com_1(eval_foo_NewDefault_in(v_.05, v_1, v_2, v_N, v_i, v_r, v_x, v_y)) :|: v_2 < 0
+  eval_foo_LeafBlock_in(v_.05, v_1, v_2, v_N, v_i, v_r, v_x, v_y) -> Com_1(eval_foo_NewDefault_in(v_.05, v_1, v_2, v_N, v_i, v_r, v_x, v_y)) :|: v_2 > 0
+  eval_foo_bb4_in(v_.05, v_1, v_2, v_N, v_i, v_r, v_x, v_y) -> Com_1(eval_foo_bb1_in(v_1, v_1, v_2, v_N, v_i, v_r, v_x, v_y))
+  eval_foo_LeafBlock6_in(v_.05, v_1, v_2, v_N, v_i, v_r, v_x, v_y) -> Com_1(eval_foo_bb5_in(v_.05, v_1, v_2, v_N, v_i, v_r, v_x, v_y)) :|: v_2 = 1
+  eval_foo_LeafBlock6_in(v_.05, v_1, v_2, v_N, v_i, v_r, v_x, v_y) -> Com_1(eval_foo_NewDefault_in(v_.05, v_1, v_2, v_N, v_i, v_r, v_x, v_y)) :|: v_2 < 1
+  eval_foo_LeafBlock6_in(v_.05, v_1, v_2, v_N, v_i, v_r, v_x, v_y) -> Com_1(eval_foo_NewDefault_in(v_.05, v_1, v_2, v_N, v_i, v_r, v_x, v_y)) :|: v_2 > 1
+  eval_foo_bb5_in(v_.05, v_1, v_2, v_N, v_i, v_r, v_x, v_y) -> Com_1(eval_foo_bb1_in(v_1, v_1, v_2, v_N, v_i, v_r, v_x, v_y))
+  eval_foo_NodeBlock12_in(v_.05, v_1, v_2, v_N, v_i, v_r, v_x, v_y) -> Com_1(eval_foo_LeafBlock8_in(v_.05, v_1, v_2, v_N, v_i, v_r, v_x, v_y)) :|: v_2 < 3
+  eval_foo_NodeBlock12_in(v_.05, v_1, v_2, v_N, v_i, v_r, v_x, v_y) -> Com_1(eval_foo_LeafBlock10_in(v_.05, v_1, v_2, v_N, v_i, v_r, v_x, v_y)) :|: v_2 >= 3
+  eval_foo_LeafBlock8_in(v_.05, v_1, v_2, v_N, v_i, v_r, v_x, v_y) -> Com_1(eval_foo_bb6_in(v_.05, v_1, v_2, v_N, v_i, v_r, v_x, v_y)) :|: v_2 = 2
+  eval_foo_LeafBlock8_in(v_.05, v_1, v_2, v_N, v_i, v_r, v_x, v_y) -> Com_1(eval_foo_NewDefault_in(v_.05, v_1, v_2, v_N, v_i, v_r, v_x, v_y)) :|: v_2 < 2
+  eval_foo_LeafBlock8_in(v_.05, v_1, v_2, v_N, v_i, v_r, v_x, v_y) -> Com_1(eval_foo_NewDefault_in(v_.05, v_1, v_2, v_N, v_i, v_r, v_x, v_y)) :|: v_2 > 2
+  eval_foo_bb6_in(v_.05, v_1, v_2, v_N, v_i, v_r, v_x, v_y) -> Com_1(eval_foo_bb1_in(v_1, v_1, v_2, v_N, v_i, v_r, v_x, v_y))
+  eval_foo_LeafBlock10_in(v_.05, v_1, v_2, v_N, v_i, v_r, v_x, v_y) -> Com_1(eval_foo_bb7_in(v_.05, v_1, v_2, v_N, v_i, v_r, v_x, v_y)) :|: v_2 = 3
+  eval_foo_LeafBlock10_in(v_.05, v_1, v_2, v_N, v_i, v_r, v_x, v_y) -> Com_1(eval_foo_NewDefault_in(v_.05, v_1, v_2, v_N, v_i, v_r, v_x, v_y)) :|: v_2 < 3
+  eval_foo_LeafBlock10_in(v_.05, v_1, v_2, v_N, v_i, v_r, v_x, v_y) -> Com_1(eval_foo_NewDefault_in(v_.05, v_1, v_2, v_N, v_i, v_r, v_x, v_y)) :|: v_2 > 3
+  eval_foo_bb7_in(v_.05, v_1, v_2, v_N, v_i, v_r, v_x, v_y) -> Com_1(eval_foo_bb1_in(v_1, v_1, v_2, v_N, v_i, v_r, v_x, v_y))
+  eval_foo_NewDefault_in(v_.05, v_1, v_2, v_N, v_i, v_r, v_x, v_y) -> Com_1(eval_foo_bb1_in(v_1, v_1, v_2, v_N, v_i, v_r, v_x, v_y))
+  eval_foo_bb8_in(v_.05, v_1, v_2, v_N, v_i, v_r, v_x, v_y) -> Com_1(eval_foo_stop(v_.05, v_1, v_2, v_N, v_i, v_r, v_x, v_y))
+)

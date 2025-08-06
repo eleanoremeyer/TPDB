@@ -1,0 +1,14 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS eval_ex_paper2_start))
+(VAR v_n v_x.0 v_y.0)
+(RULES
+  eval_ex_paper2_start(v_n, v_x.0, v_y.0) -> Com_1(eval_ex_paper2_bb0_in(v_n, v_x.0, v_y.0))
+  eval_ex_paper2_bb0_in(v_n, v_x.0, v_y.0) -> Com_1(eval_ex_paper2_bb1_in(v_n, 1, v_y.0))
+  eval_ex_paper2_bb1_in(v_n, v_x.0, v_y.0) -> Com_1(eval_ex_paper2_bb2_in(v_n, v_x.0, v_x.0)) :|: v_x.0 <= v_n
+  eval_ex_paper2_bb1_in(v_n, v_x.0, v_y.0) -> Com_1(eval_ex_paper2_bb5_in(v_n, v_x.0, v_y.0)) :|: v_x.0 > v_n
+  eval_ex_paper2_bb2_in(v_n, v_x.0, v_y.0) -> Com_1(eval_ex_paper2_bb3_in(v_n, v_x.0, v_y.0)) :|: v_y.0 <= v_n
+  eval_ex_paper2_bb2_in(v_n, v_x.0, v_y.0) -> Com_1(eval_ex_paper2_bb4_in(v_n, v_x.0, v_y.0)) :|: v_y.0 > v_n
+  eval_ex_paper2_bb3_in(v_n, v_x.0, v_y.0) -> Com_1(eval_ex_paper2_bb2_in(v_n, v_x.0, v_y.0 + 1))
+  eval_ex_paper2_bb4_in(v_n, v_x.0, v_y.0) -> Com_1(eval_ex_paper2_bb1_in(v_n, v_x.0 + 1, v_y.0))
+  eval_ex_paper2_bb5_in(v_n, v_x.0, v_y.0) -> Com_1(eval_ex_paper2_stop(v_n, v_x.0, v_y.0))
+)

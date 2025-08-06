@@ -1,0 +1,18 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS eval_jama_ex6_start))
+(VAR v_a v_b v_c v_d v_i.0 v_j.0 v_k.0)
+(RULES
+  eval_jama_ex6_start(v_a, v_b, v_c, v_d, v_i.0, v_j.0, v_k.0) -> Com_1(eval_jama_ex6_bb0_in(v_a, v_b, v_c, v_d, v_i.0, v_j.0, v_k.0))
+  eval_jama_ex6_bb0_in(v_a, v_b, v_c, v_d, v_i.0, v_j.0, v_k.0) -> Com_1(eval_jama_ex6_bb1_in(v_a, v_b, v_c, v_d, v_a, v_j.0, v_k.0))
+  eval_jama_ex6_bb1_in(v_a, v_b, v_c, v_d, v_i.0, v_j.0, v_k.0) -> Com_1(eval_jama_ex6_bb2_in(v_a, v_b, v_c, v_d, v_i.0, v_c, v_k.0)) :|: v_i.0 <= v_b
+  eval_jama_ex6_bb1_in(v_a, v_b, v_c, v_d, v_i.0, v_j.0, v_k.0) -> Com_1(eval_jama_ex6_bb8_in(v_a, v_b, v_c, v_d, v_i.0, v_j.0, v_k.0)) :|: v_i.0 > v_b
+  eval_jama_ex6_bb2_in(v_a, v_b, v_c, v_d, v_i.0, v_j.0, v_k.0) -> Com_1(eval_jama_ex6_bb3_in(v_a, v_b, v_c, v_d, v_i.0, v_j.0, v_k.0)) :|: v_j.0 <= v_d
+  eval_jama_ex6_bb2_in(v_a, v_b, v_c, v_d, v_i.0, v_j.0, v_k.0) -> Com_1(eval_jama_ex6_bb7_in(v_a, v_b, v_c, v_d, v_i.0, v_j.0, v_k.0)) :|: v_j.0 > v_d
+  eval_jama_ex6_bb3_in(v_a, v_b, v_c, v_d, v_i.0, v_j.0, v_k.0) -> Com_1(eval_jama_ex6_bb4_in(v_a, v_b, v_c, v_d, v_i.0, v_j.0, v_i.0 - v_j.0))
+  eval_jama_ex6_bb4_in(v_a, v_b, v_c, v_d, v_i.0, v_j.0, v_k.0) -> Com_1(eval_jama_ex6_bb5_in(v_a, v_b, v_c, v_d, v_i.0, v_j.0, v_k.0)) :|: v_k.0 <= v_i.0 + v_j.0
+  eval_jama_ex6_bb4_in(v_a, v_b, v_c, v_d, v_i.0, v_j.0, v_k.0) -> Com_1(eval_jama_ex6_bb6_in(v_a, v_b, v_c, v_d, v_i.0, v_j.0, v_k.0)) :|: v_k.0 > v_i.0 + v_j.0
+  eval_jama_ex6_bb5_in(v_a, v_b, v_c, v_d, v_i.0, v_j.0, v_k.0) -> Com_1(eval_jama_ex6_bb4_in(v_a, v_b, v_c, v_d, v_i.0, v_j.0, v_k.0 + 1))
+  eval_jama_ex6_bb6_in(v_a, v_b, v_c, v_d, v_i.0, v_j.0, v_k.0) -> Com_1(eval_jama_ex6_bb2_in(v_a, v_b, v_c, v_d, v_i.0, v_j.0 + 1, v_k.0))
+  eval_jama_ex6_bb7_in(v_a, v_b, v_c, v_d, v_i.0, v_j.0, v_k.0) -> Com_1(eval_jama_ex6_bb1_in(v_a, v_b, v_c, v_d, v_i.0 + 1, v_j.0, v_k.0))
+  eval_jama_ex6_bb8_in(v_a, v_b, v_c, v_d, v_i.0, v_j.0, v_k.0) -> Com_1(eval_jama_ex6_stop(v_a, v_b, v_c, v_d, v_i.0, v_j.0, v_k.0))
+)

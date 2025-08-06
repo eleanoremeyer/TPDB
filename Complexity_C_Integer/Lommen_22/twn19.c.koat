@@ -1,0 +1,14 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS eval_twn19_start))
+(VAR v_.0 v_.01 v_a v_b v_c)
+(RULES
+  eval_twn19_start(v_.0, v_.01, v_a, v_b, v_c) -> Com_1(eval_twn19_bb0_in(v_.0, v_.01, v_a, v_b, v_c))
+  eval_twn19_bb0_in(v_.0, v_.01, v_a, v_b, v_c) -> Com_1(eval_twn19_bb1_in(v_a, v_b, v_a, v_b, v_c)) :|: v_c > 0
+  eval_twn19_bb0_in(v_.0, v_.01, v_a, v_b, v_c) -> Com_1(eval_twn19_bb3_in(v_.0, v_.01, v_a, v_b, v_c)) :|: v_c <= 0
+  eval_twn19_bb1_in(v_.0, v_.01, v_a, v_b, v_c) -> Com_1(eval_twn19_bb2_in(v_.0, v_.01, v_a, v_b, v_c)) :|: v_.0^2 + v_c^5 < v_.01 && v_.0 < 0
+  eval_twn19_bb1_in(v_.0, v_.01, v_a, v_b, v_c) -> Com_1(eval_twn19_bb2_in(v_.0, v_.01, v_a, v_b, v_c)) :|: v_.0^2 + v_c^5 < v_.01 && v_.0 > 0
+  eval_twn19_bb1_in(v_.0, v_.01, v_a, v_b, v_c) -> Com_1(eval_twn19_bb3_in(v_.0, v_.01, v_a, v_b, v_c)) :|: v_.0^2 + v_c^5 >= v_.01
+  eval_twn19_bb1_in(v_.0, v_.01, v_a, v_b, v_c) -> Com_1(eval_twn19_bb3_in(v_.0, v_.01, v_a, v_b, v_c)) :|: v_.0 = 0
+  eval_twn19_bb2_in(v_.0, v_.01, v_a, v_b, v_c) -> Com_1(eval_twn19_bb1_in(-2*v_.0, 3*v_.01 - 2*v_c^3, v_a, v_b, v_c))
+  eval_twn19_bb3_in(v_.0, v_.01, v_a, v_b, v_c) -> Com_1(eval_twn19_stop(v_.0, v_.01, v_a, v_b, v_c))
+)

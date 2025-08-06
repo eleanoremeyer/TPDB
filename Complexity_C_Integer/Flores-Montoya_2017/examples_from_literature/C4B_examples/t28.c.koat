@@ -1,0 +1,17 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS eval_t28_start))
+(VAR v_.0 v_.01 v_.1 v_.12 v_x v_y)
+(RULES
+  eval_t28_start(v_.0, v_.01, v_.1, v_.12, v_x, v_y) -> Com_1(eval_t28_bb0_in(v_.0, v_.01, v_.1, v_.12, v_x, v_y))
+  eval_t28_bb0_in(v_.0, v_.01, v_.1, v_.12, v_x, v_y) -> Com_1(eval_t28_bb1_in(v_x, v_y, v_.1, v_.12, v_x, v_y))
+  eval_t28_bb1_in(v_.0, v_.01, v_.1, v_.12, v_x, v_y) -> Com_1(eval_t28_bb2_in(v_.0, v_.01, v_.1, v_.12, v_x, v_y)) :|: v_.0 > v_.01
+  eval_t28_bb1_in(v_.0, v_.01, v_.1, v_.12, v_x, v_y) -> Com_1(eval_t28_bb3_in(v_.0, v_.01, v_.1, v_.01, v_x, v_y)) :|: v_.0 <= v_.01
+  eval_t28_bb2_in(v_.0, v_.01, v_.1, v_.12, v_x, v_y) -> Com_1(eval_t28_bb1_in(v_.0 + 999, v_.01 + 1000, v_.1, v_.12, v_x, v_y))
+  eval_t28_bb3_in(v_.0, v_.01, v_.1, v_.12, v_x, v_y) -> Com_1(eval_t28_bb4_in(v_.0, v_.01, v_.1, v_.12, v_x, v_y)) :|: v_.12 > 0
+  eval_t28_bb3_in(v_.0, v_.01, v_.1, v_.12, v_x, v_y) -> Com_1(eval_t28_bb5_in(v_.0, v_.01, v_.0, v_.12, v_x, v_y)) :|: v_.12 <= 0
+  eval_t28_bb4_in(v_.0, v_.01, v_.1, v_.12, v_x, v_y) -> Com_1(eval_t28_bb3_in(v_.0, v_.01, v_.1, v_.12 - 1, v_x, v_y))
+  eval_t28_bb5_in(v_.0, v_.01, v_.1, v_.12, v_x, v_y) -> Com_1(eval_t28_bb6_in(v_.0, v_.01, v_.1, v_.12, v_x, v_y)) :|: v_.1 < 0
+  eval_t28_bb5_in(v_.0, v_.01, v_.1, v_.12, v_x, v_y) -> Com_1(eval_t28_bb7_in(v_.0, v_.01, v_.1, v_.12, v_x, v_y)) :|: v_.1 >= 0
+  eval_t28_bb6_in(v_.0, v_.01, v_.1, v_.12, v_x, v_y) -> Com_1(eval_t28_bb5_in(v_.0, v_.01, v_.1 + 1, v_.12, v_x, v_y))
+  eval_t28_bb7_in(v_.0, v_.01, v_.1, v_.12, v_x, v_y) -> Com_1(eval_t28_stop(v_.0, v_.01, v_.1, v_.12, v_x, v_y))
+)

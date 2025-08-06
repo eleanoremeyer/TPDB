@@ -1,0 +1,18 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS eval_speed_pldi10_ex1_start))
+(VAR nondef.0 v_.0 v_.1 v_1 v_3 v_i.0 v_i.0.sink v_n)
+(RULES
+  eval_speed_pldi10_ex1_start(v_.0, v_.1, v_1, v_3, v_i.0, v_i.0.sink, v_n) -> Com_1(eval_speed_pldi10_ex1_bb0_in(v_.0, v_.1, v_1, v_3, v_i.0, v_i.0.sink, v_n))
+  eval_speed_pldi10_ex1_bb0_in(v_.0, v_.1, v_1, v_3, v_i.0, v_i.0.sink, v_n) -> Com_1(eval_speed_pldi10_ex1_bb1_in(v_n, v_.1, v_1, v_3, 0, v_i.0.sink, v_n))
+  eval_speed_pldi10_ex1_bb1_in(v_.0, v_.1, v_1, v_3, v_i.0, v_i.0.sink, v_n) -> Com_1(eval_speed_pldi10_ex1_bb2_in(v_.0, v_.0, v_1, v_3, v_i.0, v_i.0, v_n)) :|: v_i.0 < v_.0
+  eval_speed_pldi10_ex1_bb1_in(v_.0, v_.1, v_1, v_3, v_i.0, v_i.0.sink, v_n) -> Com_1(eval_speed_pldi10_ex1_bb6_in(v_.0, v_.1, v_1, v_3, v_i.0, v_i.0.sink, v_n)) :|: v_i.0 >= v_.0
+  eval_speed_pldi10_ex1_bb2_in(v_.0, v_.1, v_1, v_3, v_i.0, v_i.0.sink, v_n) -> Com_1(eval_speed_pldi10_ex1_bb3_in(v_.0, v_.1, v_i.0.sink + 1, v_3, v_i.0, v_i.0.sink, v_n)) :|: v_i.0.sink + 1 < v_.1
+  eval_speed_pldi10_ex1_bb2_in(v_.0, v_.1, v_1, v_3, v_i.0, v_i.0.sink, v_n) -> Com_1(eval_speed_pldi10_ex1_bb5_in(v_.0, v_.1, v_i.0.sink + 1, v_3, v_i.0, v_i.0.sink, v_n)) :|: v_i.0.sink + 1 >= v_.1
+  eval_speed_pldi10_ex1_bb3_in(v_.0, v_.1, v_1, v_3, v_i.0, v_i.0.sink, v_n) -> Com_1(eval_speed_pldi10_ex1_2(v_.0, v_.1, v_1, v_3, v_i.0, v_i.0.sink, v_n))
+  eval_speed_pldi10_ex1_2(v_.0, v_.1, v_1, v_3, v_i.0, v_i.0.sink, v_n) -> Com_2(eval_nondet_start(v_.0, v_.1, v_1, v_3, v_i.0, v_i.0.sink, v_n), eval_speed_pldi10_ex1_3(v_.0, v_.1, v_1, nondef.0, v_i.0, v_i.0.sink, v_n))
+  eval_speed_pldi10_ex1_3(v_.0, v_.1, v_1, v_3, v_i.0, v_i.0.sink, v_n) -> Com_1(eval_speed_pldi10_ex1_bb4_in(v_.0, v_.1, v_1, v_3, v_i.0, v_i.0.sink, v_n)) :|: v_3 > 0
+  eval_speed_pldi10_ex1_3(v_.0, v_.1, v_1, v_3, v_i.0, v_i.0.sink, v_n) -> Com_1(eval_speed_pldi10_ex1_bb2_in(v_.0, v_.1, v_1, v_3, v_i.0, v_1, v_n)) :|: v_3 <= 0
+  eval_speed_pldi10_ex1_bb4_in(v_.0, v_.1, v_1, v_3, v_i.0, v_i.0.sink, v_n) -> Com_1(eval_speed_pldi10_ex1_bb2_in(v_.0, v_.1 - 1, v_1, v_3, v_i.0, v_1 - 1, v_n))
+  eval_speed_pldi10_ex1_bb5_in(v_.0, v_.1, v_1, v_3, v_i.0, v_i.0.sink, v_n) -> Com_1(eval_speed_pldi10_ex1_bb1_in(v_.1, v_.1, v_1, v_3, v_i.0 + 1, v_i.0.sink, v_n))
+  eval_speed_pldi10_ex1_bb6_in(v_.0, v_.1, v_1, v_3, v_i.0, v_i.0.sink, v_n) -> Com_1(eval_speed_pldi10_ex1_stop(v_.0, v_.1, v_1, v_3, v_i.0, v_i.0.sink, v_n))
+)

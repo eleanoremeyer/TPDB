@@ -1,0 +1,24 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS eval_realheapsort_step1_start))
+(VAR nondef.0 nondef.1 nondef.3 v_4 v_5 v_N v_j.0 v_k.0)
+(RULES
+  eval_realheapsort_step1_start(v_4, v_5, v_N, v_j.0, v_k.0) -> Com_1(eval_realheapsort_step1_bb0_in(v_4, v_5, v_N, v_j.0, v_k.0))
+  eval_realheapsort_step1_bb0_in(v_4, v_5, v_N, v_j.0, v_k.0) -> Com_1(eval_realheapsort_step1_bb1_in(v_4, v_5, v_N, v_j.0, 1)) :|: v_N > 2
+  eval_realheapsort_step1_bb0_in(v_4, v_5, v_N, v_j.0, v_k.0) -> Com_1(eval_realheapsort_step1_bb5_in(v_4, v_5, v_N, v_j.0, v_k.0)) :|: v_N <= 2
+  eval_realheapsort_step1_bb1_in(v_4, v_5, v_N, v_j.0, v_k.0) -> Com_1(eval_realheapsort_step1_bb2_in(v_4, v_5, v_N, v_k.0, v_k.0)) :|: v_k.0 <= v_N - 1
+  eval_realheapsort_step1_bb1_in(v_4, v_5, v_N, v_j.0, v_k.0) -> Com_1(eval_realheapsort_step1_bb5_in(v_4, v_5, v_N, v_j.0, v_k.0)) :|: v_k.0 > v_N - 1
+  eval_realheapsort_step1_bb2_in(v_4, v_5, v_N, v_j.0, v_k.0) -> Com_1(eval_realheapsort_step1_bb3_in(v_4, v_5, v_N, v_j.0, v_k.0)) :|: v_j.0 > 0
+  eval_realheapsort_step1_bb2_in(v_4, v_5, v_N, v_j.0, v_k.0) -> Com_1(eval_realheapsort_step1_.critedge_in(v_4, v_5, v_N, v_j.0, v_k.0)) :|: v_j.0 <= 0
+  eval_realheapsort_step1_bb3_in(v_4, v_5, v_N, v_j.0, v_k.0) -> Com_1(eval_realheapsort_step1_2(v_4, v_5, v_N, v_j.0, v_k.0))
+  eval_realheapsort_step1_2(v_4, v_5, v_N, v_j.0, v_k.0) -> Com_2(eval_nondet_start(v_4, v_5, v_N, v_j.0, v_k.0), eval_realheapsort_step1_3(nondef.0, v_5, v_N, v_j.0, v_k.0))
+  eval_realheapsort_step1_3(v_4, v_5, v_N, v_j.0, v_k.0) -> Com_2(eval_nondet_start(v_4, v_5, v_N, v_j.0, v_k.0), eval_realheapsort_step1_4(v_4, nondef.1, v_N, v_j.0, v_k.0))
+  eval_realheapsort_step1_4(v_4, v_5, v_N, v_j.0, v_k.0) -> Com_1(eval_realheapsort_step1_bb4_in(v_4, v_5, v_N, v_j.0, v_k.0)) :|: v_4 > v_5
+  eval_realheapsort_step1_4(v_4, v_5, v_N, v_j.0, v_k.0) -> Com_1(eval_realheapsort_step1_.critedge_in(v_4, v_5, v_N, v_j.0, v_k.0)) :|: v_4 <= v_5
+  eval_realheapsort_step1_bb4_in(v_4, v_5, v_N, v_j.0, v_k.0) -> Com_1(eval_realheapsort_step1_5(v_4, v_5, v_N, v_j.0, v_k.0))
+  eval_realheapsort_step1_5(v_4, v_5, v_N, v_j.0, v_k.0) -> Com_2(eval_nondet_start(v_4, v_5, v_N, v_j.0, v_k.0), eval_realheapsort_step1_6(v_4, v_5, v_N, v_j.0, v_k.0))
+  eval_realheapsort_step1_6(v_4, v_5, v_N, v_j.0, v_k.0) -> Com_1(eval_realheapsort_step1_bb2_in(v_4, v_5, v_N, nondef.3 - 1, v_k.0)) :|: v_j.0 + 1 = 0 && nondef.3 = 0
+  eval_realheapsort_step1_6(v_4, v_5, v_N, v_j.0, v_k.0) -> Com_1(eval_realheapsort_step1_bb2_in(v_4, v_5, v_N, nondef.3 - 1, v_k.0)) :|: v_j.0 + 1 > 0 && nondef.3 >= 0 && v_j.0 - 2*nondef.3 + 1 >= 0 && v_j.0 - 2*nondef.3 + 1 < 2
+  eval_realheapsort_step1_6(v_4, v_5, v_N, v_j.0, v_k.0) -> Com_1(eval_realheapsort_step1_bb2_in(v_4, v_5, v_N, nondef.3 - 1, v_k.0)) :|: v_j.0 + 1 < 0 && nondef.3 <= 0 && -v_j.0 + 2*nondef.3 - 1 >= 0 && -v_j.0 + 2*nondef.3 - 1 < 2
+  eval_realheapsort_step1_.critedge_in(v_4, v_5, v_N, v_j.0, v_k.0) -> Com_1(eval_realheapsort_step1_bb1_in(v_4, v_5, v_N, v_j.0, v_k.0 + 1))
+  eval_realheapsort_step1_bb5_in(v_4, v_5, v_N, v_j.0, v_k.0) -> Com_1(eval_realheapsort_step1_stop(v_4, v_5, v_N, v_j.0, v_k.0))
+)

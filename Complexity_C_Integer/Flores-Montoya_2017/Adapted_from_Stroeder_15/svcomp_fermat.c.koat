@@ -1,0 +1,28 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS eval_foo_start))
+(VAR v_.0 v_.01 v_.03 v_MAX v_a v_b v_c)
+(RULES
+  eval_foo_start(v_.0, v_.01, v_.03, v_MAX, v_a, v_b, v_c) -> Com_1(eval_foo_bb0_in(v_.0, v_.01, v_.03, v_MAX, v_a, v_b, v_c))
+  eval_foo_bb0_in(v_.0, v_.01, v_.03, v_MAX, v_a, v_b, v_c) -> Com_1(eval_foo_bb1_in(1, 1, 1, v_MAX, v_a, v_b, v_c))
+  eval_foo_bb1_in(v_.0, v_.01, v_.03, v_MAX, v_a, v_b, v_c) -> Com_1(eval_foo_bb2_in(v_.0, v_.01, v_.03, v_MAX, v_a, v_b, v_c)) :|: v_.0^3 < v_.01^3 + v_.03^3 && v_.03 <= 1000
+  eval_foo_bb1_in(v_.0, v_.01, v_.03, v_MAX, v_a, v_b, v_c) -> Com_1(eval_foo_bb2_in(v_.0, v_.01, v_.03, v_MAX, v_a, v_b, v_c)) :|: v_.0^3 > v_.01^3 + v_.03^3 && v_.03 <= 1000
+  eval_foo_bb1_in(v_.0, v_.01, v_.03, v_MAX, v_a, v_b, v_c) -> Com_1(eval_foo_bb3_in(v_.0, v_.01, v_.03, v_MAX, v_a, v_b, v_c)) :|: v_.0^3 = v_.01^3 + v_.03^3
+  eval_foo_bb1_in(v_.0, v_.01, v_.03, v_MAX, v_a, v_b, v_c) -> Com_1(eval_foo_bb3_in(v_.0, v_.01, v_.03, v_MAX, v_a, v_b, v_c)) :|: v_.03 > 1000
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_MAX, v_a, v_b, v_c) -> Com_1(eval_foo_bb1_in(1, 1, v_.03 + 1, v_MAX, v_a, v_b, v_c)) :|: v_.0 + 1 > 1000 && v_.0 + 1 > 1000 && v_.01 + 1 > 1000 && v_.01 + 1 > 1000
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_MAX, v_a, v_b, v_c) -> Com_1(eval_foo_bb1_in(1, v_.01 + 1, v_.03 + 1, v_MAX, v_a, v_b, v_c)) :|: v_.0 + 1 > 1000 && v_.0 + 1 > 1000 && v_.01 + 1 > 1000 && v_.01 + 1 <= 1000
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_MAX, v_a, v_b, v_c) -> Com_1(eval_foo_bb1_in(1, 1, v_.03, v_MAX, v_a, v_b, v_c)) :|: v_.0 + 1 > 1000 && v_.0 + 1 > 1000 && v_.01 + 1 <= 1000 && v_.01 + 1 > 1000
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_MAX, v_a, v_b, v_c) -> Com_1(eval_foo_bb1_in(1, v_.01 + 1, v_.03, v_MAX, v_a, v_b, v_c)) :|: v_.0 + 1 > 1000 && v_.0 + 1 > 1000 && v_.01 + 1 <= 1000 && v_.01 + 1 <= 1000
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_MAX, v_a, v_b, v_c) -> Com_1(eval_foo_bb1_in(v_.0 + 1, 1, v_.03 + 1, v_MAX, v_a, v_b, v_c)) :|: v_.0 + 1 > 1000 && v_.0 + 1 <= 1000 && v_.01 + 1 > 1000 && v_.01 + 1 > 1000
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_MAX, v_a, v_b, v_c) -> Com_1(eval_foo_bb1_in(v_.0 + 1, v_.01 + 1, v_.03 + 1, v_MAX, v_a, v_b, v_c)) :|: v_.0 + 1 > 1000 && v_.0 + 1 <= 1000 && v_.01 + 1 > 1000 && v_.01 + 1 <= 1000
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_MAX, v_a, v_b, v_c) -> Com_1(eval_foo_bb1_in(v_.0 + 1, 1, v_.03, v_MAX, v_a, v_b, v_c)) :|: v_.0 + 1 > 1000 && v_.0 + 1 <= 1000 && v_.01 + 1 <= 1000 && v_.01 + 1 > 1000
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_MAX, v_a, v_b, v_c) -> Com_1(eval_foo_bb1_in(v_.0 + 1, v_.01 + 1, v_.03, v_MAX, v_a, v_b, v_c)) :|: v_.0 + 1 > 1000 && v_.0 + 1 <= 1000 && v_.01 + 1 <= 1000 && v_.01 + 1 <= 1000
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_MAX, v_a, v_b, v_c) -> Com_1(eval_foo_bb1_in(1, 1, v_.03 + 1, v_MAX, v_a, v_b, v_c)) :|: v_.0 + 1 <= 1000 && v_.0 + 1 > 1000 && v_.01 > 1000 && v_.01 > 1000
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_MAX, v_a, v_b, v_c) -> Com_1(eval_foo_bb1_in(1, v_.01, v_.03 + 1, v_MAX, v_a, v_b, v_c)) :|: v_.0 + 1 <= 1000 && v_.0 + 1 > 1000 && v_.01 > 1000 && v_.01 <= 1000
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_MAX, v_a, v_b, v_c) -> Com_1(eval_foo_bb1_in(1, 1, v_.03, v_MAX, v_a, v_b, v_c)) :|: v_.0 + 1 <= 1000 && v_.0 + 1 > 1000 && v_.01 <= 1000 && v_.01 > 1000
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_MAX, v_a, v_b, v_c) -> Com_1(eval_foo_bb1_in(1, v_.01, v_.03, v_MAX, v_a, v_b, v_c)) :|: v_.0 + 1 <= 1000 && v_.0 + 1 > 1000 && v_.01 <= 1000 && v_.01 <= 1000
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_MAX, v_a, v_b, v_c) -> Com_1(eval_foo_bb1_in(v_.0 + 1, 1, v_.03 + 1, v_MAX, v_a, v_b, v_c)) :|: v_.0 + 1 <= 1000 && v_.0 + 1 <= 1000 && v_.01 > 1000 && v_.01 > 1000
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_MAX, v_a, v_b, v_c) -> Com_1(eval_foo_bb1_in(v_.0 + 1, v_.01, v_.03 + 1, v_MAX, v_a, v_b, v_c)) :|: v_.0 + 1 <= 1000 && v_.0 + 1 <= 1000 && v_.01 > 1000 && v_.01 <= 1000
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_MAX, v_a, v_b, v_c) -> Com_1(eval_foo_bb1_in(v_.0 + 1, 1, v_.03, v_MAX, v_a, v_b, v_c)) :|: v_.0 + 1 <= 1000 && v_.0 + 1 <= 1000 && v_.01 <= 1000 && v_.01 > 1000
+  eval_foo_bb2_in(v_.0, v_.01, v_.03, v_MAX, v_a, v_b, v_c) -> Com_1(eval_foo_bb1_in(v_.0 + 1, v_.01, v_.03, v_MAX, v_a, v_b, v_c)) :|: v_.0 + 1 <= 1000 && v_.0 + 1 <= 1000 && v_.01 <= 1000 && v_.01 <= 1000
+  eval_foo_bb3_in(v_.0, v_.01, v_.03, v_MAX, v_a, v_b, v_c) -> Com_1(eval_foo_stop(v_.0, v_.01, v_.03, v_MAX, v_a, v_b, v_c))
+)

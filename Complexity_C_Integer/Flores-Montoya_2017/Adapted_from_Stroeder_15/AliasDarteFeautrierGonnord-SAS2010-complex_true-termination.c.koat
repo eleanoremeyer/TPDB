@@ -1,0 +1,19 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS eval_foo_start))
+(VAR v_.0 v_.01 v_.1 v_.12 v_a v_b)
+(RULES
+  eval_foo_start(v_.0, v_.01, v_.1, v_.12, v_a, v_b) -> Com_1(eval_foo_bb0_in(v_.0, v_.01, v_.1, v_.12, v_a, v_b))
+  eval_foo_bb0_in(v_.0, v_.01, v_.1, v_.12, v_a, v_b) -> Com_1(eval_foo_bb1_in(v_a, v_b, v_.1, v_.12, v_a, v_b))
+  eval_foo_bb1_in(v_.0, v_.01, v_.1, v_.12, v_a, v_b) -> Com_1(eval_foo_bb2_in(v_.0, v_.01, v_.0, v_.01, v_a, v_b)) :|: v_.0 < 30
+  eval_foo_bb1_in(v_.0, v_.01, v_.1, v_.12, v_a, v_b) -> Com_1(eval_foo_bb5_in(v_.0, v_.01, v_.1, v_.12, v_a, v_b)) :|: v_.0 >= 30
+  eval_foo_bb2_in(v_.0, v_.01, v_.1, v_.12, v_a, v_b) -> Com_1(eval_foo_bb3_in(v_.0, v_.01, v_.1, v_.12, v_a, v_b)) :|: v_.12 < v_.1
+  eval_foo_bb2_in(v_.0, v_.01, v_.1, v_.12, v_a, v_b) -> Com_1(eval_foo_bb4_in(v_.0, v_.01, v_.1, v_.12, v_a, v_b)) :|: v_.12 >= v_.1
+  eval_foo_bb3_in(v_.0, v_.01, v_.1, v_.12, v_a, v_b) -> Com_1(eval_foo_bb2_in(v_.0, v_.01, v_.1 + 10, v_.12 + 7, v_a, v_b)) :|: v_.12 > 5 && v_.12 + 7 >= 10 && v_.12 + 7 <= 12
+  eval_foo_bb3_in(v_.0, v_.01, v_.1, v_.12, v_a, v_b) -> Com_1(eval_foo_bb2_in(v_.0, v_.01, v_.1 + 1, v_.12 + 7, v_a, v_b)) :|: v_.12 > 5 && v_.12 + 7 < 10
+  eval_foo_bb3_in(v_.0, v_.01, v_.1, v_.12, v_a, v_b) -> Com_1(eval_foo_bb2_in(v_.0, v_.01, v_.1 + 1, v_.12 + 7, v_a, v_b)) :|: v_.12 > 5 && v_.12 + 7 > 12
+  eval_foo_bb3_in(v_.0, v_.01, v_.1, v_.12, v_a, v_b) -> Com_1(eval_foo_bb2_in(v_.0, v_.01, v_.1 + 10, v_.12 + 2, v_a, v_b)) :|: v_.12 <= 5 && v_.12 + 2 >= 10 && v_.12 + 2 <= 12
+  eval_foo_bb3_in(v_.0, v_.01, v_.1, v_.12, v_a, v_b) -> Com_1(eval_foo_bb2_in(v_.0, v_.01, v_.1 + 1, v_.12 + 2, v_a, v_b)) :|: v_.12 <= 5 && v_.12 + 2 < 10
+  eval_foo_bb3_in(v_.0, v_.01, v_.1, v_.12, v_a, v_b) -> Com_1(eval_foo_bb2_in(v_.0, v_.01, v_.1 + 1, v_.12 + 2, v_a, v_b)) :|: v_.12 <= 5 && v_.12 + 2 > 12
+  eval_foo_bb4_in(v_.0, v_.01, v_.1, v_.12, v_a, v_b) -> Com_1(eval_foo_bb1_in(v_.1 + 2, v_.12 - 10, v_.1, v_.12, v_a, v_b))
+  eval_foo_bb5_in(v_.0, v_.01, v_.1, v_.12, v_a, v_b) -> Com_1(eval_foo_stop(v_.0, v_.01, v_.1, v_.12, v_a, v_b))
+)

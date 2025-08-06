@@ -1,0 +1,33 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS eval_foo_start))
+(VAR nondef.0 nondef.1 nondef.2 nondef.3 v_.0 v_1 v_10 v_4 v_7 v_x)
+(RULES
+  eval_foo_start(v_.0, v_1, v_10, v_4, v_7, v_x) -> Com_1(eval_foo_bb0_in(v_.0, v_1, v_10, v_4, v_7, v_x))
+  eval_foo_bb0_in(v_.0, v_1, v_10, v_4, v_7, v_x) -> Com_1(eval_foo_bb1_in(v_x, v_1, v_10, v_4, v_7, v_x))
+  eval_foo_bb1_in(v_.0, v_1, v_10, v_4, v_7, v_x) -> Com_1(eval_foo_bb2_in(v_.0, v_1, v_10, v_4, v_7, v_x)) :|: v_.0 >= 0
+  eval_foo_bb1_in(v_.0, v_1, v_10, v_4, v_7, v_x) -> Com_1(eval_foo_bb9_in(v_.0, v_1, v_10, v_4, v_7, v_x)) :|: v_.0 < 0
+  eval_foo_bb2_in(v_.0, v_1, v_10, v_4, v_7, v_x) -> Com_1(eval_foo_0(v_.0, v_1, v_10, v_4, v_7, v_x))
+  eval_foo_0(v_.0, v_1, v_10, v_4, v_7, v_x) -> Com_2(eval___VERIFIER_nondet_int_start(v_.0, v_1, v_10, v_4, v_7, v_x), eval_foo_1(v_.0, nondef.0, v_10, v_4, v_7, v_x))
+  eval_foo_1(v_.0, v_1, v_10, v_4, v_7, v_x) -> Com_1(eval_foo_bb3_in(v_.0, v_1, v_10, v_4, v_7, v_x)) :|: v_1 < 0
+  eval_foo_1(v_.0, v_1, v_10, v_4, v_7, v_x) -> Com_1(eval_foo_bb3_in(v_.0, v_1, v_10, v_4, v_7, v_x)) :|: v_1 > 0
+  eval_foo_1(v_.0, v_1, v_10, v_4, v_7, v_x) -> Com_1(eval_foo_bb4_in(v_.0, v_1, v_10, v_4, v_7, v_x)) :|: v_1 = 0
+  eval_foo_bb3_in(v_.0, v_1, v_10, v_4, v_7, v_x) -> Com_1(eval_foo_bb1_in(v_.0 + 1, v_1, v_10, v_4, v_7, v_x))
+  eval_foo_bb4_in(v_.0, v_1, v_10, v_4, v_7, v_x) -> Com_1(eval_foo_4(v_.0, v_1, v_10, v_4, v_7, v_x))
+  eval_foo_4(v_.0, v_1, v_10, v_4, v_7, v_x) -> Com_2(eval___VERIFIER_nondet_int_start(v_.0, v_1, v_10, v_4, v_7, v_x), eval_foo_5(v_.0, v_1, v_10, nondef.1, v_7, v_x))
+  eval_foo_5(v_.0, v_1, v_10, v_4, v_7, v_x) -> Com_1(eval_foo_bb5_in(v_.0, v_1, v_10, v_4, v_7, v_x)) :|: v_4 < 0
+  eval_foo_5(v_.0, v_1, v_10, v_4, v_7, v_x) -> Com_1(eval_foo_bb5_in(v_.0, v_1, v_10, v_4, v_7, v_x)) :|: v_4 > 0
+  eval_foo_5(v_.0, v_1, v_10, v_4, v_7, v_x) -> Com_1(eval_foo_bb6_in(v_.0, v_1, v_10, v_4, v_7, v_x)) :|: v_4 = 0
+  eval_foo_bb5_in(v_.0, v_1, v_10, v_4, v_7, v_x) -> Com_1(eval_foo_bb1_in(v_.0 + 2, v_1, v_10, v_4, v_7, v_x))
+  eval_foo_bb6_in(v_.0, v_1, v_10, v_4, v_7, v_x) -> Com_1(eval_foo_8(v_.0, v_1, v_10, v_4, v_7, v_x))
+  eval_foo_8(v_.0, v_1, v_10, v_4, v_7, v_x) -> Com_2(eval___VERIFIER_nondet_int_start(v_.0, v_1, v_10, v_4, v_7, v_x), eval_foo_9(v_.0, v_1, v_10, v_4, nondef.2, v_x))
+  eval_foo_9(v_.0, v_1, v_10, v_4, v_7, v_x) -> Com_1(eval_foo_bb7_in(v_.0, v_1, v_10, v_4, v_7, v_x)) :|: v_7 < 0
+  eval_foo_9(v_.0, v_1, v_10, v_4, v_7, v_x) -> Com_1(eval_foo_bb7_in(v_.0, v_1, v_10, v_4, v_7, v_x)) :|: v_7 > 0
+  eval_foo_9(v_.0, v_1, v_10, v_4, v_7, v_x) -> Com_1(eval_foo_bb8_in(v_.0, v_1, v_10, v_4, v_7, v_x)) :|: v_7 = 0
+  eval_foo_bb7_in(v_.0, v_1, v_10, v_4, v_7, v_x) -> Com_1(eval_foo_bb1_in(v_.0 + 3, v_1, v_10, v_4, v_7, v_x))
+  eval_foo_bb8_in(v_.0, v_1, v_10, v_4, v_7, v_x) -> Com_1(eval_foo_12(v_.0, v_1, v_10, v_4, v_7, v_x))
+  eval_foo_12(v_.0, v_1, v_10, v_4, v_7, v_x) -> Com_2(eval___VERIFIER_nondet_int_start(v_.0, v_1, v_10, v_4, v_7, v_x), eval_foo_13(v_.0, v_1, nondef.3, v_4, v_7, v_x))
+  eval_foo_13(v_.0, v_1, v_10, v_4, v_7, v_x) -> Com_1(eval_foo_bb1_in(v_.0 + 4, v_1, v_10, v_4, v_7, v_x)) :|: v_10 < 0
+  eval_foo_13(v_.0, v_1, v_10, v_4, v_7, v_x) -> Com_1(eval_foo_bb1_in(v_.0 + 4, v_1, v_10, v_4, v_7, v_x)) :|: v_10 > 0
+  eval_foo_13(v_.0, v_1, v_10, v_4, v_7, v_x) -> Com_1(eval_foo_bb1_in(-1, v_1, v_10, v_4, v_7, v_x)) :|: v_10 = 0
+  eval_foo_bb9_in(v_.0, v_1, v_10, v_4, v_7, v_x) -> Com_1(eval_foo_stop(v_.0, v_1, v_10, v_4, v_7, v_x))
+)

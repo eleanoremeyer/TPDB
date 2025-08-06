@@ -1,0 +1,16 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS eval_speed_popl10_nested_single_start))
+(VAR nondef.0 v_1 v_3 v_n v_x.0 v_x.0.sink)
+(RULES
+  eval_speed_popl10_nested_single_start(v_1, v_3, v_n, v_x.0, v_x.0.sink) -> Com_1(eval_speed_popl10_nested_single_bb0_in(v_1, v_3, v_n, v_x.0, v_x.0.sink))
+  eval_speed_popl10_nested_single_bb0_in(v_1, v_3, v_n, v_x.0, v_x.0.sink) -> Com_1(eval_speed_popl10_nested_single_bb1_in(v_1, v_3, v_n, 0, v_x.0.sink))
+  eval_speed_popl10_nested_single_bb1_in(v_1, v_3, v_n, v_x.0, v_x.0.sink) -> Com_1(eval_speed_popl10_nested_single_bb2_in(v_1, v_3, v_n, v_x.0, v_x.0)) :|: v_x.0 < v_n
+  eval_speed_popl10_nested_single_bb1_in(v_1, v_3, v_n, v_x.0, v_x.0.sink) -> Com_1(eval_speed_popl10_nested_single_bb4_in(v_1, v_3, v_n, v_x.0, v_x.0.sink)) :|: v_x.0 >= v_n
+  eval_speed_popl10_nested_single_bb2_in(v_1, v_3, v_n, v_x.0, v_x.0.sink) -> Com_1(eval_speed_popl10_nested_single_bb3_in(v_x.0.sink + 1, v_3, v_n, v_x.0, v_x.0.sink)) :|: v_x.0.sink + 1 < v_n
+  eval_speed_popl10_nested_single_bb2_in(v_1, v_3, v_n, v_x.0, v_x.0.sink) -> Com_1(eval_speed_popl10_nested_single_bb1_in(v_1, v_3, v_n, v_x.0.sink + 1, v_x.0.sink)) :|: v_x.0.sink + 1 >= v_n
+  eval_speed_popl10_nested_single_bb3_in(v_1, v_3, v_n, v_x.0, v_x.0.sink) -> Com_1(eval_speed_popl10_nested_single_2(v_1, v_3, v_n, v_x.0, v_x.0.sink))
+  eval_speed_popl10_nested_single_2(v_1, v_3, v_n, v_x.0, v_x.0.sink) -> Com_2(eval_nondet_start(v_1, v_3, v_n, v_x.0, v_x.0.sink), eval_speed_popl10_nested_single_3(v_1, nondef.0, v_n, v_x.0, v_x.0.sink))
+  eval_speed_popl10_nested_single_3(v_1, v_3, v_n, v_x.0, v_x.0.sink) -> Com_1(eval_speed_popl10_nested_single_bb1_in(v_1, v_3, v_n, v_1, v_x.0.sink)) :|: v_3 > 0
+  eval_speed_popl10_nested_single_3(v_1, v_3, v_n, v_x.0, v_x.0.sink) -> Com_1(eval_speed_popl10_nested_single_bb2_in(v_1, v_3, v_n, v_x.0, v_1)) :|: v_3 <= 0
+  eval_speed_popl10_nested_single_bb4_in(v_1, v_3, v_n, v_x.0, v_x.0.sink) -> Com_1(eval_speed_popl10_nested_single_stop(v_1, v_3, v_n, v_x.0, v_x.0.sink))
+)

@@ -1,0 +1,31 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS eval_noiseTickSize_start))
+(VAR nondef.0 v_0 v_DELTAS v_i.0 v_j.0)
+(RULES
+  eval_noiseTickSize_start(v_0, v_DELTAS, v_i.0, v_j.0) -> Com_1(eval_noiseTickSize_bb0_in(v_0, v_DELTAS, v_i.0, v_j.0))
+  eval_noiseTickSize_bb0_in(v_0, v_DELTAS, v_i.0, v_j.0) -> Com_1(eval_noiseTickSize_bb1_in(v_0, v_DELTAS, 0, 0))
+  eval_noiseTickSize_bb1_in(v_0, v_DELTAS, v_i.0, v_j.0) -> Com_1(eval_noiseTickSize_0(v_0, v_DELTAS, v_i.0, v_j.0))
+  eval_noiseTickSize_0(v_0, v_DELTAS, v_i.0, v_j.0) -> Com_2(eval_nondet_start(v_0, v_DELTAS, v_i.0, v_j.0), eval_noiseTickSize_1(nondef.0, v_DELTAS, v_i.0, v_j.0))
+  eval_noiseTickSize_1(v_0, v_DELTAS, v_i.0, v_j.0) -> Com_1(eval_noiseTickSize_bb1_in(v_0, v_DELTAS, v_i.0 + 1, 1)) :|: v_0 < 0 && v_0 < 0 && v_i.0 + 1 < v_DELTAS
+  eval_noiseTickSize_1(v_0, v_DELTAS, v_i.0, v_j.0) -> Com_1(eval_noiseTickSize_bb1_in(v_0, v_DELTAS, v_i.0 + 1, 1)) :|: v_0 < 0 && v_0 > 0 && v_i.0 + 1 < v_DELTAS
+  eval_noiseTickSize_1(v_0, v_DELTAS, v_i.0, v_j.0) -> Com_1(eval_noiseTickSize_bb1_in(v_0, v_DELTAS, v_i.0 + 1, 1)) :|: v_0 > 0 && v_0 < 0 && v_i.0 + 1 < v_DELTAS
+  eval_noiseTickSize_1(v_0, v_DELTAS, v_i.0, v_j.0) -> Com_1(eval_noiseTickSize_bb1_in(v_0, v_DELTAS, v_i.0 + 1, 1)) :|: v_0 > 0 && v_0 > 0 && v_i.0 + 1 < v_DELTAS
+  eval_noiseTickSize_1(v_0, v_DELTAS, v_i.0, v_j.0) -> Com_1(eval_noiseTickSize_bb2_in(v_0, v_DELTAS, v_i.0, v_j.0)) :|: v_0 < 0 && v_0 < 0 && v_i.0 + 1 >= v_DELTAS
+  eval_noiseTickSize_1(v_0, v_DELTAS, v_i.0, v_j.0) -> Com_1(eval_noiseTickSize_bb2_in(v_0, v_DELTAS, v_i.0, v_j.0)) :|: v_0 < 0 && v_0 > 0 && v_i.0 + 1 >= v_DELTAS
+  eval_noiseTickSize_1(v_0, v_DELTAS, v_i.0, v_j.0) -> Com_1(eval_noiseTickSize_bb2_in(v_0, v_DELTAS, v_i.0, v_j.0)) :|: v_0 > 0 && v_0 < 0 && v_i.0 + 1 >= v_DELTAS
+  eval_noiseTickSize_1(v_0, v_DELTAS, v_i.0, v_j.0) -> Com_1(eval_noiseTickSize_bb2_in(v_0, v_DELTAS, v_i.0, v_j.0)) :|: v_0 > 0 && v_0 > 0 && v_i.0 + 1 >= v_DELTAS
+  eval_noiseTickSize_1(v_0, v_DELTAS, v_i.0, v_j.0) -> Com_1(eval_noiseTickSize_bb1_in(v_0, v_DELTAS, v_i.0, 1)) :|: v_0 < 0 && v_0 = 0 && v_i.0 < v_DELTAS
+  eval_noiseTickSize_1(v_0, v_DELTAS, v_i.0, v_j.0) -> Com_1(eval_noiseTickSize_bb1_in(v_0, v_DELTAS, v_i.0, 1)) :|: v_0 > 0 && v_0 = 0 && v_i.0 < v_DELTAS
+  eval_noiseTickSize_1(v_0, v_DELTAS, v_i.0, v_j.0) -> Com_1(eval_noiseTickSize_bb2_in(v_0, v_DELTAS, v_i.0, v_j.0)) :|: v_0 < 0 && v_0 = 0 && v_i.0 >= v_DELTAS
+  eval_noiseTickSize_1(v_0, v_DELTAS, v_i.0, v_j.0) -> Com_1(eval_noiseTickSize_bb2_in(v_0, v_DELTAS, v_i.0, v_j.0)) :|: v_0 > 0 && v_0 = 0 && v_i.0 >= v_DELTAS
+  eval_noiseTickSize_1(v_0, v_DELTAS, v_i.0, v_j.0) -> Com_1(eval_noiseTickSize_bb1_in(v_0, v_DELTAS, v_i.0 + 1, v_j.0 + 1)) :|: v_0 = 0 && v_0 < 0 && v_j.0 <= 10000 && v_i.0 + 1 < v_DELTAS
+  eval_noiseTickSize_1(v_0, v_DELTAS, v_i.0, v_j.0) -> Com_1(eval_noiseTickSize_bb1_in(v_0, v_DELTAS, v_i.0 + 1, v_j.0 + 1)) :|: v_0 = 0 && v_0 > 0 && v_j.0 <= 10000 && v_i.0 + 1 < v_DELTAS
+  eval_noiseTickSize_1(v_0, v_DELTAS, v_i.0, v_j.0) -> Com_1(eval_noiseTickSize_bb2_in(v_0, v_DELTAS, v_i.0, v_j.0)) :|: v_0 = 0 && v_0 < 0 && v_j.0 > 10000
+  eval_noiseTickSize_1(v_0, v_DELTAS, v_i.0, v_j.0) -> Com_1(eval_noiseTickSize_bb2_in(v_0, v_DELTAS, v_i.0, v_j.0)) :|: v_0 = 0 && v_0 < 0 && v_i.0 + 1 >= v_DELTAS
+  eval_noiseTickSize_1(v_0, v_DELTAS, v_i.0, v_j.0) -> Com_1(eval_noiseTickSize_bb2_in(v_0, v_DELTAS, v_i.0, v_j.0)) :|: v_0 = 0 && v_0 > 0 && v_j.0 > 10000
+  eval_noiseTickSize_1(v_0, v_DELTAS, v_i.0, v_j.0) -> Com_1(eval_noiseTickSize_bb2_in(v_0, v_DELTAS, v_i.0, v_j.0)) :|: v_0 = 0 && v_0 > 0 && v_i.0 + 1 >= v_DELTAS
+  eval_noiseTickSize_1(v_0, v_DELTAS, v_i.0, v_j.0) -> Com_1(eval_noiseTickSize_bb1_in(v_0, v_DELTAS, v_i.0, v_j.0 + 1)) :|: v_0 = 0 && v_0 = 0 && v_j.0 <= 10000 && v_i.0 < v_DELTAS
+  eval_noiseTickSize_1(v_0, v_DELTAS, v_i.0, v_j.0) -> Com_1(eval_noiseTickSize_bb2_in(v_0, v_DELTAS, v_i.0, v_j.0)) :|: v_0 = 0 && v_0 = 0 && v_j.0 > 10000
+  eval_noiseTickSize_1(v_0, v_DELTAS, v_i.0, v_j.0) -> Com_1(eval_noiseTickSize_bb2_in(v_0, v_DELTAS, v_i.0, v_j.0)) :|: v_0 = 0 && v_0 = 0 && v_i.0 >= v_DELTAS
+  eval_noiseTickSize_bb2_in(v_0, v_DELTAS, v_i.0, v_j.0) -> Com_1(eval_noiseTickSize_stop(v_0, v_DELTAS, v_i.0, v_j.0))
+)

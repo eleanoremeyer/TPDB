@@ -1,0 +1,14 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS eval_foo_start))
+(VAR v_.0 v_.01 v_res v_restmp v_x v_xtmp)
+(RULES
+  eval_foo_start(v_.0, v_.01, v_res, v_restmp, v_x, v_xtmp) -> Com_1(eval_foo_bb0_in(v_.0, v_.01, v_res, v_restmp, v_x, v_xtmp))
+  eval_foo_bb0_in(v_.0, v_.01, v_res, v_restmp, v_x, v_xtmp) -> Com_1(eval_foo_bb1_in(v_x, v_.01, v_res, v_restmp, v_x, v_xtmp))
+  eval_foo_bb1_in(v_.0, v_.01, v_res, v_restmp, v_x, v_xtmp) -> Com_1(eval_foo_bb2_in(v_.0, v_.0, v_res, v_restmp, v_x, v_xtmp)) :|: v_.0 > 1
+  eval_foo_bb1_in(v_.0, v_.01, v_res, v_restmp, v_x, v_xtmp) -> Com_1(eval_foo_bb5_in(v_.0, v_.01, v_res, v_restmp, v_x, v_xtmp)) :|: v_.0 <= 1
+  eval_foo_bb2_in(v_.0, v_.01, v_res, v_restmp, v_x, v_xtmp) -> Com_1(eval_foo_bb3_in(v_.0, v_.01, v_res, v_restmp, v_x, v_xtmp)) :|: v_.01 > 1
+  eval_foo_bb2_in(v_.0, v_.01, v_res, v_restmp, v_x, v_xtmp) -> Com_1(eval_foo_bb4_in(v_.0, v_.01, v_res, v_restmp, v_x, v_xtmp)) :|: v_.01 <= 1
+  eval_foo_bb3_in(v_.0, v_.01, v_res, v_restmp, v_x, v_xtmp) -> Com_1(eval_foo_bb2_in(v_.0, v_.01 - 2, v_res, v_restmp, v_x, v_xtmp))
+  eval_foo_bb4_in(v_.0, v_.01, v_res, v_restmp, v_x, v_xtmp) -> Com_1(eval_foo_bb1_in(v_.01, v_.01, v_res, v_restmp, v_x, v_xtmp))
+  eval_foo_bb5_in(v_.0, v_.01, v_res, v_restmp, v_x, v_xtmp) -> Com_1(eval_foo_stop(v_.0, v_.01, v_res, v_restmp, v_x, v_xtmp))
+)

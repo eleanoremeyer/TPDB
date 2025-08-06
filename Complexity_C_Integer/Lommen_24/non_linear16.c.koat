@@ -1,0 +1,21 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS eval_non_linear16_start))
+(VAR nondef.0 nondef.1 v_.0 v_.01 v_.02 v_.03 v_4 v_7 v_8 v_9 v_t.0 v_x1 v_x2 v_y1 v_y2)
+(RULES
+  eval_non_linear16_start(v_.0, v_.01, v_.02, v_.03, v_4, v_7, v_8, v_9, v_t.0, v_x1, v_x2, v_y1, v_y2) -> Com_1(eval_non_linear16_bb0_in(v_.0, v_.01, v_.02, v_.03, v_4, v_7, v_8, v_9, v_t.0, v_x1, v_x2, v_y1, v_y2))
+  eval_non_linear16_bb0_in(v_.0, v_.01, v_.02, v_.03, v_4, v_7, v_8, v_9, v_t.0, v_x1, v_x2, v_y1, v_y2) -> Com_1(eval_non_linear16_bb1_in(v_x1, v_x2, v_.02, v_.03, v_4, v_7, v_8, v_9, v_t.0, v_x1, v_x2, v_y1, v_y2))
+  eval_non_linear16_bb1_in(v_.0, v_.01, v_.02, v_.03, v_4, v_7, v_8, v_9, v_t.0, v_x1, v_x2, v_y1, v_y2) -> Com_1(eval_non_linear16_bb2_in(v_.0, v_.01, v_.02, v_.03, v_4, v_7, v_8, v_9, v_t.0, v_x1, v_x2, v_y1, v_y2)) :|: v_.01 < v_.0 && v_.01 > 0
+  eval_non_linear16_bb1_in(v_.0, v_.01, v_.02, v_.03, v_4, v_7, v_8, v_9, v_t.0, v_x1, v_x2, v_y1, v_y2) -> Com_1(eval_non_linear16_bb3_in(v_.0, v_.01, v_.02, v_.03, v_4, v_7, v_8, v_9, v_t.0, v_x1, v_x2, v_y1, v_y2)) :|: v_.01 >= v_.0
+  eval_non_linear16_bb1_in(v_.0, v_.01, v_.02, v_.03, v_4, v_7, v_8, v_9, v_t.0, v_x1, v_x2, v_y1, v_y2) -> Com_1(eval_non_linear16_bb3_in(v_.0, v_.01, v_.02, v_.03, v_4, v_7, v_8, v_9, v_t.0, v_x1, v_x2, v_y1, v_y2)) :|: v_.01 <= 0
+  eval_non_linear16_bb2_in(v_.0, v_.01, v_.02, v_.03, v_4, v_7, v_8, v_9, v_t.0, v_x1, v_x2, v_y1, v_y2) -> Com_1(eval_non_linear16_bb1_in(2*v_.0, 3*v_.01, v_.02, v_.03, v_4, v_7, v_8, v_9, v_t.0, v_x1, v_x2, v_y1, v_y2))
+  eval_non_linear16_bb3_in(v_.0, v_.01, v_.02, v_.03, v_4, v_7, v_8, v_9, v_t.0, v_x1, v_x2, v_y1, v_y2) -> Com_1(eval_non_linear16_3(v_.0, v_.01, v_.02, v_.03, v_4, v_7, v_8, v_9, v_t.0, v_x1, v_x2, v_y1, v_y2))
+  eval_non_linear16_3(v_.0, v_.01, v_.02, v_.03, v_4, v_7, v_8, v_9, v_t.0, v_x1, v_x2, v_y1, v_y2) -> Com_2(eval___VERIFIER_nondet_int_start(v_.0, v_.01, v_.02, v_.03, v_4, v_7, v_8, v_9, v_t.0, v_x1, v_x2, v_y1, v_y2), eval_non_linear16_4(v_.0, v_.01, v_.02, v_.03, nondef.0, v_7, v_8, v_9, v_t.0, v_x1, v_x2, v_y1, v_y2))
+  eval_non_linear16_4(v_.0, v_.01, v_.02, v_.03, v_4, v_7, v_8, v_9, v_t.0, v_x1, v_x2, v_y1, v_y2) -> Com_1(eval_non_linear16_bb4_in(v_.0, v_.01, v_y1, v_y2, v_4, v_7, v_8, v_9, v_4, v_x1, v_x2, v_y1, v_y2))
+  eval_non_linear16_bb4_in(v_.0, v_.01, v_.02, v_.03, v_4, v_7, v_8, v_9, v_t.0, v_x1, v_x2, v_y1, v_y2) -> Com_1(eval_non_linear16_bb5_in(v_.0, v_.01, v_.02, v_.03, v_4, v_7, v_8, v_9, v_t.0, v_x1, v_x2, v_y1, v_y2)) :|: v_.02 > 0 && v_t.0 > 0
+  eval_non_linear16_bb4_in(v_.0, v_.01, v_.02, v_.03, v_4, v_7, v_8, v_9, v_t.0, v_x1, v_x2, v_y1, v_y2) -> Com_1(eval_non_linear16_bb6_in(v_.0, v_.01, v_.02, v_.03, v_4, v_7, v_8, v_9, v_t.0, v_x1, v_x2, v_y1, v_y2)) :|: v_.02 <= 0
+  eval_non_linear16_bb4_in(v_.0, v_.01, v_.02, v_.03, v_4, v_7, v_8, v_9, v_t.0, v_x1, v_x2, v_y1, v_y2) -> Com_1(eval_non_linear16_bb6_in(v_.0, v_.01, v_.02, v_.03, v_4, v_7, v_8, v_9, v_t.0, v_x1, v_x2, v_y1, v_y2)) :|: v_t.0 <= 0
+  eval_non_linear16_bb5_in(v_.0, v_.01, v_.02, v_.03, v_4, v_7, v_8, v_9, v_t.0, v_x1, v_x2, v_y1, v_y2) -> Com_1(eval_non_linear16_7(v_.0, v_.01, v_.02, v_.03, v_4, v_.02 + v_.03, v_.03 - v_t.0, v_9, v_t.0, v_x1, v_x2, v_y1, v_y2))
+  eval_non_linear16_7(v_.0, v_.01, v_.02, v_.03, v_4, v_7, v_8, v_9, v_t.0, v_x1, v_x2, v_y1, v_y2) -> Com_2(eval___VERIFIER_nondet_int_start(v_.0, v_.01, v_.02, v_.03, v_4, v_7, v_8, v_9, v_t.0, v_x1, v_x2, v_y1, v_y2), eval_non_linear16_8(v_.0, v_.01, v_.02, v_.03, v_4, v_7, v_8, nondef.1, v_t.0, v_x1, v_x2, v_y1, v_y2))
+  eval_non_linear16_8(v_.0, v_.01, v_.02, v_.03, v_4, v_7, v_8, v_9, v_t.0, v_x1, v_x2, v_y1, v_y2) -> Com_1(eval_non_linear16_bb4_in(v_.0, v_.01, v_7, v_8, v_4, v_7, v_8, v_9, v_9, v_x1, v_x2, v_y1, v_y2))
+  eval_non_linear16_bb6_in(v_.0, v_.01, v_.02, v_.03, v_4, v_7, v_8, v_9, v_t.0, v_x1, v_x2, v_y1, v_y2) -> Com_1(eval_non_linear16_stop(v_.0, v_.01, v_.02, v_.03, v_4, v_7, v_8, v_9, v_t.0, v_x1, v_x2, v_y1, v_y2))
+)

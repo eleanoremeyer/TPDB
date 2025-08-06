@@ -1,0 +1,14 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS eval_t47_start))
+(VAR v_.0 v_flag.0 v_n)
+(RULES
+  eval_t47_start(v_.0, v_flag.0, v_n) -> Com_1(eval_t47_bb0_in(v_.0, v_flag.0, v_n))
+  eval_t47_bb0_in(v_.0, v_flag.0, v_n) -> Com_1(eval_t47_bb1_in(v_n, 1, v_n))
+  eval_t47_bb1_in(v_.0, v_flag.0, v_n) -> Com_1(eval_t47_bb2_in(v_.0, v_flag.0, v_n)) :|: v_flag.0 > 0
+  eval_t47_bb1_in(v_.0, v_flag.0, v_n) -> Com_1(eval_t47_bb3_in(v_.0, v_flag.0, v_n)) :|: v_flag.0 <= 0
+  eval_t47_bb2_in(v_.0, v_flag.0, v_n) -> Com_1(eval_t47_bb1_in(v_.0 - 1, 1, v_n)) :|: v_.0 > 0 && v_.0 > 0
+  eval_t47_bb2_in(v_.0, v_flag.0, v_n) -> Com_1(eval_t47_bb1_in(v_.0, 1, v_n)) :|: v_.0 > 0 && v_.0 <= 0
+  eval_t47_bb2_in(v_.0, v_flag.0, v_n) -> Com_1(eval_t47_bb1_in(v_.0 - 1, 0, v_n)) :|: v_.0 <= 0 && v_.0 > 0
+  eval_t47_bb2_in(v_.0, v_flag.0, v_n) -> Com_1(eval_t47_bb1_in(v_.0, 0, v_n)) :|: v_.0 <= 0 && v_.0 <= 0
+  eval_t47_bb3_in(v_.0, v_flag.0, v_n) -> Com_1(eval_t47_stop(v_.0, v_flag.0, v_n))
+)

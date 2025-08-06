@@ -1,0 +1,22 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS eval_real2_start))
+(VAR nondef.0 nondef.1 v_3 v_4 v_again.0 v_again.1 v_again.2 v_i.0 v_len)
+(RULES
+  eval_real2_start(v_3, v_4, v_again.0, v_again.1, v_again.2, v_i.0, v_len) -> Com_1(eval_real2_bb0_in(v_3, v_4, v_again.0, v_again.1, v_again.2, v_i.0, v_len))
+  eval_real2_bb0_in(v_3, v_4, v_again.0, v_again.1, v_again.2, v_i.0, v_len) -> Com_1(eval_real2_bb1_in(v_3, v_4, 1, v_again.1, v_again.2, v_i.0, v_len))
+  eval_real2_bb1_in(v_3, v_4, v_again.0, v_again.1, v_again.2, v_i.0, v_len) -> Com_1(eval_real2_bb2_in(v_3, v_4, v_again.0, 0, v_again.2, 0, v_len)) :|: v_again.0 < 0
+  eval_real2_bb1_in(v_3, v_4, v_again.0, v_again.1, v_again.2, v_i.0, v_len) -> Com_1(eval_real2_bb2_in(v_3, v_4, v_again.0, 0, v_again.2, 0, v_len)) :|: v_again.0 > 0
+  eval_real2_bb1_in(v_3, v_4, v_again.0, v_again.1, v_again.2, v_i.0, v_len) -> Com_1(eval_real2_bb6_in(v_3, v_4, v_again.0, v_again.1, v_again.2, v_i.0, v_len)) :|: v_again.0 = 0
+  eval_real2_bb2_in(v_3, v_4, v_again.0, v_again.1, v_again.2, v_i.0, v_len) -> Com_1(eval_real2_bb3_in(v_3, v_4, v_again.0, v_again.1, v_again.2, v_i.0, v_len)) :|: v_i.0 < v_len - 1
+  eval_real2_bb2_in(v_3, v_4, v_again.0, v_again.1, v_again.2, v_i.0, v_len) -> Com_1(eval_real2_bb1_in(v_3, v_4, v_again.1, v_again.1, v_again.2, v_i.0, v_len)) :|: v_i.0 >= v_len - 1
+  eval_real2_bb3_in(v_3, v_4, v_again.0, v_again.1, v_again.2, v_i.0, v_len) -> Com_1(eval_real2_2(v_3, v_4, v_again.0, v_again.1, v_again.2, v_i.0, v_len))
+  eval_real2_2(v_3, v_4, v_again.0, v_again.1, v_again.2, v_i.0, v_len) -> Com_2(eval_nondet_start(v_3, v_4, v_again.0, v_again.1, v_again.2, v_i.0, v_len), eval_real2_3(nondef.0, v_4, v_again.0, v_again.1, v_again.2, v_i.0, v_len))
+  eval_real2_3(v_3, v_4, v_again.0, v_again.1, v_again.2, v_i.0, v_len) -> Com_2(eval_nondet_start(v_3, v_4, v_again.0, v_again.1, v_again.2, v_i.0, v_len), eval_real2_4(v_3, nondef.1, v_again.0, v_again.1, v_again.2, v_i.0, v_len))
+  eval_real2_4(v_3, v_4, v_again.0, v_again.1, v_again.2, v_i.0, v_len) -> Com_1(eval_real2_bb4_in(v_3, v_4, v_again.0, v_again.1, v_again.2, v_i.0, v_len)) :|: v_3 > v_4
+  eval_real2_4(v_3, v_4, v_again.0, v_again.1, v_again.2, v_i.0, v_len) -> Com_1(eval_real2_bb5_in(v_3, v_4, v_again.0, v_again.1, v_again.1, v_i.0, v_len)) :|: v_3 <= v_4
+  eval_real2_bb4_in(v_3, v_4, v_again.0, v_again.1, v_again.2, v_i.0, v_len) -> Com_1(eval_real2_5(v_3, v_4, v_again.0, v_again.1, v_again.2, v_i.0, v_len))
+  eval_real2_5(v_3, v_4, v_again.0, v_again.1, v_again.2, v_i.0, v_len) -> Com_2(eval_nondet_start(v_3, v_4, v_again.0, v_again.1, v_again.2, v_i.0, v_len), eval_real2_6(v_3, v_4, v_again.0, v_again.1, v_again.2, v_i.0, v_len))
+  eval_real2_6(v_3, v_4, v_again.0, v_again.1, v_again.2, v_i.0, v_len) -> Com_1(eval_real2_bb5_in(v_3, v_4, v_again.0, v_again.1, 1, v_i.0, v_len))
+  eval_real2_bb5_in(v_3, v_4, v_again.0, v_again.1, v_again.2, v_i.0, v_len) -> Com_1(eval_real2_bb2_in(v_3, v_4, v_again.0, v_again.2, v_again.2, v_i.0 + 1, v_len))
+  eval_real2_bb6_in(v_3, v_4, v_again.0, v_again.1, v_again.2, v_i.0, v_len) -> Com_1(eval_real2_stop(v_3, v_4, v_again.0, v_again.1, v_again.2, v_i.0, v_len))
+)

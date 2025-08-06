@@ -1,0 +1,24 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS eval_t62_start))
+(VAR nondef.0 nondef.1 v_.0 v_.01 v_.1 v_.12 v_1 v_3 v_5 v_7 v_h v_l)
+(RULES
+  eval_t62_start(v_.0, v_.01, v_.1, v_.12, v_1, v_3, v_5, v_7, v_h, v_l) -> Com_1(eval_t62_bb0_in(v_.0, v_.01, v_.1, v_.12, v_1, v_3, v_5, v_7, v_h, v_l))
+  eval_t62_bb0_in(v_.0, v_.01, v_.1, v_.12, v_1, v_3, v_5, v_7, v_h, v_l) -> Com_1(eval_t62_bb5_in(v_.0, v_.01, v_.1, v_.12, v_1, v_3, v_5, v_7, v_h, v_l)) :|: v_l >= v_h
+  eval_t62_bb0_in(v_.0, v_.01, v_.1, v_.12, v_1, v_3, v_5, v_7, v_h, v_l) -> Com_1(eval_t62_bb1_in(v_l, v_h, v_.1, v_.12, v_1, v_3, v_5, v_7, v_h, v_l)) :|: v_l < v_h
+  eval_t62_bb1_in(v_.0, v_.01, v_.1, v_.12, v_1, v_3, v_5, v_7, v_h, v_l) -> Com_1(eval_t62_bb2_in(v_.0, v_.01, v_.0, v_.12, v_1, v_3, v_5, v_7, v_h, v_l))
+  eval_t62_bb2_in(v_.0, v_.01, v_.1, v_.12, v_1, v_3, v_5, v_7, v_h, v_l) -> Com_1(eval_t62_bb3_in(v_.0, v_.01, v_.1, v_.12, v_.1 + 1, v_3, v_5, v_7, v_h, v_l)) :|: v_.1 + 1 < v_.01
+  eval_t62_bb2_in(v_.0, v_.01, v_.1, v_.12, v_1, v_3, v_5, v_7, v_h, v_l) -> Com_1(eval_t62_.critedge_in(v_.0, v_.01, v_.1, v_.01, v_.1 + 1, v_3, v_5, v_7, v_h, v_l)) :|: v_.1 + 1 >= v_.01
+  eval_t62_bb3_in(v_.0, v_.01, v_.1, v_.12, v_1, v_3, v_5, v_7, v_h, v_l) -> Com_1(eval_t62_2(v_.0, v_.01, v_.1, v_.12, v_1, v_3, v_5, v_7, v_h, v_l))
+  eval_t62_2(v_.0, v_.01, v_.1, v_.12, v_1, v_3, v_5, v_7, v_h, v_l) -> Com_2(eval_nondet_start(v_.0, v_.01, v_.1, v_.12, v_1, v_3, v_5, v_7, v_h, v_l), eval_t62_3(v_.0, v_.01, v_.1, v_.12, v_1, nondef.0, v_5, v_7, v_h, v_l))
+  eval_t62_3(v_.0, v_.01, v_.1, v_.12, v_1, v_3, v_5, v_7, v_h, v_l) -> Com_1(eval_t62_bb2_in(v_.0, v_.01, v_1, v_.12, v_1, v_3, v_5, v_7, v_h, v_l)) :|: v_3 > 0
+  eval_t62_3(v_.0, v_.01, v_.1, v_.12, v_1, v_3, v_5, v_7, v_h, v_l) -> Com_1(eval_t62_.critedge_in(v_.0, v_.01, v_.1, v_.01, v_1, v_3, v_5, v_7, v_h, v_l)) :|: v_3 <= 0
+  eval_t62_.critedge_in(v_.0, v_.01, v_.1, v_.12, v_1, v_3, v_5, v_7, v_h, v_l) -> Com_1(eval_t62_bb4_in(v_.0, v_.01, v_.1, v_.12, v_1, v_3, v_.12 - 1, v_7, v_h, v_l)) :|: v_1 < v_.12 - 1
+  eval_t62_.critedge_in(v_.0, v_.01, v_.1, v_.12, v_1, v_3, v_5, v_7, v_h, v_l) -> Com_1(eval_t62_.critedge3_in(v_.0, v_.01, v_.1, v_.12, v_1, v_3, v_.12 - 1, v_7, v_h, v_l)) :|: v_1 >= v_.12 - 1
+  eval_t62_bb4_in(v_.0, v_.01, v_.1, v_.12, v_1, v_3, v_5, v_7, v_h, v_l) -> Com_1(eval_t62_6(v_.0, v_.01, v_.1, v_.12, v_1, v_3, v_5, v_7, v_h, v_l))
+  eval_t62_6(v_.0, v_.01, v_.1, v_.12, v_1, v_3, v_5, v_7, v_h, v_l) -> Com_2(eval_nondet_start(v_.0, v_.01, v_.1, v_.12, v_1, v_3, v_5, v_7, v_h, v_l), eval_t62_7(v_.0, v_.01, v_.1, v_.12, v_1, v_3, v_5, nondef.1, v_h, v_l))
+  eval_t62_7(v_.0, v_.01, v_.1, v_.12, v_1, v_3, v_5, v_7, v_h, v_l) -> Com_1(eval_t62_.critedge_in(v_.0, v_.01, v_.1, v_5, v_1, v_3, v_5, v_7, v_h, v_l)) :|: v_7 > 0
+  eval_t62_7(v_.0, v_.01, v_.1, v_.12, v_1, v_3, v_5, v_7, v_h, v_l) -> Com_1(eval_t62_.critedge3_in(v_.0, v_.01, v_.1, v_.12, v_1, v_3, v_5, v_7, v_h, v_l)) :|: v_7 <= 0
+  eval_t62_.critedge3_in(v_.0, v_.01, v_.1, v_.12, v_1, v_3, v_5, v_7, v_h, v_l) -> Com_1(eval_t62_bb5_in(v_.0, v_.01, v_.1, v_.12, v_1, v_3, v_5, v_7, v_h, v_l)) :|: v_1 >= v_5
+  eval_t62_.critedge3_in(v_.0, v_.01, v_.1, v_.12, v_1, v_3, v_5, v_7, v_h, v_l) -> Com_1(eval_t62_bb1_in(v_1, v_5, v_.1, v_.12, v_1, v_3, v_5, v_7, v_h, v_l)) :|: v_1 < v_5
+  eval_t62_bb5_in(v_.0, v_.01, v_.1, v_.12, v_1, v_3, v_5, v_7, v_h, v_l) -> Com_1(eval_t62_stop(v_.0, v_.01, v_.1, v_.12, v_1, v_3, v_5, v_7, v_h, v_l))
+)

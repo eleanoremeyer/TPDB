@@ -1,0 +1,13 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS eval_non_linear06_start))
+(VAR v_.02 v_.03 v_.04 v_x1 v_x2 v_x3 v_x4 v_y1 v_y2)
+(RULES
+  eval_non_linear06_start(v_.02, v_.03, v_.04, v_x1, v_x2, v_x3, v_x4, v_y1, v_y2) -> Com_1(eval_non_linear06_bb0_in(v_.02, v_.03, v_.04, v_x1, v_x2, v_x3, v_x4, v_y1, v_y2))
+  eval_non_linear06_bb0_in(v_.02, v_.03, v_.04, v_x1, v_x2, v_x3, v_x4, v_y1, v_y2) -> Com_1(eval_non_linear06_bb1_in(v_x4, v_y1, v_y2, v_x1, v_x2, v_x3, v_x4, v_y1, v_y2))
+  eval_non_linear06_bb1_in(v_.02, v_.03, v_.04, v_x1, v_x2, v_x3, v_x4, v_y1, v_y2) -> Com_1(eval_non_linear06_bb2_in(v_.02, v_.03, v_.04, v_x1, v_x2, v_x3, v_x4, v_y1, v_y2)) :|: v_.02^2 - v_x3^5 < 2*v_.03 - v_.04 && v_.02 < 0
+  eval_non_linear06_bb1_in(v_.02, v_.03, v_.04, v_x1, v_x2, v_x3, v_x4, v_y1, v_y2) -> Com_1(eval_non_linear06_bb2_in(v_.02, v_.03, v_.04, v_x1, v_x2, v_x3, v_x4, v_y1, v_y2)) :|: v_.02^2 - v_x3^5 < 2*v_.03 - v_.04 && v_.02 > 0
+  eval_non_linear06_bb1_in(v_.02, v_.03, v_.04, v_x1, v_x2, v_x3, v_x4, v_y1, v_y2) -> Com_1(eval_non_linear06_bb3_in(v_.02, v_.03, v_.04, v_x1, v_x2, v_x3, v_x4, v_y1, v_y2)) :|: v_.02^2 - v_x3^5 >= 2*v_.03 - v_.04
+  eval_non_linear06_bb1_in(v_.02, v_.03, v_.04, v_x1, v_x2, v_x3, v_x4, v_y1, v_y2) -> Com_1(eval_non_linear06_bb3_in(v_.02, v_.03, v_.04, v_x1, v_x2, v_x3, v_x4, v_y1, v_y2)) :|: v_.02 = 0
+  eval_non_linear06_bb2_in(v_.02, v_.03, v_.04, v_x1, v_x2, v_x3, v_x4, v_y1, v_y2) -> Com_1(eval_non_linear06_bb1_in(-2*v_.02, v_.03 + v_.03^2 + v_x3^2, -4*v_.03 + 2*v_.03^2 + 3*v_.04 + v_x3^2, v_x1, v_x2, v_x3, v_x4, v_y1, v_y2))
+  eval_non_linear06_bb3_in(v_.02, v_.03, v_.04, v_x1, v_x2, v_x3, v_x4, v_y1, v_y2) -> Com_1(eval_non_linear06_stop(v_.02, v_.03, v_.04, v_x1, v_x2, v_x3, v_x4, v_y1, v_y2))
+)

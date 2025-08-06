@@ -1,0 +1,21 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS eval_Loopus2015_ex2_start))
+(VAR nondef.0 v_3 v_m1 v_m2 v_n v_x.1 v_y.0 v_z.0)
+(RULES
+  eval_Loopus2015_ex2_start(v_3, v_m1, v_m2, v_n, v_x.1, v_y.0, v_z.0) -> Com_1(eval_Loopus2015_ex2_bb0_in(v_3, v_m1, v_m2, v_n, v_x.1, v_y.0, v_z.0))
+  eval_Loopus2015_ex2_bb0_in(v_3, v_m1, v_m2, v_n, v_x.1, v_y.0, v_z.0) -> Com_1(eval_Loopus2015_ex2_bb6_in(v_3, v_m1, v_m2, v_n, v_x.1, v_y.0, v_z.0)) :|: v_n < 0
+  eval_Loopus2015_ex2_bb0_in(v_3, v_m1, v_m2, v_n, v_x.1, v_y.0, v_z.0) -> Com_1(eval_Loopus2015_ex2_bb6_in(v_3, v_m1, v_m2, v_n, v_x.1, v_y.0, v_z.0)) :|: v_m1 < 0
+  eval_Loopus2015_ex2_bb0_in(v_3, v_m1, v_m2, v_n, v_x.1, v_y.0, v_z.0) -> Com_1(eval_Loopus2015_ex2_bb6_in(v_3, v_m1, v_m2, v_n, v_x.1, v_y.0, v_z.0)) :|: v_m2 < 0
+  eval_Loopus2015_ex2_bb0_in(v_3, v_m1, v_m2, v_n, v_x.1, v_y.0, v_z.0) -> Com_1(eval_Loopus2015_ex2_bb1_in(v_3, v_m1, v_m2, v_n, v_x.1, v_y.0, v_z.0)) :|: v_n >= 0 && v_m1 >= 0 && v_m2 >= 0
+  eval_Loopus2015_ex2_bb1_in(v_3, v_m1, v_m2, v_n, v_x.1, v_y.0, v_z.0) -> Com_1(eval_Loopus2015_ex2_0(v_3, v_m1, v_m2, v_n, v_x.1, v_y.0, v_z.0))
+  eval_Loopus2015_ex2_0(v_3, v_m1, v_m2, v_n, v_x.1, v_y.0, v_z.0) -> Com_2(eval_nondet_start(v_3, v_m1, v_m2, v_n, v_x.1, v_y.0, v_z.0), eval_Loopus2015_ex2_1(nondef.0, v_m1, v_m2, v_n, v_x.1, v_y.0, v_z.0))
+  eval_Loopus2015_ex2_1(v_3, v_m1, v_m2, v_n, v_x.1, v_y.0, v_z.0) -> Com_1(eval_Loopus2015_ex2_bb2_in(v_3, v_m1, v_m2, v_n, v_m1, v_n, v_z.0)) :|: v_3 > 0
+  eval_Loopus2015_ex2_1(v_3, v_m1, v_m2, v_n, v_x.1, v_y.0, v_z.0) -> Com_1(eval_Loopus2015_ex2_bb2_in(v_3, v_m1, v_m2, v_n, v_m2, v_n, v_z.0)) :|: v_3 <= 0
+  eval_Loopus2015_ex2_bb2_in(v_3, v_m1, v_m2, v_n, v_x.1, v_y.0, v_z.0) -> Com_1(eval_Loopus2015_ex2_bb3_in(v_3, v_m1, v_m2, v_n, v_x.1, v_y.0, v_z.0)) :|: v_y.0 > 0
+  eval_Loopus2015_ex2_bb2_in(v_3, v_m1, v_m2, v_n, v_x.1, v_y.0, v_z.0) -> Com_1(eval_Loopus2015_ex2_bb4_in(v_3, v_m1, v_m2, v_n, v_x.1, v_y.0, v_x.1)) :|: v_y.0 <= 0
+  eval_Loopus2015_ex2_bb3_in(v_3, v_m1, v_m2, v_n, v_x.1, v_y.0, v_z.0) -> Com_1(eval_Loopus2015_ex2_bb2_in(v_3, v_m1, v_m2, v_n, v_x.1 + 2, v_y.0 - 1, v_z.0))
+  eval_Loopus2015_ex2_bb4_in(v_3, v_m1, v_m2, v_n, v_x.1, v_y.0, v_z.0) -> Com_1(eval_Loopus2015_ex2_bb5_in(v_3, v_m1, v_m2, v_n, v_x.1, v_y.0, v_z.0)) :|: v_z.0 > 0
+  eval_Loopus2015_ex2_bb4_in(v_3, v_m1, v_m2, v_n, v_x.1, v_y.0, v_z.0) -> Com_1(eval_Loopus2015_ex2_bb6_in(v_3, v_m1, v_m2, v_n, v_x.1, v_y.0, v_z.0)) :|: v_z.0 <= 0
+  eval_Loopus2015_ex2_bb5_in(v_3, v_m1, v_m2, v_n, v_x.1, v_y.0, v_z.0) -> Com_1(eval_Loopus2015_ex2_bb4_in(v_3, v_m1, v_m2, v_n, v_x.1, v_y.0, v_z.0 - 1))
+  eval_Loopus2015_ex2_bb6_in(v_3, v_m1, v_m2, v_n, v_x.1, v_y.0, v_z.0) -> Com_1(eval_Loopus2015_ex2_stop(v_3, v_m1, v_m2, v_n, v_x.1, v_y.0, v_z.0))
+)

@@ -1,0 +1,14 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS eval_textbook_ex2_start))
+(VAR v_i.0 v_j.0 v_n)
+(RULES
+  eval_textbook_ex2_start(v_i.0, v_j.0, v_n) -> Com_1(eval_textbook_ex2_bb0_in(v_i.0, v_j.0, v_n))
+  eval_textbook_ex2_bb0_in(v_i.0, v_j.0, v_n) -> Com_1(eval_textbook_ex2_bb1_in(0, v_j.0, v_n))
+  eval_textbook_ex2_bb1_in(v_i.0, v_j.0, v_n) -> Com_1(eval_textbook_ex2_bb2_in(v_i.0, 0, v_n)) :|: v_i.0 <= v_n - 1
+  eval_textbook_ex2_bb1_in(v_i.0, v_j.0, v_n) -> Com_1(eval_textbook_ex2_bb5_in(v_i.0, v_j.0, v_n)) :|: v_i.0 > v_n - 1
+  eval_textbook_ex2_bb2_in(v_i.0, v_j.0, v_n) -> Com_1(eval_textbook_ex2_bb3_in(v_i.0, v_j.0, v_n)) :|: v_j.0 <= v_i.0
+  eval_textbook_ex2_bb2_in(v_i.0, v_j.0, v_n) -> Com_1(eval_textbook_ex2_bb4_in(v_i.0, v_j.0, v_n)) :|: v_j.0 > v_i.0
+  eval_textbook_ex2_bb3_in(v_i.0, v_j.0, v_n) -> Com_1(eval_textbook_ex2_bb2_in(v_i.0, v_j.0 + 1, v_n))
+  eval_textbook_ex2_bb4_in(v_i.0, v_j.0, v_n) -> Com_1(eval_textbook_ex2_bb1_in(v_i.0 + 1, v_j.0, v_n))
+  eval_textbook_ex2_bb5_in(v_i.0, v_j.0, v_n) -> Com_1(eval_textbook_ex2_stop(v_i.0, v_j.0, v_n))
+)

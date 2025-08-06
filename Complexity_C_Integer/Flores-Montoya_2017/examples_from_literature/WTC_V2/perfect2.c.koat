@@ -1,0 +1,21 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS eval_perfect2_start))
+(VAR v_1 v_x v_y1.0 v_y2.1 v_y3.0)
+(RULES
+  eval_perfect2_start(v_1, v_x, v_y1.0, v_y2.1, v_y3.0) -> Com_1(eval_perfect2_bb0_in(v_1, v_x, v_y1.0, v_y2.1, v_y3.0))
+  eval_perfect2_bb0_in(v_1, v_x, v_y1.0, v_y2.1, v_y3.0) -> Com_1(eval_perfect2_bb3_in(v_1, v_x, v_y1.0, v_y2.1, v_y3.0)) :|: v_x <= 0
+  eval_perfect2_bb0_in(v_1, v_x, v_y1.0, v_y2.1, v_y3.0) -> Com_1(eval_perfect2_bb1_in(v_1, v_x, v_x, v_y2.1, v_x)) :|: v_x > 0
+  eval_perfect2_bb1_in(v_1, v_x, v_y1.0, v_y2.1, v_y3.0) -> Com_1(eval_perfect2_bb2_in(v_1, v_x, v_y1.0, v_y2.1, v_y3.0)) :|: v_y1.0 - 1 = 0
+  eval_perfect2_bb1_in(v_1, v_x, v_y1.0, v_y2.1, v_y3.0) -> Com_1(eval_perfect2_bb4_in(v_y1.0 - 1, v_x, v_y1.0, v_x, v_y3.0)) :|: v_y1.0 - 1 < 0
+  eval_perfect2_bb1_in(v_1, v_x, v_y1.0, v_y2.1, v_y3.0) -> Com_1(eval_perfect2_bb4_in(v_y1.0 - 1, v_x, v_y1.0, v_x, v_y3.0)) :|: v_y1.0 - 1 > 0
+  eval_perfect2_bb2_in(v_1, v_x, v_y1.0, v_y2.1, v_y3.0) -> Com_1(eval_perfect2_bb3_in(v_1, v_x, v_y1.0, v_y2.1, v_y3.0)) :|: v_y3.0 < 0
+  eval_perfect2_bb2_in(v_1, v_x, v_y1.0, v_y2.1, v_y3.0) -> Com_1(eval_perfect2_bb3_in(v_1, v_x, v_y1.0, v_y2.1, v_y3.0)) :|: v_y3.0 > 0
+  eval_perfect2_bb2_in(v_1, v_x, v_y1.0, v_y2.1, v_y3.0) -> Com_1(eval_perfect2_bb3_in(v_1, v_x, v_y1.0, v_y2.1, v_y3.0)) :|: v_y3.0 = 0
+  eval_perfect2_bb3_in(v_1, v_x, v_y1.0, v_y2.1, v_y3.0) -> Com_1(eval_perfect2_stop(v_1, v_x, v_y1.0, v_y2.1, v_y3.0))
+  eval_perfect2_bb4_in(v_1, v_x, v_y1.0, v_y2.1, v_y3.0) -> Com_1(eval_perfect2_bb5_in(v_1, v_x, v_y1.0, v_y2.1, v_y3.0)) :|: v_y2.1 >= v_1
+  eval_perfect2_bb4_in(v_1, v_x, v_y1.0, v_y2.1, v_y3.0) -> Com_1(eval_perfect2_bb6_in(v_1, v_x, v_y1.0, v_y2.1, v_y3.0)) :|: v_y2.1 < v_1
+  eval_perfect2_bb5_in(v_1, v_x, v_y1.0, v_y2.1, v_y3.0) -> Com_1(eval_perfect2_bb4_in(v_1, v_x, v_y1.0, v_y2.1 - v_1, v_y3.0))
+  eval_perfect2_bb6_in(v_1, v_x, v_y1.0, v_y2.1, v_y3.0) -> Com_1(eval_perfect2_bb1_in(v_1, v_x, v_1, v_y2.1, v_y3.0 - v_1)) :|: v_y2.1 = 0
+  eval_perfect2_bb6_in(v_1, v_x, v_y1.0, v_y2.1, v_y3.0) -> Com_1(eval_perfect2_bb1_in(v_1, v_x, v_1, v_y2.1, v_y3.0)) :|: v_y2.1 < 0
+  eval_perfect2_bb6_in(v_1, v_x, v_y1.0, v_y2.1, v_y3.0) -> Com_1(eval_perfect2_bb1_in(v_1, v_x, v_1, v_y2.1, v_y3.0)) :|: v_y2.1 > 0
+)

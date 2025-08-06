@@ -1,0 +1,18 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS eval_size06_start))
+(VAR v_.0 v_.01 v_.02 v_.1 v_.13 v_.2 v_a v_b v_c)
+(RULES
+  eval_size06_start(v_.0, v_.01, v_.02, v_.1, v_.13, v_.2, v_a, v_b, v_c) -> Com_1(eval_size06_bb0_in(v_.0, v_.01, v_.02, v_.1, v_.13, v_.2, v_a, v_b, v_c))
+  eval_size06_bb0_in(v_.0, v_.01, v_.02, v_.1, v_.13, v_.2, v_a, v_b, v_c) -> Com_1(eval_size06_bb1_in(v_a, v_.01, v_c, v_.1, v_.13, v_.2, v_a, v_b, v_c)) :|: v_a > 0
+  eval_size06_bb0_in(v_.0, v_.01, v_.02, v_.1, v_.13, v_.2, v_a, v_b, v_c) -> Com_1(eval_size06_bb7_in(v_.0, v_.01, v_.02, v_.1, v_.13, v_.2, v_a, v_b, v_c)) :|: v_a <= 0
+  eval_size06_bb1_in(v_.0, v_.01, v_.02, v_.1, v_.13, v_.2, v_a, v_b, v_c) -> Com_1(eval_size06_bb2_in(v_.0, v_.01, v_.02, v_.1, v_.13, v_.2, v_a, v_b, v_c)) :|: v_.02 > 0
+  eval_size06_bb1_in(v_.0, v_.01, v_.02, v_.1, v_.13, v_.2, v_a, v_b, v_c) -> Com_1(eval_size06_bb3_in(v_.0, v_b, v_.02, v_.0, v_.02, v_.2, v_a, v_b, v_c)) :|: v_.02 <= 0
+  eval_size06_bb2_in(v_.0, v_.01, v_.02, v_.1, v_.13, v_.2, v_a, v_b, v_c) -> Com_1(eval_size06_bb1_in(v_.0 + v_.02, v_.01, v_.02 - 1, v_.1, v_.13, v_.2, v_a, v_b, v_c))
+  eval_size06_bb3_in(v_.0, v_.01, v_.02, v_.1, v_.13, v_.2, v_a, v_b, v_c) -> Com_1(eval_size06_bb4_in(v_.0, v_.01, v_.02, v_.1, v_.13, v_.2, v_a, v_b, v_c)) :|: v_.1 < v_.01^2
+  eval_size06_bb3_in(v_.0, v_.01, v_.02, v_.1, v_.13, v_.2, v_a, v_b, v_c) -> Com_1(eval_size06_bb5_in(v_.0, v_.01, v_.02, v_.1, v_.13, v_.1, v_a, v_b, v_c)) :|: v_.1 >= v_.01^2
+  eval_size06_bb4_in(v_.0, v_.01, v_.02, v_.1, v_.13, v_.2, v_a, v_b, v_c) -> Com_1(eval_size06_bb3_in(v_.0, v_.01 + 1, v_.02, v_.1 + v_.13^2, v_.13 + 1, v_.2, v_a, v_b, v_c))
+  eval_size06_bb5_in(v_.0, v_.01, v_.02, v_.1, v_.13, v_.2, v_a, v_b, v_c) -> Com_1(eval_size06_bb6_in(v_.0, v_.01, v_.02, v_.1, v_.13, v_.2, v_a, v_b, v_c)) :|: v_.2 > 0
+  eval_size06_bb5_in(v_.0, v_.01, v_.02, v_.1, v_.13, v_.2, v_a, v_b, v_c) -> Com_1(eval_size06_bb7_in(v_.0, v_.01, v_.02, v_.1, v_.13, v_.2, v_a, v_b, v_c)) :|: v_.2 <= 0
+  eval_size06_bb6_in(v_.0, v_.01, v_.02, v_.1, v_.13, v_.2, v_a, v_b, v_c) -> Com_1(eval_size06_bb5_in(v_.0, v_.01, v_.02, v_.1, v_.13, v_.2 - 1, v_a, v_b, v_c))
+  eval_size06_bb7_in(v_.0, v_.01, v_.02, v_.1, v_.13, v_.2, v_a, v_b, v_c) -> Com_1(eval_size06_stop(v_.0, v_.01, v_.02, v_.1, v_.13, v_.2, v_a, v_b, v_c))
+)

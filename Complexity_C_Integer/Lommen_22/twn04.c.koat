@@ -1,0 +1,16 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS eval_twn04_start))
+(VAR v_.03 v_.1 v_.12 v_a v_b v_c v_d v_e)
+(RULES
+  eval_twn04_start(v_.03, v_.1, v_.12, v_a, v_b, v_c, v_d, v_e) -> Com_1(eval_twn04_bb0_in(v_.03, v_.1, v_.12, v_a, v_b, v_c, v_d, v_e))
+  eval_twn04_bb0_in(v_.03, v_.1, v_.12, v_a, v_b, v_c, v_d, v_e) -> Com_1(eval_twn04_bb1_in(v_c, v_.1, v_.12, v_a, v_b, v_c, v_d, v_e)) :|: v_d > 0
+  eval_twn04_bb0_in(v_.03, v_.1, v_.12, v_a, v_b, v_c, v_d, v_e) -> Com_1(eval_twn04_bb5_in(v_.03, v_.1, v_.12, v_a, v_b, v_c, v_d, v_e)) :|: v_d <= 0
+  eval_twn04_bb1_in(v_.03, v_.1, v_.12, v_a, v_b, v_c, v_d, v_e) -> Com_1(eval_twn04_bb2_in(v_.03, v_d, v_e, v_a, v_b, v_c, v_d, v_e)) :|: v_.03 > 0
+  eval_twn04_bb1_in(v_.03, v_.1, v_.12, v_a, v_b, v_c, v_d, v_e) -> Com_1(eval_twn04_bb5_in(v_.03, v_.1, v_.12, v_a, v_b, v_c, v_d, v_e)) :|: v_.03 <= 0
+  eval_twn04_bb2_in(v_.03, v_.1, v_.12, v_a, v_b, v_c, v_d, v_e) -> Com_1(eval_twn04_bb3_in(v_.03, v_.1, v_.12, v_a, v_b, v_c, v_d, v_e)) :|: v_.1 < v_.12^2 && v_.1 > 0
+  eval_twn04_bb2_in(v_.03, v_.1, v_.12, v_a, v_b, v_c, v_d, v_e) -> Com_1(eval_twn04_bb4_in(v_.03, v_.1, v_.12, v_a, v_b, v_c, v_d, v_e)) :|: v_.1 >= v_.12^2
+  eval_twn04_bb2_in(v_.03, v_.1, v_.12, v_a, v_b, v_c, v_d, v_e) -> Com_1(eval_twn04_bb4_in(v_.03, v_.1, v_.12, v_a, v_b, v_c, v_d, v_e)) :|: v_.1 <= 0
+  eval_twn04_bb3_in(v_.03, v_.1, v_.12, v_a, v_b, v_c, v_d, v_e) -> Com_1(eval_twn04_bb2_in(v_.03, 5*v_.1 + v_.03^2, 2*v_.12, v_a, v_b, v_c, v_d, v_e))
+  eval_twn04_bb4_in(v_.03, v_.1, v_.12, v_a, v_b, v_c, v_d, v_e) -> Com_1(eval_twn04_bb1_in(v_.03 - 1, v_.1, v_.12, v_a, v_b, v_c, v_d, v_e))
+  eval_twn04_bb5_in(v_.03, v_.1, v_.12, v_a, v_b, v_c, v_d, v_e) -> Com_1(eval_twn04_stop(v_.03, v_.1, v_.12, v_a, v_b, v_c, v_d, v_e))
+)

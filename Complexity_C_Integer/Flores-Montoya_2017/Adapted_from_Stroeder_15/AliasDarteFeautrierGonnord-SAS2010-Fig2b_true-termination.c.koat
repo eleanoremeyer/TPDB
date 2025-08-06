@@ -1,0 +1,29 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS eval_foo_start))
+(VAR nondef.0 nondef.1 v_.0 v_.01 v_.1 v_.12 v_.2 v_.23 v_10 v_5 v_x v_y)
+(RULES
+  eval_foo_start(v_.0, v_.01, v_.1, v_.12, v_.2, v_.23, v_10, v_5, v_x, v_y) -> Com_1(eval_foo_bb0_in(v_.0, v_.01, v_.1, v_.12, v_.2, v_.23, v_10, v_5, v_x, v_y))
+  eval_foo_bb0_in(v_.0, v_.01, v_.1, v_.12, v_.2, v_.23, v_10, v_5, v_x, v_y) -> Com_1(eval_foo_bb1_in(v_x, v_y, v_.1, v_.12, v_.2, v_.23, v_10, v_5, v_x, v_y))
+  eval_foo_bb1_in(v_.0, v_.01, v_.1, v_.12, v_.2, v_.23, v_10, v_5, v_x, v_y) -> Com_1(eval_foo_bb2_in(v_.0, v_.01, v_.1, v_.12, v_.2, v_.23, v_10, v_5, v_x, v_y)) :|: v_.0 >= 2
+  eval_foo_bb1_in(v_.0, v_.01, v_.1, v_.12, v_.2, v_.23, v_10, v_5, v_x, v_y) -> Com_1(eval_foo_bb9_in(v_.0, v_.01, v_.1, v_.12, v_.2, v_.23, v_10, v_5, v_x, v_y)) :|: v_.0 < 2
+  eval_foo_bb2_in(v_.0, v_.01, v_.1, v_.12, v_.2, v_.23, v_10, v_5, v_x, v_y) -> Com_1(eval_foo_bb3_in(v_.0, v_.01, v_.0 - 1, v_.01 + v_.0 - 1, v_.2, v_.23, v_10, v_5, v_x, v_y))
+  eval_foo_bb3_in(v_.0, v_.01, v_.1, v_.12, v_.2, v_.23, v_10, v_5, v_x, v_y) -> Com_1(eval_foo_bb4_in(v_.0, v_.01, v_.1, v_.12, v_.2, v_.23, v_10, v_5, v_x, v_y)) :|: v_.12 >= v_.1 + 1
+  eval_foo_bb3_in(v_.0, v_.01, v_.1, v_.12, v_.2, v_.23, v_10, v_5, v_x, v_y) -> Com_1(eval_foo_.critedge_in(v_.0, v_.01, v_.1, v_.12, v_.2, v_.23, v_10, v_5, v_x, v_y)) :|: v_.12 < v_.1 + 1
+  eval_foo_bb4_in(v_.0, v_.01, v_.1, v_.12, v_.2, v_.23, v_10, v_5, v_x, v_y) -> Com_1(eval_foo_5(v_.0, v_.01, v_.1, v_.12, v_.2, v_.23, v_10, v_5, v_x, v_y))
+  eval_foo_5(v_.0, v_.01, v_.1, v_.12, v_.2, v_.23, v_10, v_5, v_x, v_y) -> Com_2(eval___VERIFIER_nondet_int_start(v_.0, v_.01, v_.1, v_.12, v_.2, v_.23, v_10, v_5, v_x, v_y), eval_foo_6(v_.0, v_.01, v_.1, v_.12, v_.2, v_.23, v_10, nondef.0, v_x, v_y))
+  eval_foo_6(v_.0, v_.01, v_.1, v_.12, v_.2, v_.23, v_10, v_5, v_x, v_y) -> Com_1(eval_foo_bb5_in(v_.0, v_.01, v_.1, v_.12, v_.2, v_.23, v_10, v_5, v_x, v_y)) :|: v_5 < 0
+  eval_foo_6(v_.0, v_.01, v_.1, v_.12, v_.2, v_.23, v_10, v_5, v_x, v_y) -> Com_1(eval_foo_bb5_in(v_.0, v_.01, v_.1, v_.12, v_.2, v_.23, v_10, v_5, v_x, v_y)) :|: v_5 > 0
+  eval_foo_6(v_.0, v_.01, v_.1, v_.12, v_.2, v_.23, v_10, v_5, v_x, v_y) -> Com_1(eval_foo_.critedge_in(v_.0, v_.01, v_.1, v_.12, v_.2, v_.23, v_10, v_5, v_x, v_y)) :|: v_5 = 0
+  eval_foo_bb5_in(v_.0, v_.01, v_.1, v_.12, v_.2, v_.23, v_10, v_5, v_x, v_y) -> Com_1(eval_foo_bb6_in(v_.0, v_.01, v_.1, v_.12, v_.1, v_.12 - 1, v_10, v_5, v_x, v_y))
+  eval_foo_bb6_in(v_.0, v_.01, v_.1, v_.12, v_.2, v_.23, v_10, v_5, v_x, v_y) -> Com_1(eval_foo_bb7_in(v_.0, v_.01, v_.1, v_.12, v_.2, v_.23, v_10, v_5, v_x, v_y)) :|: v_.23 >= v_.2 + 3
+  eval_foo_bb6_in(v_.0, v_.01, v_.1, v_.12, v_.2, v_.23, v_10, v_5, v_x, v_y) -> Com_1(eval_foo_.critedge4_in(v_.0, v_.01, v_.1, v_.12, v_.2, v_.23, v_10, v_5, v_x, v_y)) :|: v_.23 < v_.2 + 3
+  eval_foo_bb7_in(v_.0, v_.01, v_.1, v_.12, v_.2, v_.23, v_10, v_5, v_x, v_y) -> Com_1(eval_foo_11(v_.0, v_.01, v_.1, v_.12, v_.2, v_.23, v_10, v_5, v_x, v_y))
+  eval_foo_11(v_.0, v_.01, v_.1, v_.12, v_.2, v_.23, v_10, v_5, v_x, v_y) -> Com_2(eval___VERIFIER_nondet_int_start(v_.0, v_.01, v_.1, v_.12, v_.2, v_.23, v_10, v_5, v_x, v_y), eval_foo_12(v_.0, v_.01, v_.1, v_.12, v_.2, v_.23, nondef.1, v_5, v_x, v_y))
+  eval_foo_12(v_.0, v_.01, v_.1, v_.12, v_.2, v_.23, v_10, v_5, v_x, v_y) -> Com_1(eval_foo_bb8_in(v_.0, v_.01, v_.1, v_.12, v_.2, v_.23, v_10, v_5, v_x, v_y)) :|: v_10 < 0
+  eval_foo_12(v_.0, v_.01, v_.1, v_.12, v_.2, v_.23, v_10, v_5, v_x, v_y) -> Com_1(eval_foo_bb8_in(v_.0, v_.01, v_.1, v_.12, v_.2, v_.23, v_10, v_5, v_x, v_y)) :|: v_10 > 0
+  eval_foo_12(v_.0, v_.01, v_.1, v_.12, v_.2, v_.23, v_10, v_5, v_x, v_y) -> Com_1(eval_foo_.critedge4_in(v_.0, v_.01, v_.1, v_.12, v_.2, v_.23, v_10, v_5, v_x, v_y)) :|: v_10 = 0
+  eval_foo_bb8_in(v_.0, v_.01, v_.1, v_.12, v_.2, v_.23, v_10, v_5, v_x, v_y) -> Com_1(eval_foo_bb6_in(v_.0, v_.01, v_.1, v_.12, v_.2 + 1, v_.23 - 2, v_10, v_5, v_x, v_y))
+  eval_foo_.critedge4_in(v_.0, v_.01, v_.1, v_.12, v_.2, v_.23, v_10, v_5, v_x, v_y) -> Com_1(eval_foo_bb3_in(v_.0, v_.01, v_.2, v_.23 - 1, v_.2, v_.23, v_10, v_5, v_x, v_y))
+  eval_foo_.critedge_in(v_.0, v_.01, v_.1, v_.12, v_.2, v_.23, v_10, v_5, v_x, v_y) -> Com_1(eval_foo_bb1_in(v_.1 - 1, v_.12 - v_.1 + 1, v_.1, v_.12, v_.2, v_.23, v_10, v_5, v_x, v_y))
+  eval_foo_bb9_in(v_.0, v_.01, v_.1, v_.12, v_.2, v_.23, v_10, v_5, v_x, v_y) -> Com_1(eval_foo_stop(v_.0, v_.01, v_.1, v_.12, v_.2, v_.23, v_10, v_5, v_x, v_y))
+)

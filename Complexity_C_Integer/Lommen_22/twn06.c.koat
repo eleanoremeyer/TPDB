@@ -1,0 +1,20 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS eval_twn06_start))
+(VAR v_.010 v_.03 v_.06 v_.08 v_.1 v_.12 v_.14 v_.17 v_.19 v_.25 v_a v_b v_c v_d v_e v_f)
+(RULES
+  eval_twn06_start(v_.010, v_.03, v_.06, v_.08, v_.1, v_.12, v_.14, v_.17, v_.19, v_.25, v_a, v_b, v_c, v_d, v_e, v_f) -> Com_1(eval_twn06_bb0_in(v_.010, v_.03, v_.06, v_.08, v_.1, v_.12, v_.14, v_.17, v_.19, v_.25, v_a, v_b, v_c, v_d, v_e, v_f))
+  eval_twn06_bb0_in(v_.010, v_.03, v_.06, v_.08, v_.1, v_.12, v_.14, v_.17, v_.19, v_.25, v_a, v_b, v_c, v_d, v_e, v_f) -> Com_1(eval_twn06_bb1_in(v_f, v_c, v_d, v_e, v_.1, v_.12, v_.14, v_.17, v_.19, v_.25, v_a, v_b, v_c, v_d, v_e, v_f)) :|: v_d > 0
+  eval_twn06_bb0_in(v_.010, v_.03, v_.06, v_.08, v_.1, v_.12, v_.14, v_.17, v_.19, v_.25, v_a, v_b, v_c, v_d, v_e, v_f) -> Com_1(eval_twn06_bb7_in(v_.010, v_.03, v_.06, v_.08, v_.1, v_.12, v_.14, v_.17, v_.19, v_.25, v_a, v_b, v_c, v_d, v_e, v_f)) :|: v_d <= 0
+  eval_twn06_bb1_in(v_.010, v_.03, v_.06, v_.08, v_.1, v_.12, v_.14, v_.17, v_.19, v_.25, v_a, v_b, v_c, v_d, v_e, v_f) -> Com_1(eval_twn06_bb2_in(v_.010, v_.03, v_.06, v_.08, v_.06, v_.12, v_.03, v_.17, v_.19, v_.25, v_a, v_b, v_c, v_d, v_e, v_f)) :|: v_.03 > 0
+  eval_twn06_bb1_in(v_.010, v_.03, v_.06, v_.08, v_.1, v_.12, v_.14, v_.17, v_.19, v_.25, v_a, v_b, v_c, v_d, v_e, v_f) -> Com_1(eval_twn06_bb7_in(v_.010, v_.03, v_.06, v_.08, v_.1, v_.12, v_.14, v_.17, v_.19, v_.25, v_a, v_b, v_c, v_d, v_e, v_f)) :|: v_.03 <= 0
+  eval_twn06_bb2_in(v_.010, v_.03, v_.06, v_.08, v_.1, v_.12, v_.14, v_.17, v_.19, v_.25, v_a, v_b, v_c, v_d, v_e, v_f) -> Com_1(eval_twn06_bb3_in(v_.010, v_.03, v_.06, v_.08, v_.1, v_.12, v_.14, v_.17, v_.19, v_.25, v_a, v_b, v_c, v_d, v_e, v_f)) :|: v_.14 > 0
+  eval_twn06_bb2_in(v_.010, v_.03, v_.06, v_.08, v_.1, v_.12, v_.14, v_.17, v_.19, v_.25, v_a, v_b, v_c, v_d, v_e, v_f) -> Com_1(eval_twn06_bb4_in(v_.010, v_.03, v_.06, v_.08, v_.1, v_.08, v_.14, v_.06, v_.08, v_.010, v_a, v_b, v_c, v_d, v_e, v_f)) :|: v_.14 <= 0
+  eval_twn06_bb3_in(v_.010, v_.03, v_.06, v_.08, v_.1, v_.12, v_.14, v_.17, v_.19, v_.25, v_a, v_b, v_c, v_d, v_e, v_f) -> Com_1(eval_twn06_bb2_in(v_.010, v_.03, v_.06, v_.08, v_.1 + v_.14, v_.12, v_.14 - 1, v_.17, v_.19, v_.25, v_a, v_b, v_c, v_d, v_e, v_f))
+  eval_twn06_bb4_in(v_.010, v_.03, v_.06, v_.08, v_.1, v_.12, v_.14, v_.17, v_.19, v_.25, v_a, v_b, v_c, v_d, v_e, v_f) -> Com_1(eval_twn06_bb5_in(v_.010, v_.03, v_.06, v_.08, v_.1, v_.12, v_.14, v_.17, v_.19, v_.25, v_a, v_b, v_c, v_d, v_e, v_f)) :|: v_.12^2 > 1
+  eval_twn06_bb4_in(v_.010, v_.03, v_.06, v_.08, v_.1, v_.12, v_.14, v_.17, v_.19, v_.25, v_a, v_b, v_c, v_d, v_e, v_f) -> Com_1(eval_twn06_.critedge_in(v_.010, v_.03, v_.06, v_.08, v_.1, v_.12, v_.14, v_.17, v_.19, v_.25, v_a, v_b, v_c, v_d, v_e, v_f)) :|: v_.12^2 <= 1
+  eval_twn06_bb5_in(v_.010, v_.03, v_.06, v_.08, v_.1, v_.12, v_.14, v_.17, v_.19, v_.25, v_a, v_b, v_c, v_d, v_e, v_f) -> Com_1(eval_twn06_bb6_in(v_.010, v_.03, v_.06, v_.08, v_.1, v_.12, v_.14, v_.17, v_.19, v_.25, v_a, v_b, v_c, v_d, v_e, v_f)) :|: v_.1*v_.25 > 0
+  eval_twn06_bb5_in(v_.010, v_.03, v_.06, v_.08, v_.1, v_.12, v_.14, v_.17, v_.19, v_.25, v_a, v_b, v_c, v_d, v_e, v_f) -> Com_1(eval_twn06_.critedge_in(v_.010, v_.03, v_.06, v_.08, v_.1, v_.12, v_.14, v_.17, v_.19, v_.25, v_a, v_b, v_c, v_d, v_e, v_f)) :|: v_.1*v_.25 <= 0
+  eval_twn06_bb6_in(v_.010, v_.03, v_.06, v_.08, v_.1, v_.12, v_.14, v_.17, v_.19, v_.25, v_a, v_b, v_c, v_d, v_e, v_f) -> Com_1(eval_twn06_bb4_in(v_.010, v_.03, v_.06, v_.08, v_.1, 3*v_.12 - 4*v_.25, v_.14, 5*v_.17, 5*v_.19 - v_.1^2, 4*v_.12 - 3*v_.25, v_a, v_b, v_c, v_d, v_e, v_f))
+  eval_twn06_.critedge_in(v_.010, v_.03, v_.06, v_.08, v_.1, v_.12, v_.14, v_.17, v_.19, v_.25, v_a, v_b, v_c, v_d, v_e, v_f) -> Com_1(eval_twn06_bb1_in(v_.010 - 1, v_.25, v_.17, v_.19, v_.1, v_.12, v_.14, v_.17, v_.19, v_.25, v_a, v_b, v_c, v_d, v_e, v_f))
+  eval_twn06_bb7_in(v_.010, v_.03, v_.06, v_.08, v_.1, v_.12, v_.14, v_.17, v_.19, v_.25, v_a, v_b, v_c, v_d, v_e, v_f) -> Com_1(eval_twn06_stop(v_.010, v_.03, v_.06, v_.08, v_.1, v_.12, v_.14, v_.17, v_.19, v_.25, v_a, v_b, v_c, v_d, v_e, v_f))
+)

@@ -1,0 +1,20 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS eval_Loopus2015_original_start))
+(VAR nondef.0 nondef.1 v_.end.0 v_1 v_2 v_4 v_beg.0 v_end.0 v_i.0 v_k.0 v_len)
+(RULES
+  eval_Loopus2015_original_start(v_.end.0, v_1, v_2, v_4, v_beg.0, v_end.0, v_i.0, v_k.0, v_len) -> Com_1(eval_Loopus2015_original_bb0_in(v_.end.0, v_1, v_2, v_4, v_beg.0, v_end.0, v_i.0, v_k.0, v_len))
+  eval_Loopus2015_original_bb0_in(v_.end.0, v_1, v_2, v_4, v_beg.0, v_end.0, v_i.0, v_k.0, v_len) -> Com_1(eval_Loopus2015_original_bb1_in(v_.end.0, v_1, v_2, v_4, 0, 0, 0, v_k.0, v_len))
+  eval_Loopus2015_original_bb1_in(v_.end.0, v_1, v_2, v_4, v_beg.0, v_end.0, v_i.0, v_k.0, v_len) -> Com_1(eval_Loopus2015_original_bb2_in(v_.end.0, v_1, v_2, v_4, v_beg.0, v_end.0, v_i.0, v_k.0, v_len)) :|: v_i.0 < v_len
+  eval_Loopus2015_original_bb1_in(v_.end.0, v_1, v_2, v_4, v_beg.0, v_end.0, v_i.0, v_k.0, v_len) -> Com_1(eval_Loopus2015_original_bb5_in(v_.end.0, v_1, v_2, v_4, v_beg.0, v_end.0, v_i.0, v_k.0, v_len)) :|: v_i.0 >= v_len
+  eval_Loopus2015_original_bb2_in(v_.end.0, v_1, v_2, v_4, v_beg.0, v_end.0, v_i.0, v_k.0, v_len) -> Com_1(eval_Loopus2015_original_1(v_.end.0, v_i.0 + 1, v_2, v_4, v_beg.0, v_end.0, v_i.0, v_k.0, v_len))
+  eval_Loopus2015_original_1(v_.end.0, v_1, v_2, v_4, v_beg.0, v_end.0, v_i.0, v_k.0, v_len) -> Com_2(eval_nondet_start(v_.end.0, v_1, v_2, v_4, v_beg.0, v_end.0, v_i.0, v_k.0, v_len), eval_Loopus2015_original_2(v_.end.0, v_1, nondef.0, v_4, v_beg.0, v_end.0, v_i.0, v_k.0, v_len))
+  eval_Loopus2015_original_2(v_.end.0, v_1, v_2, v_4, v_beg.0, v_end.0, v_i.0, v_k.0, v_len) -> Com_1(eval_Loopus2015_original_3(v_1, v_1, v_2, v_4, v_beg.0, v_end.0, v_i.0, v_k.0, v_len)) :|: v_2 > 0
+  eval_Loopus2015_original_2(v_.end.0, v_1, v_2, v_4, v_beg.0, v_end.0, v_i.0, v_k.0, v_len) -> Com_1(eval_Loopus2015_original_3(v_end.0, v_1, v_2, v_4, v_beg.0, v_end.0, v_i.0, v_k.0, v_len)) :|: v_2 <= 0
+  eval_Loopus2015_original_3(v_.end.0, v_1, v_2, v_4, v_beg.0, v_end.0, v_i.0, v_k.0, v_len) -> Com_2(eval_nondet_start(v_.end.0, v_1, v_2, v_4, v_beg.0, v_end.0, v_i.0, v_k.0, v_len), eval_Loopus2015_original_4(v_.end.0, v_1, v_2, nondef.1, v_beg.0, v_end.0, v_i.0, v_k.0, v_len))
+  eval_Loopus2015_original_4(v_.end.0, v_1, v_2, v_4, v_beg.0, v_end.0, v_i.0, v_k.0, v_len) -> Com_1(eval_Loopus2015_original_bb3_in(v_.end.0, v_1, v_2, v_4, v_beg.0, v_end.0, v_i.0, v_beg.0, v_len)) :|: v_4 > 0
+  eval_Loopus2015_original_4(v_.end.0, v_1, v_2, v_4, v_beg.0, v_end.0, v_i.0, v_k.0, v_len) -> Com_1(eval_Loopus2015_original_bb1_in(v_.end.0, v_1, v_2, v_4, v_beg.0, v_.end.0, v_1, v_k.0, v_len)) :|: v_4 <= 0
+  eval_Loopus2015_original_bb3_in(v_.end.0, v_1, v_2, v_4, v_beg.0, v_end.0, v_i.0, v_k.0, v_len) -> Com_1(eval_Loopus2015_original_bb4_in(v_.end.0, v_1, v_2, v_4, v_beg.0, v_end.0, v_i.0, v_k.0, v_len)) :|: v_k.0 < v_.end.0
+  eval_Loopus2015_original_bb3_in(v_.end.0, v_1, v_2, v_4, v_beg.0, v_end.0, v_i.0, v_k.0, v_len) -> Com_1(eval_Loopus2015_original_bb1_in(v_.end.0, v_1, v_2, v_4, v_1, v_1, v_1, v_k.0, v_len)) :|: v_k.0 >= v_.end.0
+  eval_Loopus2015_original_bb4_in(v_.end.0, v_1, v_2, v_4, v_beg.0, v_end.0, v_i.0, v_k.0, v_len) -> Com_1(eval_Loopus2015_original_bb3_in(v_.end.0, v_1, v_2, v_4, v_beg.0, v_end.0, v_i.0, v_k.0 + 1, v_len))
+  eval_Loopus2015_original_bb5_in(v_.end.0, v_1, v_2, v_4, v_beg.0, v_end.0, v_i.0, v_k.0, v_len) -> Com_1(eval_Loopus2015_original_stop(v_.end.0, v_1, v_2, v_4, v_beg.0, v_end.0, v_i.0, v_k.0, v_len))
+)
